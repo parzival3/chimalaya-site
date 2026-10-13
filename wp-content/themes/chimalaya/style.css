@@ -1,0 +1,514 @@
+/*
+Theme Name: Chimalaya
+Theme URI: https://chimalayanepal.org
+Description: Custom theme for Chimalaya Charity, rebuilt to match the original Charity-theme look using the site's own stylesheets. Classic PHP theme with EN/NE (Polylang) support, project/service/activity custom post types and a staff-facing News type.
+Author: Chimalaya rebuild
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 8.0
+Text Domain: chimalaya
+*/
+
+/* The visual styling lives in the enqueued assets/css/* files (the original theme's
+   bootstrap/style/responsive). This file is only the WordPress theme header plus a few
+   safety overrides. */
+
+/* Neutralise scroll-reveal libraries we did not import (WOW/AOS) so content is never hidden. */
+.wow, [data-wow-delay], .aos-init { visibility: visible !important; opacity: 1 !important; animation: none !important; }
+
+/* ------------------------------------------------------------------ *
+ * Sticky footer: on short pages (e.g. Local Supporters) keep the navy
+ * footer at the bottom of the window instead of leaving a white gap
+ * under it. The body is a full-height column and the footer takes up
+ * any spare space above it. The logged-in admin bar adds 32px (46px on
+ * small screens) above the body, so subtract it there.
+ * ------------------------------------------------------------------ */
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+body.admin-bar {
+	min-height: calc(100dvh - 32px);
+}
+@media screen and (max-width: 782px) {
+	body.admin-bar {
+		min-height: calc(100dvh - 46px);
+	}
+}
+body > .footer-area {
+	margin-top: auto;
+}
+
+/* ------------------------------------------------------------------ *
+ * Primary mega-menu dropdowns.
+ * The original theme's .sub-menu-container rules were pruned out of the
+ * captured CSS, so we define the hover-dropdown behaviour here. Positions
+ * each submenu directly under its parent item; second level flies right.
+ * ------------------------------------------------------------------ */
+.navbar-nav .nav-item { position: relative; }
+
+.navbar-nav .sub-menu-container {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 230px;
+	margin: 0;
+	padding: 10px 0;
+	list-style: none;
+	background: #fff;
+	border: 0;
+	border-radius: 0 0 6px 6px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+	display: block;            /* beats Bootstrap's .dropdown-menu{display:none} */
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(12px);
+	transition: opacity .25s ease, transform .25s ease, visibility .25s;
+	z-index: 1000;
+}
+
+.navbar-nav .nav-item:hover > .sub-menu-container {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.navbar-nav .sub-menu-container .nav-item { width: 100%; }
+
+.navbar-nav .sub-menu-container .nav-link {
+	padding: 9px 22px;
+	white-space: nowrap;
+	color: #1b2a4e;
+	font-size: 15px;
+}
+.navbar-nav .sub-menu-container .nav-link:hover { color: #e8114b; }
+
+/* Second-level submenu flies to the right of its parent row. */
+.navbar-nav .sub-menu-container .sub-menu-container {
+	top: 0;
+	left: 100%;
+}
+
+/* On mobile (collapsed navbar, below the lg breakpoint) submenus render inline,
+   hidden until their parent item is tapped (JS toggles .open on the li). */
+@media (max-width: 991.98px) {
+	.navbar-nav .sub-menu-container {
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+		box-shadow: none;
+		padding-left: 15px;
+		display: none;
+	}
+	.navbar-nav .nav-item.open > .sub-menu-container { display: block; }
+	/* Caret marks expandable items. */
+	.navbar-nav .menu-item-has-children > .nav-link::after {
+		content: '';
+		display: inline-block;
+		margin-left: 8px;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-top: 5px solid currentColor;
+		transition: transform .2s ease;
+	}
+	.navbar-nav .nav-item.open > .nav-link::after { transform: rotate(180deg); }
+}
+
+/* ------------------------------------------------------------------ *
+ * Header brand colours.
+ * The original applied its nav colour via a `.desktop-nav` wrapper
+ * (nav links #123f6b navy, red #e50046 on hover) which our markup does
+ * not use, so Bootstrap's grey was showing instead. Set them here to
+ * match, keyed to our actual markup.
+ * ------------------------------------------------------------------ */
+.navbar-area { background:#fff; box-shadow:0 0 20px 3px rgba(0,0,0,.05); }
+
+.navbar-light .navbar-nav .nav-link {
+	color:#123f6b;
+	font-weight:600;
+	white-space:nowrap;   /* never wrap a label onto two lines ("About Us") */
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-item:hover > .nav-link,
+.navbar-light .navbar-nav .current-menu-item > .nav-link {
+	color:#e50046;
+}
+
+/* Submenu items share the navy/red scheme. */
+.navbar-nav .sub-menu-container .nav-link { color:#123f6b; }
+.navbar-nav .sub-menu-container .nav-link:hover { color:#e50046; }
+
+/* ------------------------------------------------------------------ *
+ * Uniform service-card images.
+ * Service photos have mixed aspect ratios (some 3:2, some 16:9) and the theme only
+ * sets img{height:100%} with no container height, so taller images (e.g. the Pregnancy
+ * group session card) overflow. Lock every card image to a consistent 16:9 crop.
+ * ------------------------------------------------------------------ */
+.single-services-item.style-three a { display: block; }
+.single-services-item.style-three img {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	height: auto;
+	object-fit: cover;
+}
+
+/* ------------------------------------------------------------------ *
+ * Language switcher as a single dropdown.
+ * inline-block so the container shrink-wraps the toggle, keeping the
+ * absolutely-positioned menu anchored to the button. (In the collapsed
+ * mobile navbar the menu switches to static — see the media query below.)
+ * ------------------------------------------------------------------ */
+.language-switcher.dropdown { position: relative; display: inline-block; margin-left: 20px; }
+.language-switcher .lang-toggle {
+	display: flex; align-items: center; gap: .45em;
+	background: #fff; border: 1px solid #c4c4c4; border-radius: 4px;
+	padding: 6px 12px; color: #123f6b; font-weight: 600; cursor: pointer;
+	font-size: 15px; line-height: 1;
+}
+.language-switcher .lang-toggle:hover { border-color: #123f6b; }
+.language-switcher .lang-toggle i { font-size: 16px; transition: transform .2s; }
+.language-switcher.open .lang-toggle i { transform: rotate(180deg); }
+.language-switcher .lang-menu {
+	position: absolute; top: calc(100% + 6px); right: 0; min-width: 100%;
+	margin: 0; padding: 4px 0; list-style: none;
+	background: #fff; border: 1px solid #e3e3e3; border-radius: 4px;
+	box-shadow: 0 10px 24px rgba(0,0,0,.12); z-index: 1001;
+	opacity: 0; visibility: hidden; transform: translateY(8px);
+	transition: opacity .2s ease, transform .2s ease, visibility .2s;
+}
+.language-switcher:hover .lang-menu,
+.language-switcher.open .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.language-switcher .lang-menu li { width: 100%; }
+.language-switcher .lang-menu a {
+	display: flex; align-items: center; gap: .45em;
+	padding: 7px 14px; color: #123f6b; font-weight: 600; text-decoration: none; white-space: nowrap;
+}
+.language-switcher .lang-menu a:hover { background: #f3f9f8; color: #e50046; }
+.language-switcher img { vertical-align: middle; border-radius: 2px; }
+
+/* Crisp SVG flags — keep aspect ratio (Nepal flag is a non-rectangular pennant). */
+.language-switcher img { height: 15px; width: auto; border-radius: 0; display: inline-block; }
+.language-switcher .lang-toggle, .language-switcher .lang-menu a { align-items: center; }
+
+/* ------------------------------------------------------------------ *
+ * Language switcher refinements: square corners, CSS caret (no icon
+ * font dependency), and keep the dropdown within the viewport.
+ * ------------------------------------------------------------------ */
+.language-switcher .lang-toggle {
+	border-radius: 0;
+	padding: 7px 10px;
+	gap: .5em;
+}
+.language-switcher .lang-menu { border-radius: 0; right: 0; left: auto; min-width: 140px; }
+/* Pure-CSS down caret so the control always renders (icon font glyphs were missing). */
+.lang-caret {
+	display: inline-block;
+	width: 0; height: 0;
+	margin-left: 2px;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 5px solid #123f6b;
+	transition: transform .2s ease;
+}
+.language-switcher.open .lang-caret { transform: rotate(180deg); }
+
+/* In the collapsed (mobile) navbar the switcher sits under the nav links,
+   and the menu expands inline (static) instead of floating. */
+@media (max-width: 991.98px) {
+	.language-switcher.dropdown { display: inline-block; margin: 10px 0 4px; }
+	.language-switcher .lang-menu { position: static; display: none; min-width: 0; }
+	.language-switcher:hover .lang-menu,
+	.language-switcher.open .lang-menu { display: block; }
+}
+
+/* ------------------------------------------------------------------ *
+ * Services carousel on smaller screens.
+ * The original hangs the prev/next arrows half outside the carousel
+ * (left/right: -20px), where they clip against the viewport or overlap
+ * the card edges. Below the lg breakpoint, move them into a centered
+ * row under the cards instead.
+ * ------------------------------------------------------------------ */
+@media (max-width: 991.98px) {
+	.services-slide.owl-theme .owl-nav,
+	.services-slide-two.owl-theme .owl-nav {
+		display: flex;
+		justify-content: center;
+		gap: 12px;
+		margin-top: 20px;
+	}
+	.services-slide.owl-theme .owl-nav .owl-prev,
+	.services-slide.owl-theme .owl-nav .owl-next,
+	.services-slide-two.owl-theme .owl-nav .owl-prev,
+	.services-slide-two.owl-theme .owl-nav .owl-next {
+		position: static;
+		transform: none;
+	}
+}
+
+/* ------------------------------------------------------------------ *
+ * Mobile hero content position.
+ * The original responsive rule anchors .banner-content.style-three with
+ * bottom: 32% but never resets the desktop top: 50% + translateY(-50%).
+ * With both top and bottom set the box is stretched to a sliver and the
+ * text overflows it, landing mid-photo over the subjects' faces.
+ * Reset top/transform so the block anchors cleanly toward the bottom.
+ * ------------------------------------------------------------------ */
+@media (max-width: 767.98px) {
+	.banner-content.style-three {
+		top: auto;
+		transform: none;
+	}
+	/* Left-align hero content on small screens, matching the desktop layout. */
+	.banner-content.style-three { text-align: left; }
+}
+
+/* Equal-height service cards: stretch the navy body so cards in the same
+   row align even when titles wrap to a different number of lines.
+   Covers both the home carousel (.services-slide) and the page grids
+   (services/projects/activities), where cards sit in Bootstrap columns
+   that already stretch to the row height. */
+.services-slide .owl-stage { display: flex; }
+.services-slide .owl-item { display: flex; }
+.single-services-item.style-three {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.services-slide .single-services-item { width: 100%; }
+.single-services-item.style-three .services-contents { flex: 1; }
+
+/* ------------------------------------------------------------------ *
+ * Contact page "Our Location" map.
+ * The imported page carried a LiteSpeed lazy-loaded Google Maps iframe
+ * whose real URL sat in data-litespeed-src while src stayed about:blank,
+ * so without that plugin the panel rendered blank. It is replaced by a
+ * static map screenshot linking out to Google Maps.
+ * The image must never be cropped: Google's attribution strip ("Google
+ * Maps" wordmark, "Map data (c) Google", Terms/Privacy) is baked into
+ * the bottom edge and has to stay visible, so no object-fit/cover and
+ * no overlay anywhere near the bottom of the frame.
+ * ------------------------------------------------------------------ */
+.location-map {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	border-radius: 6px;
+	box-shadow: 0 0 20px 3px rgb(0 0 0 / .07);
+	line-height: 0;
+	transition: box-shadow .3s ease, transform .3s ease;
+}
+.location-map img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.location-map:hover,
+.location-map:focus-visible {
+	box-shadow: 0 6px 28px 3px rgb(0 0 0 / .14);
+	transform: translateY(-3px);
+}
+/* Anchored top-right, clear of the attribution strip along the bottom. */
+.location-map-cta {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background-color: #e50046;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1;
+	padding: 11px 18px;
+	border-radius: 4px;
+	box-shadow: 0 2px 10px rgb(0 0 0 / .2);
+	transition: background-color .3s ease;
+}
+.location-map-cta i {
+	font-size: 17px;
+	line-height: 1;
+}
+.location-map:hover .location-map-cta,
+.location-map:focus-visible .location-map-cta {
+	background-color: #123f6b;
+}
+@media (max-width: 575.98px) {
+	.location-map-cta {
+		top: 10px;
+		right: 10px;
+		font-size: 13px;
+		padding: 9px 13px;
+	}
+}
+
+/* ------------------------------------------------------------------ *
+ * Partner ("Foundations and Organizations") carousel.
+ * dots is enabled so a partner that does not fit the current breakpoint
+ * stays reachable, but with only three logos the slider is usually a
+ * single page — hide the lone dot rather than show a control that does
+ * nothing. Cap the logo height so the SVGs stay even when the carousel
+ * scales them down on tablet.
+ * ------------------------------------------------------------------ */
+.partner-slide .owl-dots .owl-dot:only-child {
+	display: none;
+}
+.partner-slide .partner-item img {
+	max-height: 90px;
+	width: auto;
+	max-width: 100%;
+	margin: 0 auto;
+	object-fit: contain;
+}
+
+/* ------------------------------------------------------------------ *
+ * Supporter pages (Our Supporters, Business Partners, Foundations,
+ * Local Supporters) list every logo in a grid instead of the 3-up
+ * slider, which hid most of them. Each logo sits in an equal tile and
+ * is scaled to fit it, so wide wordmarks and square crests read at a
+ * similar visual size.
+ * ------------------------------------------------------------------ */
+.partner-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* a short last row (or a page with 3 logos) sits centred */
+	gap: 20px;
+	margin-top: 30px;
+}
+.partner-grid .partner-item {
+	flex: 0 0 calc((100% - 4 * 20px) / 5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 140px;
+	padding: 20px 24px;
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 6px;
+}
+.partner-grid .partner-item img {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+}
+@media only screen and (max-width: 991px) {
+	.partner-grid .partner-item {
+		flex-basis: calc((100% - 2 * 20px) / 3);
+	}
+}
+@media only screen and (max-width: 575px) {
+	.partner-grid {
+		gap: 12px;
+	}
+	.partner-grid .partner-item {
+		flex-basis: calc((100% - 12px) / 2);
+		height: 100px;
+		padding: 12px;
+	}
+}
+
+/* ------------------------------------------------------------------ *
+ * Simplify .default-btn ("Donate Us", "Read More").
+ * The original hover was a navy panel wiping up from the bottom: an
+ * absolutely-positioned ::after at z-index -1 inside an overflow:hidden,
+ * z-index:1 parent, driven by `animation: rotateIn`. Those keyframes are
+ * not defined anywhere in the theme, so the animation never ran and the
+ * overlay rendered inconsistently between browsers. Drop the pseudo
+ * element and just transition the background colour.
+ * Also pin the flex alignment: .default-btn is inline-flex but sets no
+ * align-items / justify-content, so the icon and label were left to
+ * default behaviour to line up — the gap replaces the icon's margin and
+ * its relative `top` nudge.
+ * ------------------------------------------------------------------ */
+.default-btn {
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	overflow: visible;
+	box-shadow: none;
+	transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.default-btn::after {
+	content: none;
+}
+/* The About block is wrapped in <ul><li>, so the button's icon also matched
+ * `.about-content ul li i` — the 80px pale-teal circle meant for feature-list
+ * bullets. That selector (0,1,3) outranks `.default-btn i` (0,1,1), and because
+ * .default-btn is position:relative the icon was absolutely positioned against
+ * the button itself, landing 30px down and spilling out below it as a circle
+ * with a near-invisible white chevron. Reset the icon back to a plain inline
+ * glyph, at a specificity that beats the list rule. */
+.default-btn i,
+.about-content ul li .default-btn i {
+	position: static;
+	top: auto;
+	left: auto;
+	width: auto;
+	height: auto;
+	line-height: 1;
+	margin-right: 0;
+	background: none;
+	border-radius: 0;
+	font-size: 15px !important;
+}
+.default-btn:hover,
+.default-btn:focus-visible {
+	background-color: #123F6B;
+	border-color: #123F6B;
+	color: #ffffff;
+}
+
+/* ------------------------------------------------------------------ *
+ * Services grid row spacing.
+ * The equal-height rule above gives .single-services-item.style-three
+ * height:100%, so the card fills its column and its own margin-bottom
+ * ends up outside the column box — it no longer pushes the next wrapped
+ * row down, leaving the second row of cards butted straight against the
+ * first. Put the vertical gap on the grid instead, where row-gap spaces
+ * only *between* rows and adds nothing after the last one.
+ * Scoped to .services-area .row: the home page's services section uses
+ * the .services-slide carousel, not a Bootstrap row, so it is untouched.
+ * ------------------------------------------------------------------ */
+.services-area .row {
+	row-gap: 30px;
+}
+.services-area .row .single-services-item {
+	margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------------ *
+ * Bag4Life page photo carousel dots.
+ * owl.theme.default.css is not enqueued, so carousel dots are unstyled
+ * by default. Mirror the .blog-slide dot pattern from the original
+ * theme's style.css: grey dots, brand red when active.
+ * ------------------------------------------------------------------ */
+.bag4life-carousel.owl-theme .owl-dots {
+line-height: 1;
+margin-top: 15px;
+text-align: center;
+}
+.bag4life-carousel.owl-theme .owl-dots .owl-dot {
+line-height: 1;
+}
+.bag4life-carousel.owl-theme .owl-dots .owl-dot span {
+display: inline-block;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #C4C4C4;
+transition: all ease 0.5s;
+margin: 0 5px;
+}
+.bag4life-carousel.owl-theme .owl-dots .owl-dot:hover span,
+.bag4life-carousel.owl-theme .owl-dots .owl-dot.active span {
+background-color: #e50046;
+}
+.bag4life-carousel.owl-theme .owl-dots .owl-dot.active span {
+width: 12px;
+height: 12px;
+}
