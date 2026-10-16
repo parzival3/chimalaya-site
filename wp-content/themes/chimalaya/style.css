@@ -944,6 +944,11 @@ p { font-family: var(--ff-body); font-size: 1rem; line-height: 1.7; color: var(-
 .section-title p,
 .site-content .text-center p,
 .site-content p.text-center { margin-left: auto; margin-right: auto; }
+/* Team & Governance pages: the intro runs the width of the photo grid below it. The
+ * imported markup nests a .container in a .container, which indents the text 12px
+ * past the cards; drop the inner padding so both share an edge. */
+.site-content .our-team-area p { max-width: none; }
+.our-team-area .container .container { padding-left: 0; padding-right: 0; }
 .site-content .home-impact-source,
 .site-content .about-content p { max-width: none; }
 
