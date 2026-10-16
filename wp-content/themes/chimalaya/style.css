@@ -40,6 +40,16 @@ body.admin-bar {
 body > .footer-area {
 	margin-top: auto;
 }
+/* Let the page's last section absorb the spare height, so a short page shows its
+ * own (grey/white) background down to the footer rather than a strip of body white. */
+body > .site-content {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+body > .site-content > :last-child {
+	flex-grow: 1;
+}
 
 /* ------------------------------------------------------------------ *
  * Primary mega-menu dropdowns.
@@ -385,16 +395,29 @@ body > .footer-area {
 	justify-content: center;
 	height: 140px;
 	padding: 20px 24px;
-	background: #fff;
-	border: 1px solid #eee;
-	border-radius: 6px;
+	background: var(--c-surface);
+	border: 1px solid var(--c-border);
+	border-radius: var(--r-md);
+	transition: box-shadow var(--t-med) var(--ease);
 }
+/* Logos sit muted until hover, when the tile lifts and the mark goes full
+   colour (A.7). */
 .partner-grid .partner-item img {
 	max-width: 100%;
 	max-height: 100%;
 	width: auto;
 	height: auto;
 	object-fit: contain;
+	filter: grayscale(1) opacity(.8);
+	transition: filter var(--t-med) var(--ease);
+}
+@media (hover: hover) {
+	.partner-grid .partner-item:hover {
+		box-shadow: var(--shadow-md);
+	}
+	.partner-grid .partner-item:hover img {
+		filter: none;
+	}
 }
 @media only screen and (max-width: 991px) {
 	.partner-grid .partner-item {
@@ -527,7 +550,8 @@ height: 12px;
 	margin: 6px 0 18px;
 }
 .impact-report .impact-lead {
-	font-size: 17px;
+	font-size: 1.1875rem;
+	line-height: 1.7;
 	margin-bottom: 24px;
 }
 .impact-report .impact-photo {
@@ -553,12 +577,12 @@ height: 12px;
 .impact-kpi strong {
 	display: block;
 	font-family: "Red Hat Display", sans-serif;
-	font-size: 40px;
+	font-size: 48px;
 	font-weight: 700;
 	line-height: 1.1;
 	color: #e50046;
 }
-.impact-kpi span { display: block; margin-top: 6px; font-size: 14px; color: #5b6b80; }
+.impact-kpi span { display: block; margin-top: 8px; font-size: 16px; line-height: 1.45; font-weight: 500; color: var(--c-text); }
 .impact-figure {
 	background: #fff;
 	border-radius: 6px;
@@ -568,15 +592,17 @@ height: 12px;
 .impact-figure figcaption {
 	font-family: "Red Hat Display", sans-serif;
 	font-weight: 600;
+	font-size: 19px;
+	line-height: 1.35;
 	color: #123f6b;
 	margin-bottom: 10px;
 }
 .impact-svg { width: 100%; height: auto; display: block; }
 .impact-scroll { overflow-x: auto; }
-.impact-note { font-size: 13px; color: #5b6b80; margin-top: 8px; }
-.impact-data { margin-top: 6px; font-size: 14px; }
-.impact-data summary { cursor: pointer; color: #e50046; }
-.impact-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
+.impact-note { font-size: 15px; line-height: 1.6; color: var(--c-text-muted); margin-top: 10px; }
+.impact-data { margin-top: 6px; font-size: 15px; }
+.impact-data summary { cursor: pointer; color: #e50046; font-weight: 600; }
+.impact-table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
 .impact-table th {
 	color: #123f6b;
 	font-weight: 600;
@@ -584,7 +610,7 @@ height: 12px;
 	padding: 6px 8px;
 	text-align: left;
 }
-.impact-table td { border-bottom: 1px solid #d7dee7; padding: 6px 8px; vertical-align: top; }
+.impact-table td { border-bottom: 1px solid #d7dee7; padding: 8px 10px; vertical-align: top; }
 .impact-schedule { background: #fff; }
 .impact-schedule td:nth-child(-n+2) { white-space: nowrap; }
 .impact-callout {
@@ -595,10 +621,14 @@ height: 12px;
 	margin: 18px 0;
 }
 .impact-callout-navy { border-left-color: #123f6b; }
-.impact-callout h5 { color: #123f6b; font-size: 18px; margin-bottom: 6px; }
+.impact-callout h5 { color: #123f6b; font-size: 20px; line-height: 1.3; margin-bottom: 8px; }
 /* .about-content ul li is styled by the theme as an icon card; this is a plain bullet list. */
 .impact-report .about-content .impact-list { padding-left: 1.1em; }
 .impact-report .about-content .impact-list li {
+	font-family: var(--ff-body);
+	font-size: 17px;
+	line-height: 1.6;
+	color: var(--c-text);
 	list-style-type: disc;
 	background: none;
 	box-shadow: none;
@@ -611,16 +641,694 @@ height: 12px;
 .impact-method {
 	border-top: 1px solid #d7dee7;
 	padding-top: 20px;
-	font-size: 14px;
-	color: #5b6b80;
+	font-size: 15px;
+	color: var(--c-text-muted);
 }
 .impact-method h5 { color: #123f6b; }
+/* Section headings: the theme's .about-content h3 is ~22px, too small for a report. */
+.impact-report .about-content h3 {
+	font-size: clamp(26px, 1.2rem + 1.2vw, 34px);
+	line-height: 1.2;
+	margin: 8px 0 24px;
+}
+.impact-report .about-content > p, .impact-report .about-content .row p:not(.impact-note) { font-size: 17px; }
+/* The chart SVGs are drawn at 11 units and scale with their column, so text can end up
+ * at 8px. Where the labels have room, set a larger size in SVG units per chart.
+ * baseline_needs is left alone: its long labels already fill the left margin. */
+.impact-chart-localities text { font-size: 15px; }
+.impact-chart-enrolment_by_year text,
+.impact-chart-ebf_months text { font-size: 13px; }
+.impact-chart-visit_coverage_by_year text { font-size: 12px; }
 @media (max-width: 991px) {
 	.impact-kpis { grid-template-columns: repeat(2, 1fr); }
 	.impact-report .impact-title { font-size: 34px; }
 }
 @media (max-width: 575px) {
 	.impact-kpis, .impact-kpis-3 { grid-template-columns: 1fr; }
-	.impact-kpi strong { font-size: 34px; }
-	.impact-svg { min-width: 520px; }
+	.impact-kpi strong { font-size: 40px; }
+	.impact-svg { min-width: 560px; }
+}
+
+/* === Modernize: icons (Phase 0) ===
+ * Inline SVG icons (inc/icons.php sprite) replacing the remixicon/flaticon
+ * webfonts. Base sizing inherits context font-size and colour, like the glyphs
+ * did; the rules below mirror the old `i`-element styles onto `svg.i`.
+ */
+svg.i {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	display: inline-block;
+	vertical-align: -0.125em;
+}
+
+/* Buttons (Donate / Read more): keep the small icon + gap. */
+.default-btn svg.i {
+	font-size: 14px;
+	color: #ffffff;
+	margin-right: 5px;
+	position: relative;
+	top: 0;
+}
+
+/* Footer socials: the white circle used to sit on the <i>; move it to the <a>. */
+.single-footer-widget .social-link li a {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	display: inline-block;
+	color: #e50046;
+	background: #fff;
+	border-radius: 50px;
+	transition: all ease 0.5s;
+}
+.single-footer-widget .social-link li a svg.i {
+	font-size: 18px;
+	vertical-align: middle;
+}
+.single-footer-widget .social-link li a:hover {
+	background-color: #e50046;
+	color: #ffffff;
+}
+
+/* Team pages: crimson mail icon, white on hover. */
+.single-team-item .team-content ul li a svg.i { color: #e50046; transition: all ease 0.5s; }
+.single-team-item .team-content ul li a:hover svg.i { color: #ffffff; }
+
+/* Contact page: the big crimson flaticon glyphs. */
+.single-contact-info svg.i {
+	font-size: 60px;
+	color: #e50046;
+	line-height: 1;
+	margin-bottom: 8px;
+	display: block;
+}
+
+/* Video play button: 32px glyph centred in the button (the old flex-on-<i> trick
+ * doesn't apply to an SVG; translate centres it, 1px right for the play triangle). */
+.video-btn svg.i {
+	font-size: 32px;
+	color: #123F6B;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(calc(-50% + 1px), -50%);
+	transition: all ease 0.5s;
+}
+.video-btn:hover svg.i { color: #ffffff; }
+
+/* === Modernize: sticky header (Phase 1) ===
+ * Spec: MODERNIZATION-PLAN.md A.8. Pure-CSS sticky; theme-init.js toggles
+ * .is-scrolled after 8px of scroll for the shadow. */
+.header-area {
+position: sticky;
+top: 0;
+z-index: 1000;
+background: #ffffff;
+transition: box-shadow var(--t-med) var(--ease);
+}
+.header-area.is-scrolled { box-shadow: var(--shadow-md); }
+
+/* === Modernize: homepage hero (Phase 1) ===
+ * Spec: MODERNIZATION-PLAN.md A.9. Single static hero replacing the 4-slide
+ * carousel. Left-aligned content, max 620px, gradient overlay for legibility. */
+.home-hero {
+position: relative;
+min-height: min(78vh, 720px);
+display: flex;
+align-items: center;
+overflow: hidden;
+background: var(--c-navy-900); /* shows while the image loads */
+}
+.home-hero-img {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center 30%;
+}
+.home-hero-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(90deg, rgba(11,42,73,.88) 0%, rgba(11,42,73,.62) 50%, rgba(11,42,73,0) 82%);
+}
+.home-hero .container { position: relative; z-index: 1; }
+.home-hero-content { max-width: 620px; padding: 48px 0; }
+
+/* Eyebrow: white with the crimson bar (A.6 scoped to the hero for now). */
+.home-hero-eyebrow {
+display: inline-block;
+font-family: var(--ff-head);
+font-size: clamp(0.9375rem, 0.85rem + 0.3vw, 1.0625rem);
+font-weight: 700;
+letter-spacing: .1em;
+text-transform: uppercase;
+color: #ffffff;
+margin-bottom: 16px;
+}
+.home-hero-eyebrow::before {
+content: "";
+display: inline-block;
+width: 32px;
+height: 3px;
+background: var(--c-crimson);
+margin-right: 12px;
+vertical-align: middle;
+}
+:lang(ne) .home-hero-eyebrow { text-transform: none; letter-spacing: normal; }
+
+.home-hero-title {
+color: #ffffff;
+font-size: clamp(2.25rem, 1.5rem + 2.8vw, 3.75rem);
+font-weight: 700;
+line-height: 1.15;
+margin-bottom: 16px;
+}
+.home-hero-lead {
+color: rgba(255,255,255,.9);
+font-size: clamp(1.125rem, 1rem + 0.4vw, 1.3125rem);
+line-height: 1.7;
+margin-bottom: 28px;
+}
+.home-hero-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* .btn-light (A.5): white bg / navy text, for dark contexts like this hero. */
+.default-btn.btn-light {
+background: #ffffff;
+color: var(--c-navy);
+}
+.default-btn.btn-light:hover {
+background: var(--c-crimson);
+color: #ffffff;
+}
+
+@media (max-width: 767px) {
+.home-hero { min-height: min(70vh, 560px); }
+/* Bottom-to-top overlay on mobile: text sits over the busier lower half. */
+.home-hero-overlay {
+background: linear-gradient(0deg, rgba(11,42,73,.92) 0%, rgba(11,42,73,.68) 60%, rgba(11,42,73,.35) 100%);
+}
+.home-hero-content { padding: 40px 0; }
+.home-hero-eyebrow { font-size: 0.875rem; letter-spacing: .05em; }
+.home-hero-eyebrow::before { width: 24px; margin-right: 10px; }
+}
+
+/* === Modernize: impact ribbon (Phase 2) ===
+ * Spec: MODERNIZATION-PLAN.md A.9. White card pulled up over the hero bottom on
+ * desktop; 4 KPIs in a row >= 992px, 2x2 below; dividers desktop-only. Numbers
+ * come from assets/impact/metrics.json (template-parts/impact-ribbon.php). */
+.home-impact { position: relative; z-index: 2; }
+@media (min-width: 992px) {
+.home-impact { margin-top: calc(-1 * var(--s-8)); }
+}
+@media (max-width: 991px) {
+.home-impact { margin-top: var(--s-6); }
+}
+.home-impact-card {
+background: var(--c-surface);
+border-radius: var(--r-md);
+box-shadow: var(--shadow-lg);
+padding: var(--s-6) var(--s-6) var(--s-5);
+}
+.home-impact-kpis {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: var(--s-5) var(--s-4);
+}
+@media (min-width: 992px) {
+.home-impact-kpis { grid-template-columns: repeat(4, 1fr); gap: 0; }
+.home-impact-kpi + .home-impact-kpi { border-left: 1px solid var(--c-border); }
+}
+.home-impact-kpi { text-align: center; padding: 0 var(--s-4); }
+.home-impact-kpi strong {
+display: block;
+font-family: var(--ff-head);
+font-size: clamp(2.25rem, 1.6rem + 1.8vw, 3.25rem);
+font-weight: 700;
+line-height: 1.1;
+color: var(--c-navy);
+}
+.home-impact-kpi span {
+display: block;
+margin-top: 8px;
+font-size: 1rem;
+line-height: 1.45;
+font-weight: 500;
+color: var(--c-text);
+}
+.home-impact-source {
+margin: var(--s-5) 0 0;
+padding-top: var(--s-4);
+border-top: 1px solid var(--c-border);
+text-align: center;
+font-size: 0.9375rem;
+color: var(--c-text-muted);
+}
+.home-impact-source a { color: var(--c-crimson); font-weight: 600; text-decoration: none; }
+.home-impact-source a:hover { text-decoration: underline; }
+/* Phones: tighter card and cell padding so the larger labels keep two-word lines. */
+@media (max-width: 575px) {
+.home-impact-card { padding: var(--s-5) var(--s-3) var(--s-4); }
+.home-impact-kpi { padding: 0 var(--s-1); }
+.home-impact-kpi strong { font-size: 2rem; }
+.home-impact-kpi span { font-size: 0.9375rem; }
+}
+
+/* === Modernize: medical advisors (Phase 2) ===
+ * Ships dark: only rendered when CHIMALAYA_SHOW_ADVISORS is true (functions.php). */
+.home-advisors { background: var(--c-surface); }
+.home-advisors-title { color: var(--c-navy); margin-bottom: var(--s-6); }
+.home-advisors-card {
+background: var(--c-surface);
+border: 1px solid var(--c-border);
+border-radius: var(--r-md);
+box-shadow: var(--shadow-sm);
+padding: var(--s-6);
+height: 100%;
+}
+.home-advisors-card h3 { color: var(--c-navy); font-size: 1.375rem; margin-bottom: 4px; }
+.home-advisors-role {
+font-family: var(--ff-head);
+font-size: 0.875rem;
+font-weight: 600;
+letter-spacing: .05em;
+text-transform: uppercase;
+color: var(--c-crimson);
+margin-bottom: var(--s-4);
+}
+:lang(ne) .home-advisors-role { text-transform: none; letter-spacing: normal; }
+.home-advisors-card p:last-child { margin-bottom: 0; color: var(--c-text); }
+
+/* === Modernize: type scale (Phase 4, A.3) ===
+ * Fluid section titles replace the fixed 40px; body text moves from #616161 to
+ * the --c-text token (better contrast); Devanagari keeps its own family/leading
+ * via tokens.css. */
+h2, .h2 { font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem); line-height: 1.2; }
+h3, .h3 { font-size: 1.375rem; line-height: 1.3; }
+h4, .h4 { font-size: 1.125rem; line-height: 1.4; }
+
+body { color: var(--c-text); }
+p { font-family: var(--ff-body); font-size: 1rem; line-height: 1.7; color: var(--c-text); }
+
+/* Lead paragraph: the subtitle under a section H2. */
+.section-title p { font-size: 1.125rem; line-height: 1.7; }
+
+/* Cap prose measure on text-heavy pages; cards are narrower than 72ch anyway.
+ * A capped paragraph inside centred text must be centred as a box too, or it
+ * hugs the left edge (video intro, section leads). The ribbon source line spans
+ * its card (it carries the divider), and about sections wrap around a floated
+ * image, so those run full width. */
+.site-content p { max-width: 72ch; }
+.section-title p,
+.site-content .text-center p,
+.site-content p.text-center { margin-left: auto; margin-right: auto; }
+.site-content .home-impact-source,
+.site-content .about-content p { max-width: none; }
+
+/* Justified body copy leaves rivers of white space (worse in Devanagari) —
+ * left-align everywhere. Covers both inline styles (imported content) and the
+ * original theme's class-based rule (.about-content p, original style.css:1372). */
+[style*="justify"],
+.about-content p { text-align: left !important; }
+
+/* === Modernize: section rhythm (Phase 4, A.4) ===
+ * One vertical padding token for every top-level section; the two legacy
+ * near-white section backgrounds collapse onto --c-surface-alt so sections
+ * alternate strictly white / grey. */
+.pt-70 { padding-top: var(--section-pad); }
+.pb-70 { padding-bottom: var(--section-pad); }
+.section-title { margin-bottom: var(--s-7); }
+.bg-color-f8f8f8, .bg-color-f3f9f8 { background-color: var(--c-surface-alt); }
+
+/* === Modernize: buttons (Phase 4, A.5) ===
+ * Pill shape, 48px tap target, heading font. The navy ::after wipe was already
+ * removed above; hover is now a darker crimson with a 1px lift. Focus gets a
+ * visible ring (the original `button{outline:0!important}` is beaten by the
+ * more specific :focus-visible rule). */
+.default-btn {
+font-family: var(--ff-head);
+font-size: 1rem;
+font-weight: 700;
+letter-spacing: .01em;
+padding: 14px 28px;
+min-height: 48px;
+border-width: 2px;
+border-radius: var(--r-pill);
+transition: background-color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease),
+color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease),
+box-shadow var(--t-fast) var(--ease);
+}
+.default-btn:hover,
+.default-btn:focus-visible {
+background-color: var(--c-crimson-700);
+border-color: var(--c-crimson-700);
+color: var(--c-surface);
+transform: translateY(-1px);
+box-shadow: var(--shadow-md);
+}
+.default-btn:active { transform: none; box-shadow: none; }
+.default-btn:focus-visible,
+button:focus-visible {
+outline: 3px solid var(--c-crimson) !important;
+outline-offset: 3px;
+}
+/* Secondary action — transparent with a navy border. */
+.default-btn.btn-outline {
+background-color: transparent;
+border-color: var(--c-navy);
+color: var(--c-navy);
+}
+.default-btn.btn-outline:hover,
+.default-btn.btn-outline:focus-visible {
+background-color: var(--c-navy);
+border-color: var(--c-navy);
+color: var(--c-surface);
+}
+
+/* === Modernize: eyebrow (Phase 4, A.6) ===
+ * One treatment for every .top-title: small, bold, uppercase, crimson, with a
+ * 24x2px bar in front. Devanagari drops the uppercase/tracking (no case in NE). */
+.top-title {
+font-family: var(--ff-head);
+font-size: 0.875rem;
+font-weight: 700;
+letter-spacing: .08em;
+text-transform: uppercase;
+color: var(--c-crimson);
+}
+.top-title::before {
+content: "";
+display: inline-block;
+width: 24px;
+height: 2px;
+margin-right: 8px;
+vertical-align: middle;
+background: var(--c-crimson);
+}
+:lang(ne) .top-title { text-transform: none; letter-spacing: normal; }
+/* Some imported pages (About Pia Torp) carry an empty eyebrow: hide the stray dash. */
+.top-title:empty { display: none; }
+
+/* === Modernize: cards (Phase 4, A.7) ===
+ * Services + activities cards: white surface, r-md, soft shadow, equal height,
+ * 16/10 image crop, 3-line excerpt clamp, whole card clickable via the title
+ * link's stretched ::after. Hover (pointer devices only) lifts the card and
+ * zooms the image slightly. Drops the navy text box on service cards. */
+.single-services-item.style-three,
+.single-blog-item {
+position: relative;
+background: var(--c-surface);
+border-radius: var(--r-md);
+box-shadow: var(--shadow-sm);
+overflow: hidden;
+transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
+}
+/* The crimson ::after panel (a leftover hover wipe) would paint over the new
+   white surface — the card background is part of the design now. */
+.single-services-item.style-three::after { content: none; }
+
+.single-services-item.style-three img,
+.single-blog-item > a > img {
+aspect-ratio: 16 / 10;
+border-radius: 0;
+transition: transform var(--t-med) var(--ease);
+}
+.single-blog-item > a > img {
+padding: 0;
+height: auto;
+background: none;
+}
+
+.single-services-item.style-three .services-contents,
+.single-blog-item .blog-content {
+background: var(--c-surface);
+padding: var(--s-5);
+border-radius: 0;
+}
+.single-services-item.style-three .services-contents h3 { margin-bottom: 8px; }
+.single-services-item.style-three .services-contents h3 a,
+.single-blog-item .blog-content h3 a { color: var(--c-navy); }
+.single-services-item.style-three .services-contents h3 a:hover,
+.single-blog-item .blog-content h3 a:hover { color: var(--c-crimson); }
+/* Stretched link: the whole card acts as the title link's hit area. */
+.single-services-item.style-three .services-contents h3 a::after,
+.single-blog-item .blog-content h3 a::after {
+content: "";
+position: absolute;
+inset: 0;
+}
+.single-services-item.style-three .services-contents p,
+.single-blog-item .blog-content p {
+color: var(--c-text);
+line-height: 1.7;
+-webkit-line-clamp: 3;
+margin-bottom: 0;
+}
+.single-blog-item { display: flex; flex-direction: column; height: 100%; }
+.single-blog-item .blog-content { flex: 1; }
+.single-blog-item .blog-content ul li { border-right-color: var(--c-border); }
+.single-blog-item .blog-content ul li a { color: var(--c-text-muted); }
+.single-blog-item .blog-content ul li a:hover { color: var(--c-crimson); }
+/* Date pill: white chip overlapping the image's bottom-left corner. */
+.single-blog-item .blog-content span {
+background: var(--c-surface);
+color: var(--c-navy);
+font-size: 0.75rem;
+font-weight: 700;
+padding: 6px 14px;
+border-radius: var(--r-pill);
+box-shadow: var(--shadow-sm);
+top: -16px;
+left: 20px;
+right: auto;
+}
+
+@media (hover: hover) {
+.single-services-item.style-three:hover,
+.single-blog-item:hover {
+transform: translateY(-4px);
+box-shadow: var(--shadow-lg);
+}
+.single-services-item.style-three:hover img,
+.single-blog-item:hover > a > img { transform: scale(1.03); }
+}
+
+/* Equal heights + row gaps for the activities grid and home carousel,
+   mirroring the services rules above. */
+.blog-area .row { row-gap: 30px; }
+.blog-area .row .single-blog-item { margin-bottom: 0; }
+.blog-slide .owl-stage { display: flex; }
+.blog-slide .owl-item { display: flex; }
+.blog-slide .single-blog-item { width: 100%; }
+
+/* === Modernize: header (Phase 4, A.8) ===
+ * 80/64px sticky bar, 44/36px logo, head-font nav links, current-page
+ * underline, rounded dropdowns that also open on keyboard focus, pill
+ * language switcher. Shadow only once scrolled (Phase 1 .is-scrolled). */
+.navbar-area {
+padding-top: 0;
+padding-bottom: 0;
+box-shadow: none;
+}
+.navbar-area .navbar {
+min-height: 80px;
+padding-top: 0;
+padding-bottom: 0;
+}
+.navbar-area .navbar-brand { margin-left: 0; }
+.navbar-area .navbar-brand img {
+width: auto;
+height: 44px;
+}
+@media (max-width: 991.98px) {
+.navbar-area .navbar { min-height: 64px; }
+.navbar-area .navbar-brand img { height: 36px; }
+}
+
+.navbar-light .navbar-nav .nav-link {
+font-family: var(--ff-head);
+font-size: 1rem;
+font-weight: 600;
+}
+/* Current page / current section: crimson + 2px underline (top level). */
+.navbar-light .navbar-nav > .current-menu-item > .nav-link,
+.navbar-light .navbar-nav > .current-menu-ancestor > .nav-link {
+color: var(--c-crimson);
+text-decoration: underline;
+text-decoration-thickness: 2px;
+text-underline-offset: 6px;
+}
+
+/* Dropdowns: rounded, deeper shadow, roomier items, keyboard-openable. */
+.navbar-nav .sub-menu-container {
+border-radius: var(--r-md);
+box-shadow: var(--shadow-lg);
+padding: var(--s-2);
+}
+.navbar-nav .sub-menu-container .nav-link {
+padding: 10px 16px;
+border-radius: var(--r-sm);
+}
+.navbar-nav .sub-menu-container .nav-link:hover,
+.navbar-nav .sub-menu-container .nav-link:focus {
+background: var(--c-surface-alt);
+color: var(--c-crimson);
+}
+.navbar-nav .nav-item:focus-within > .sub-menu-container {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+/* On mobile submenus are display:none until tapped; let keyboard focus open them too. */
+@media (max-width: 991.98px) {
+.navbar-nav .nav-item:focus-within > .sub-menu-container { display: block; }
+}
+
+/* Language switcher as a pill. */
+.language-switcher .lang-toggle {
+border: 1px solid var(--c-border);
+border-radius: var(--r-pill);
+}
+.language-switcher .lang-toggle:hover { border-color: var(--c-navy); }
+/* Dropdown echoes the toggle: rounded container, pill items. */
+.language-switcher .lang-menu { border-radius: var(--r-lg); padding: 6px; }
+.language-switcher .lang-menu a { border-radius: var(--r-pill); padding: 8px 16px; }
+
+/* === Modernize: footer (Phase 4, A.10) ===
+ * One navy block: brand-navy widget area + darker bottom bar, muted-white
+ * links, 40px social circles (white/navy, crimson on hover), credibility
+ * line in the bottom bar. */
+.footer-area.bg-color { background-color: var(--c-navy); }
+.single-footer-widget h3 {
+font-size: 1.125rem;
+color: var(--c-surface);
+}
+.single-footer-widget .contact-info li,
+.single-footer-widget .contact-info a,
+.single-footer-widget .use-link li a {
+color: rgba(255, 255, 255, .8);
+}
+.single-footer-widget .contact-info a:hover,
+.single-footer-widget .use-link li a:hover {
+color: var(--c-surface);
+text-decoration: underline;
+}
+.single-footer-widget .social-link li a {
+width: 40px;
+height: 40px;
+line-height: 40px;
+color: var(--c-navy);
+background: var(--c-surface);
+transition: background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+.single-footer-widget .social-link li a:hover {
+background: var(--c-crimson);
+color: var(--c-surface);
+}
+
+.copy-right-area { background-color: var(--c-navy-900); }
+.copy-right-content {
+border-top: 1px solid rgba(255, 255, 255, .15);
+padding-top: var(--s-4);
+padding-bottom: var(--s-4);
+gap: var(--s-2) var(--s-5);
+}
+.copy-right-content p { color: rgba(255, 255, 255, .8); }
+/* The Certificates link stays underlined so it reads as a link among text. */
+.copy-right-content p a { color: var(--c-surface); text-decoration: underline; }
+.copy-right-content p a:hover { color: var(--c-surface); }
+
+/* === Modernize: accessibility (Phase 4, A.11) ===
+ * Visible focus everywhere (crimson on light, white on dark), skip link,
+ * and 44px tap targets for touch controls. */
+:focus-visible {
+outline: 3px solid var(--c-crimson);
+outline-offset: 3px;
+}
+/* The original kills button outlines with !important — restore on focus. */
+button:focus-visible,
+[role="button"]:focus-visible {
+outline: 3px solid var(--c-crimson) !important;
+outline-offset: 3px;
+}
+/* Crimson is hard to see on navy — white focus ring on dark areas. */
+.footer-area :focus-visible,
+.copy-right-area :focus-visible,
+.home-hero :focus-visible {
+outline-color: var(--c-surface);
+}
+
+/* Skip-to-content: first focusable element, hidden until focused. */
+.skip-link {
+position: absolute;
+left: var(--s-4);
+top: -100px;
+z-index: 2000;
+background: var(--c-navy);
+color: var(--c-surface);
+padding: 10px 20px;
+border-radius: var(--r-pill);
+font-weight: 600;
+transition: top var(--t-fast) var(--ease);
+}
+.skip-link:focus-visible {
+top: var(--s-4);
+color: var(--c-surface);
+}
+
+/* Tap targets ≥ 44px (WCAG 2.2). */
+.navbar-toggler {
+min-width: 44px;
+min-height: 44px;
+}
+.language-switcher .lang-toggle { min-height: 44px; }
+/* 40px visual circle (A.10) inside a 44px tap target via transparent border. */
+.single-footer-widget .social-link li a {
+width: 44px;
+height: 44px;
+line-height: 40px;
+border: 2px solid transparent;
+background-clip: padding-box;
+}
+@media (max-width: 991.98px) {
+.navbar-light .navbar-nav .nav-link {
+padding-top: 12px;
+padding-bottom: 12px;
+}
+}
+
+/* === Modernize: motion (Phase 4, A.12) ===
+ * Replace the original blanket `transition: all ease .5s` on links with
+ * specific properties at token speeds; honour reduced motion. */
+a {
+transition: color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after {
+transition-duration: .01ms !important;
+animation-duration: .01ms !important;
+}
+}
+
+/* === Modernize: about-section text flow (Phase 4 follow-up) ===
+ * Imported about sections put every paragraph in a col-lg-6 beside one image,
+ * leaving a long narrow column. The importers move the image column first
+ * (float_about_image()); on desktop it floats right so the text wraps around it
+ * and continues full width below. Below lg, image on top, then text. */
+.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) .about-img { margin: 0; padding: 0; }
+@media (min-width: 992px) {
+.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) { display: block; margin-left: 0; margin-right: 0; }
+.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4)::after { content: ""; display: block; clear: both; }
+.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) > [class*="col-lg"] { padding: 0; width: auto; max-width: none; }
+.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) > .col-lg-6:first-child {
+float: right;
+width: 42%;
+margin: 6px 0 var(--s-5) var(--s-6);
+}
+}
+@media (max-width: 991.98px) {
+.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) { flex-direction: column !important; }
+.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) > .col-lg-6:first-child { margin-bottom: var(--s-2); }
 }

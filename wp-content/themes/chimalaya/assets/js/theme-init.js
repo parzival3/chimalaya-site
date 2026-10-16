@@ -1,24 +1,10 @@
 /* Initialise carousels the original theme's main.js handled (which we could not fetch).
-   Currently: the full-width hero banner. owl-carousel elements are display:none until
-   owlCarousel() runs, so an uninitialised slider is invisible. */
+   owl-carousel elements are display:none until owlCarousel() runs, so an uninitialised
+   slider is invisible. (The old hero banner carousel is gone — Phase 1 replaced it with
+   the static template hero. The home partner/services/blog sliders were never
+   initialised here; the safety net below reveals them as static grids.) */
 jQuery(function ($) {
 	if (!$.fn.owlCarousel) return;
-	$('.banner-area.owl-carousel').each(function () {
-		$(this).owlCarousel({
-			items: 1,
-			loop: true,
-			nav: false,   // no arrow styling exists in the original CSS; autoplay drives the hero
-			dots: true,
-			autoplay: true,
-			autoplayTimeout: 6000,
-			autoplayHoverPause: true,
-			smartSpeed: 800,
-			navText: [
-				'<i class="ri-arrow-left-s-line"></i>',
-				'<i class="ri-arrow-right-s-line"></i>'
-			]
-		});
-	});
 	// Bag4Life page: photo carousel at the bottom of the page.
 	$('.bag4life-carousel.owl-carousel').each(function () {
 		$(this).owlCarousel({
@@ -63,3 +49,12 @@ jQuery(function ($) {
 	});
 	$(document).on('click', function () { $('.language-switcher').removeClass('open'); });
 });
+
+// Sticky header: shadow only after 8px of scroll (A.8). Passive listener, no jQuery.
+(function () {
+	var header = document.querySelector('.header-area');
+	if (!header) return;
+	var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 8); };
+	window.addEventListener('scroll', onScroll, { passive: true });
+	onScroll();
+})();

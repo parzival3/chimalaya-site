@@ -1,0 +1,113 @@
+/* === Modernize: fonts (Phase 0) ===
+ * Self-hosted fonts — no third-party requests (GDPR) and no offline-screenshot hangs.
+ * Files live in ../fonts/ (SIL OFL, see ../fonts/OFL.txt). Each roman file is a
+ * variable font covering every weight, so there is one @font-face per family and
+ * the browser downloads it once. unicode-range keeps each
+ * file off pages that don't need it: the Devanagari subsets only load on NE pages.
+ * The :root block holds the Phase 4 design tokens (MODERNIZATION-PLAN.md A.1).
+ */
+
+:root {
+	--ff-head: "Red Hat Display", system-ui, sans-serif;
+	--ff-body: "Open Sans", system-ui, sans-serif;
+	--ff-deva: "Noto Sans Devanagari", "Open Sans", system-ui, sans-serif;
+
+	/* Brand (unchanged) */
+	--c-navy: #123F6B;        /* headings, header text, footer bg — 10.8:1 on white */
+	--c-crimson: #e50046;     /* CTAs, links on hover, eyebrows — 5.9:1 on white   */
+	--c-crimson-700: #b8003a; /* hover/active for crimson buttons                   */
+	--c-navy-900: #0b2a49;    /* footer bottom bar, hero overlay                     */
+
+	/* Neutrals (consolidates #616161, #8c9498, #f8f8f8, #f4f4f4, #f3f9f8, #ededed) */
+	--c-text: #4a4a4a;        /* body text (was #616161; 8.9:1 on white)            */
+	--c-text-muted: #6b7378;  /* meta, captions (replaces #8c9498 which is only 3.1:1) */
+	--c-surface: #ffffff;
+	--c-surface-alt: #f6f7f9; /* alternating sections (replaces #f8f8f8/#f4f4f4/#f3f9f8) */
+	--c-border: #e4e7eb;
+
+	/* Spacing scale (4px base) */
+	--s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
+	--s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px;
+	--section-pad: clamp(48px, 6vw, 96px);   /* replaces pt-70/pb-70 */
+
+	/* Shape & depth */
+	--r-sm: 6px;  --r-md: 12px;  --r-lg: 20px;  --r-pill: 999px;
+	--shadow-sm: 0 1px 2px rgba(18,63,107,.06), 0 1px 3px rgba(18,63,107,.08);
+	--shadow-md: 0 4px 12px rgba(18,63,107,.08), 0 2px 4px rgba(18,63,107,.06);
+	--shadow-lg: 0 12px 28px rgba(18,63,107,.12), 0 4px 8px rgba(18,63,107,.06);
+
+	/* Motion */
+	--ease: cubic-bezier(.2,.7,.2,1);
+	--t-fast: 150ms; --t-med: 250ms;          /* replaces the global `all ease .5s` */
+}
+
+@font-face {
+	font-family: 'Red Hat Display';
+	font-style: normal;
+	font-weight: 300 900;
+	font-display: swap;
+	src: url('../fonts/red-hat-display.woff2') format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 300 800;
+	font-display: swap;
+	src: url('../fonts/open-sans.woff2') format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../fonts/open-sans-italic.woff2') format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: 'Noto Sans Devanagari';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('../fonts/noto-sans-devanagari.woff2') format('woff2');
+	unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+
+@font-face {
+	font-family: 'Noto Sans Devanagari';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('../fonts/noto-sans-devanagari-latin.woff2') format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Devanagari glyphs for the brand families too, so any element set in Red Hat
+ * Display or Open Sans (buttons, nav, hero) renders Nepali in Noto instead of an
+ * unpredictable system fallback. Same file as above: no extra download. */
+@font-face {
+	font-family: 'Red Hat Display';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('../fonts/noto-sans-devanagari.woff2') format('woff2');
+	unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('../fonts/noto-sans-devanagari.woff2') format('woff2');
+	unicode-range: U+0900-097F, U+1CD0-1CF4, U+1CF7-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B0A;
+}
+
+/* Nepali pages: neither brand font has Devanagari glyphs — give them a real face.
+ * Devanagari needs more leading than Latin. */
+:lang(ne) body, :lang(ne) p, :lang(ne) li { font-family: var(--ff-deva); line-height: 1.8; }
+:lang(ne) h1, :lang(ne) h2, :lang(ne) h3, :lang(ne) h4, :lang(ne) h5, :lang(ne) h6 { font-family: var(--ff-deva); font-weight: 600; }
