@@ -58,3 +58,18 @@ jQuery(function ($) {
 	window.addEventListener('scroll', onScroll, { passive: true });
 	onScroll();
 })();
+
+// Home introductory video: play in place. The card links to YouTube; on click it is
+// replaced by a youtube-nocookie embed, so YouTube is only contacted once asked.
+document.addEventListener('click', function (e) {
+	var link = e.target.closest && e.target.closest('.intro-video-play[data-video]');
+	if (!link) return;
+	e.preventDefault();
+	var frame = document.createElement('iframe');
+	frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(link.dataset.video) + '?autoplay=1&rel=0';
+	frame.title = link.getAttribute('aria-label') || 'Video';
+	frame.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+	frame.allowFullscreen = true;
+	link.replaceWith(frame);
+	frame.focus();
+});
