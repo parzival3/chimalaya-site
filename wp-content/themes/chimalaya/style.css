@@ -1026,22 +1026,19 @@ p { font-family: var(--ff-body); font-size: 1rem; line-height: 1.7; color: var(-
 /* Lead paragraph: the subtitle under a section H2. */
 .section-title p { font-size: 1.125rem; line-height: 1.7; }
 
-/* Cap prose measure on text-heavy pages; cards are narrower than 72ch anyway.
- * A capped paragraph inside centred text must be centred as a box too, or it
- * hugs the left edge (video intro, section leads). The ribbon source line spans
- * its card (it carries the divider), and about sections wrap around a floated
- * image, so those run full width. */
-.site-content p { max-width: 72ch; }
+/* Body text runs the full width of its container, as the content was written for.
+ * Only centred text gets a capped measure — long centred lines are hard to read —
+ * and is centred as a box so it doesn't hug the left edge (section leads).
+ * (A site-wide 72ch cap used to sit here; every full-width text block then needed
+ * its own opt-out, and each one that was missed — about sections, Team &
+ * Governance, the supporter pages — showed its text squeezed into the left half.) */
 .section-title p,
 .site-content .text-center p,
-.site-content p.text-center { margin-left: auto; margin-right: auto; }
-/* Team & Governance pages: the intro runs the width of the photo grid below it. The
- * imported markup nests a .container in a .container, which indents the text 12px
- * past the cards; drop the inner padding so both share an edge. */
-.site-content .our-team-area p { max-width: none; }
+.site-content p.text-center { max-width: 72ch; margin-left: auto; margin-right: auto; }
+/* Team & Governance pages: the imported markup nests a .container in a .container,
+ * which indents the text 12px past the cards; drop the inner padding so both share
+ * an edge. */
 .our-team-area .container .container { padding-left: 0; padding-right: 0; }
-.site-content .home-impact-source,
-.site-content .about-content p { max-width: none; }
 
 /* Justified body copy leaves rivers of white space (worse in Devanagari) —
  * left-align everywhere. Covers both inline styles (imported content) and the
@@ -1507,7 +1504,7 @@ margin: 6px 0 var(--s-5) var(--s-6);
 .update-lead img { width: 100%; height: auto; max-height: 620px; object-fit: cover; border-radius: var(--r-md); display: block; }
 .update-body { max-width: 760px; margin: 0 auto; }
 .site-content .update-body p, .update-body li { font-size: 1.125rem; line-height: 1.75; color: var(--c-text); }
-.site-content .update-body p { max-width: none; margin: 0 0 var(--s-5); }
+.site-content .update-body p { margin: 0 0 var(--s-5); }
 .update-gallery { max-width: 1000px; margin: var(--s-7) auto 0; }
 .update-gallery h2 { font-size: 1.5rem; color: var(--c-navy); margin-bottom: var(--s-4); }
 .update-gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--s-3); }
@@ -1544,7 +1541,7 @@ margin: 6px 0 var(--s-5) var(--s-6);
 .update-card-body { padding: var(--s-5); }
 .update-card-body h3 { font-size: 1.25rem; line-height: 1.3; margin: 0 0 var(--s-2); }
 .update-card-body .update-summary { font-size: 1rem; }
-.site-content .home-updates-more { text-align: center; margin: var(--s-6) 0 0; max-width: none; }
+.site-content .home-updates-more { text-align: center; margin: var(--s-6) 0 0; }
 
 /* === Home introductory video (template-parts/intro-video.php) ===
  * Navy band with a soft crimson glow; text left, rounded video card right (stacked
