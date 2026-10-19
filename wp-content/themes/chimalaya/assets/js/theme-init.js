@@ -59,10 +59,11 @@ jQuery(function ($) {
 	onScroll();
 })();
 
-// Home introductory video: play in place. The card links to YouTube; on click it is
-// replaced by a youtube-nocookie embed, so YouTube is only contacted once asked.
+// Videos play in place (home introductory video, Teaching Videos cards). The card links
+// to YouTube; on click it is replaced by a youtube-nocookie embed, so YouTube is only
+// contacted once asked.
 document.addEventListener('click', function (e) {
-	var link = e.target.closest && e.target.closest('.intro-video-play[data-video]');
+	var link = e.target.closest && e.target.closest('.intro-video-play[data-video], .video-card-play[data-video]');
 	if (!link) return;
 	e.preventDefault();
 	var frame = document.createElement('iframe');

@@ -422,14 +422,6 @@ body > .site-content > :last-child {
 		filter: none;
 	}
 }
-.home-partners-foot {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	gap: var(--s-4);
-	margin-top: var(--s-6);
-}
 @media only screen and (max-width: 575px) {
 	.partner-marquee,
 	.partner-marquee-track {
@@ -1420,12 +1412,28 @@ float: right;
 width: 42%;
 margin: 6px 0 var(--s-5) var(--s-6);
 }
-/* A "Read More" button right after the text (home About CC) follows the text, beside
-   the photo, instead of dropping below it; the card contains the float instead. */
-.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4):has(+ p > .default-btn:only-child)::after { content: none; }
-.about-content li:has(> .row + p > .default-btn:only-child) { display: flow-root; }
-.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) + p:has(> .default-btn:only-child) { margin: var(--s-4) 0 0; }
+/* Home "About CC" (the card whose "Read More" the importers move below it, as
+   .about-more): text left, the whole photo right, vertically centred. At 35% of the
+   card the uncropped photo comes out about as tall as the text beside it. */
+.about-content:has(> .about-more) .row:has(> .col-lg-6 + .col-lg-6.pe-4) {
+display: grid;
+grid-template-columns: 1fr 35%;
+gap: var(--s-6);
+align-items: center;
 }
+.about-content:has(> .about-more) .row:has(> .col-lg-6 + .col-lg-6.pe-4)::after { content: none; }
+.about-content:has(> .about-more) .row:has(> .col-lg-6 + .col-lg-6.pe-4) > .col-lg-6:first-child {
+float: none;
+width: auto;
+margin: 0;
+grid-column: 2;
+grid-row: 1;
+}
+.about-content:has(> .about-more) .row:has(> .col-lg-6 + .col-lg-6.pe-4) > .col-lg-6.pe-4 { grid-column: 1; grid-row: 1; }
+.about-content:has(> .about-more) .row:has(> .col-lg-6 + .col-lg-6.pe-4) > .col-lg-6.pe-4 > p:last-child { margin-bottom: 0; }
+}
+/* !important: the left-align rule for .about-content p below is !important too. */
+.site-content .about-content p.about-more { text-align: center !important; margin: var(--s-6) 0 0; }
 @media (max-width: 991.98px) {
 .about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) { flex-direction: column !important; }
 .about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) > .col-lg-6:first-child { margin-bottom: var(--s-2); }
@@ -1597,7 +1605,14 @@ margin: 6px 0 var(--s-5) var(--s-6);
  * half a beat after ward 8, and the clinic dot pulses like the video play button. */
 .work-area { --ward-8: var(--c-crimson); --ward-9: #00c8c8; padding: var(--section-pad) 0; background: var(--c-surface-alt); }
 .work-area-grid { display: grid; gap: var(--s-6); align-items: center; }
-@media (min-width: 992px) { .work-area-grid { grid-template-columns: 6fr 5fr; gap: var(--s-8); } }
+@media (min-width: 992px) { .work-area-grid { grid-template-columns: 5fr 6fr; gap: var(--s-8); } }
+/* Phones get the tall crop that hugs the wards; the side-by-side desktop layout gets
+   the wide, near-square one. */
+.work-area-map.is-wide { display: none; }
+@media (min-width: 992px) {
+	.work-area-map.is-tall { display: none; }
+	.work-area-map.is-wide { display: block; max-width: 620px; }
+}
 .work-area-text h2 { font-size: clamp(2rem, 1.4rem + 2vw, 3rem); line-height: 1.15; margin: var(--s-3) 0 var(--s-4); }
 .site-content .work-area-lead { font-size: 1.1875rem; line-height: 1.7; margin: 0 0 var(--s-5); }
 .work-area-legend { list-style: none; padding: 0; margin: 0 0 var(--s-5); display: grid; gap: var(--s-3); }
@@ -1615,6 +1630,13 @@ margin: 6px 0 var(--s-5) var(--s-6);
 }
 .work-area-map img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .work-area-overlay { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+/* The whole map opens the clinic on Google Maps; the label (shared with the contact
+   page map) sits top-left, clear of the wards in both crops. */
+.work-area-link { position: absolute; inset: 0; display: block; }
+.work-area-link:focus-visible { outline: 3px solid var(--c-crimson); outline-offset: -3px; }
+.work-area-map .location-map-cta { left: 16px; right: auto; z-index: 1; transition: background-color var(--t-fast) var(--ease); }
+.work-area-link:hover .location-map-cta,
+.work-area-link:focus-visible .location-map-cta { background-color: var(--c-navy); }
 .ward-shape { stroke-width: 3; stroke-linejoin: round; fill-opacity: .16; vector-effect: non-scaling-stroke; animation: ward-fill 2.4s ease-in-out infinite; }
 .ward-pulse { fill: none; stroke-linejoin: round; stroke-opacity: 0; animation: ward-ripple 2.4s ease-out infinite; }
 .ward-8 .ward-shape { fill: var(--ward-8); stroke: var(--ward-8); }
@@ -1656,3 +1678,127 @@ margin: 6px 0 var(--s-5) var(--s-6);
 @media (prefers-reduced-motion: reduce) {
 	.ward-shape, .ward-pulse, .clinic-pulse { animation: none; }
 }
+
+/* === Call for volunteers (page-volunteer.php) and its home strip (volunteer-cta.php) ===
+ * Header with photo and the impact-style figure tiles, then alternating sections:
+ * who, what (photo cards), where (the home ward map), expectations, practical
+ * (fees + accommodation), and a navy "how to apply" band. */
+.volunteer-hero { background: var(--c-surface-alt); padding: var(--s-8) 0 var(--s-6); }
+.volunteer-hero-grid { display: grid; gap: var(--s-6); align-items: center; }
+@media (min-width: 992px) { .volunteer-hero-grid { grid-template-columns: 1fr 1fr; gap: var(--s-8); } }
+.volunteer-hero h1 { color: var(--c-navy); font-size: clamp(2.25rem, 1.5rem + 2.4vw, 3.25rem); line-height: 1.1; margin: var(--s-3) 0 var(--s-4); }
+.site-content .volunteer-lead { font-size: 1.1875rem; line-height: 1.7; margin: 0 0 var(--s-5); }
+.volunteer-hero-img, .volunteer-who-img { width: 100%; height: auto; display: block; border-radius: var(--r-lg); box-shadow: var(--shadow-lg); }
+.volunteer-when { list-style: none; padding: 0; margin: 0 0 var(--s-5); color: var(--c-navy); }
+.volunteer-btns { display: flex; flex-wrap: wrap; gap: var(--s-3); margin: 0; }
+.volunteer-btn-ghost {
+	display: inline-flex; align-items: center; padding: 12px 28px; border-radius: var(--r-pill);
+	border: 2px solid var(--c-navy); color: var(--c-navy); font-family: var(--ff-head); font-weight: 600; text-decoration: none;
+	transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+.volunteer-btn-ghost:hover { background: var(--c-navy); color: #fff; }
+.volunteer-kpis { margin: var(--s-7) 0 0; }
+
+.volunteer-section { padding: var(--section-pad) 0; }
+.volunteer-section-alt { background: var(--c-surface-alt); }
+.volunteer-section h2 { color: var(--c-navy); margin: var(--s-3) 0 var(--s-4); }
+.volunteer-section .section-title { margin-bottom: var(--s-6); }
+.volunteer-who { display: grid; gap: var(--s-6); align-items: center; }
+@media (min-width: 992px) { .volunteer-who { grid-template-columns: 7fr 5fr; gap: var(--s-8); } }
+.volunteer-chips { list-style: none; padding: 0; margin: 0 0 var(--s-4); display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.volunteer-chips li {
+	padding: 8px 16px; border-radius: var(--r-pill); background: var(--c-surface-alt); border: 1px solid var(--c-border);
+	color: var(--c-navy); font-family: var(--ff-head); font-weight: 600;
+}
+.volunteer-quote {
+	margin: var(--s-5) 0 0; padding: var(--s-2) 0 var(--s-2) var(--s-5); border-left: 3px solid var(--c-crimson);
+	font-style: italic; font-size: 1.125rem; line-height: 1.7; color: var(--c-navy);
+}
+
+.volunteer-tasks { display: grid; gap: var(--s-5); grid-template-columns: 1fr; }
+@media (min-width: 576px) { .volunteer-tasks { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1200px) { .volunteer-tasks { grid-template-columns: repeat(4, 1fr); } }
+.volunteer-task { display: flex; flex-direction: column; background: var(--c-surface); border-radius: var(--r-md); box-shadow: var(--shadow-sm); overflow: hidden; }
+.volunteer-task img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
+.volunteer-task-body { display: flex; flex-direction: column; flex: 1; padding: var(--s-5); }
+.volunteer-task h3 { font-size: 1.25rem; color: var(--c-navy); margin: 0 0 var(--s-3); }
+.site-content .volunteer-task p { font-size: 1rem; line-height: 1.65; margin: 0 0 var(--s-4); }
+.volunteer-task a { margin-top: auto; font-family: var(--ff-head); font-weight: 600; text-decoration: none; }
+
+.volunteer-expect { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-4); }
+@media (min-width: 768px) { .volunteer-expect { grid-template-columns: repeat(2, 1fr); gap: var(--s-5); } }
+.volunteer-expect li {
+	padding: var(--s-5); background: var(--c-surface); border: 1px solid var(--c-border);
+	border-top: 3px solid var(--c-crimson); border-radius: 0 0 var(--r-md) var(--r-md); line-height: 1.65;
+}
+.volunteer-expect strong { display: block; color: var(--c-navy); font-family: var(--ff-head); font-size: 1.125rem; margin-bottom: var(--s-2); }
+
+.volunteer-practical { display: grid; gap: var(--s-5); }
+@media (min-width: 992px) { .volunteer-practical { grid-template-columns: 1fr 1fr; align-items: start; } }
+.volunteer-card { background: var(--c-surface); border-radius: var(--r-md); box-shadow: var(--shadow-sm); padding: var(--s-6); }
+.volunteer-card h3 { color: var(--c-navy); margin: 0 0 var(--s-4); }
+.volunteer-fees { width: 100%; border-collapse: collapse; margin: 0 0 var(--s-4); }
+.volunteer-fees th { color: var(--c-navy); font-weight: 600; text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--c-navy); }
+.volunteer-fees td { padding: 12px 10px; border-bottom: 1px solid var(--c-border); }
+.volunteer-fees td:nth-child(-n+2), .volunteer-fees th { white-space: nowrap; }
+.volunteer-fees td strong { color: var(--c-crimson); font-family: var(--ff-head); font-size: 1.125rem; }
+.site-content .volunteer-note { font-size: .95rem; color: var(--c-text-muted); margin: 0; }
+.volunteer-ask { margin-top: var(--s-5); padding: var(--s-4) var(--s-5); background: var(--c-surface-alt); border-left: 3px solid var(--c-navy); border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+.volunteer-ask h4 { font-size: 1rem; color: var(--c-navy); margin: 0 0 var(--s-2); }
+.volunteer-ask ul { margin: 0; padding-left: 1.1em; }
+.volunteer-ask li { margin: 4px 0; }
+.volunteer-accommodation { width: 100%; height: auto; display: block; border-radius: var(--r-sm); margin: var(--s-2) 0 var(--s-3); }
+
+.volunteer-apply {
+	padding: var(--section-pad) 0; text-align: center; color: #fff;
+	background: radial-gradient(60% 80% at 85% 50%, rgba(229, 0, 70, .22) 0%, rgba(229, 0, 70, 0) 70%),
+		linear-gradient(135deg, var(--c-navy-900) 0%, var(--c-navy) 100%);
+}
+.volunteer-apply .top-title { color: #fff; }
+.volunteer-apply h2 { color: #fff; margin: var(--s-3) 0 var(--s-4); }
+.site-content .volunteer-apply p { color: rgba(255, 255, 255, .88); max-width: 60ch; margin: 0 auto var(--s-5); }
+.site-content .volunteer-apply .volunteer-btns { justify-content: center; max-width: none; margin-bottom: 0; }
+.volunteer-apply .volunteer-btn-ghost { border-color: #fff; color: #fff; }
+.volunteer-apply .volunteer-btn-ghost:hover { background: #fff; color: var(--c-navy); }
+
+/* Home strip: a white card under the impact ribbon, before About CC. */
+.volunteer-cta { background: var(--c-surface-alt); padding: var(--s-7) 0 0; }
+.volunteer-cta-card {
+	display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-5);
+	padding: var(--s-6); background: var(--c-surface); border-radius: var(--r-lg); box-shadow: var(--shadow-sm);
+	border-left: 4px solid var(--c-crimson);
+}
+.volunteer-cta-card > div { flex: 1 1 420px; }
+.volunteer-cta h2 { font-size: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); color: var(--c-navy); margin: var(--s-2) 0; }
+.site-content .volunteer-cta p { margin: 0; }
+
+/* === Teaching Videos: "All our videos" (template-parts/video-list.php) ===
+ * Every video on the YouTube channel as a card; the frame swaps to an embed on click
+ * (theme-init.js), keeping the card's 16:9 size. */
+.video-list { padding: var(--section-pad) 0; background: var(--c-surface); }
+.video-list .section-title { margin-bottom: var(--s-6); }
+.video-grid { display: grid; gap: var(--s-5); grid-template-columns: 1fr; }
+@media (min-width: 576px) { .video-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 992px) { .video-grid { grid-template-columns: repeat(3, 1fr); } }
+.video-card { display: flex; flex-direction: column; background: var(--c-surface); border-radius: var(--r-md); box-shadow: var(--shadow-sm); overflow: hidden; transition: box-shadow var(--t-med) var(--ease); }
+@media (hover: hover) { .video-card:hover { box-shadow: var(--shadow-md); } }
+.video-card-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
+.video-card-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-card-play { position: absolute; inset: 0; display: block; }
+.video-card-play img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.video-card-btn {
+	position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+	width: 60px; height: 60px; border-radius: 50%; background: var(--c-crimson); color: #fff;
+	display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0, 0, 0, .3);
+	transition: transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+.video-card-btn svg.i { width: 26px; height: 26px; margin-left: 3px; fill: currentColor; }
+.video-card-play:hover .video-card-btn, .video-card-play:focus-visible .video-card-btn { transform: translate(-50%, -50%) scale(1.08); background: var(--c-crimson-700); }
+.video-card-badge {
+	position: absolute; right: 8px; bottom: 8px; padding: 2px 8px; border-radius: var(--r-sm);
+	background: rgba(8, 16, 24, .8); color: #fff; font-family: var(--ff-head); font-size: .8125rem; font-weight: 600;
+}
+.video-card-body { padding: var(--s-4) var(--s-5) var(--s-5); }
+.video-card-body h3 { font-size: 1.125rem; line-height: 1.35; color: var(--c-navy); margin: 0 0 var(--s-2); }
+.site-content .video-card-meta { margin: 0; font-size: .9375rem; color: var(--c-text-muted); }
+.site-content .video-list-more { text-align: center; margin: var(--s-6) 0 0; }
