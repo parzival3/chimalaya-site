@@ -1,7 +1,7 @@
 /* Initialise carousels the original theme's main.js handled (which we could not fetch).
    owl-carousel elements are display:none until owlCarousel() runs, so an uninitialised
    slider is invisible. (The old hero banner carousel is gone — Phase 1 replaced it with
-   the static template hero. The home partner/services/blog sliders were never
+   the static template hero. The home services/blog sliders were never
    initialised here; the safety net below reveals them as static grids.) */
 jQuery(function ($) {
 	if (!$.fn.owlCarousel) return;

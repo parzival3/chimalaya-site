@@ -166,36 +166,6 @@
 		},
 	});
 
-	// Partner Slide JS
-	// There are only three partner logos. The original config asked for up to five
-	// items, so on wide screens the three sat left-aligned with a hole where the
-	// fourth and fifth would be, and below 768px only two fitted — with loop, nav and
-	// dots all off, the third was off-stage and unreachable. Show all three from
-	// tablet up (they scale down to fit), and keep two on phones where three would be
-	// too small to read. dots is on so any partner added later stays reachable.
-	$('.partner-slide').owlCarousel({
-		loop: false,
-		margin: 30,
-		nav: false,
-		dots: true,
-		autoplay: false,
-		smartSpeed: 1000,
-		autoplayHoverPause: true,
-		responsive: {
-			0: {
-				items: 2,
-				margin: 15,
-			},
-			576: {
-				items: 3,
-				margin: 20,
-			},
-			992: {
-				items: 3,
-			},
-		},
-	});
-
 	// Gallery Popup JS (magnific-popup plugin is not bundled — skip when absent)
 	if ($.fn.magnificPopup) {
 		$('.gallery-popup').each(function() {

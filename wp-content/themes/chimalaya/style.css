@@ -356,22 +356,113 @@ body > .site-content > :last-child {
 }
 
 /* ------------------------------------------------------------------ *
- * Partner ("Foundations and Organizations") carousel.
- * dots is enabled so a partner that does not fit the current breakpoint
- * stays reachable, but with only three logos the slider is usually a
- * single page — hide the lone dot rather than show a control that does
- * nothing. Cap the logo height so the SVGs stay even when the carousel
- * scales them down on tablet.
+ * Home partner logos (template-parts/partners.php): every supporter
+ * logo in two rows that scroll slowly in opposite directions. Each row
+ * holds two identical tracks, so shifting it by one track width (-50%)
+ * loops seamlessly. Edges fade out; hover pauses the motion. Logos sit
+ * muted and go full colour on hover, as on the supporter pages.
  * ------------------------------------------------------------------ */
-.partner-slide .owl-dots .owl-dot:only-child {
-	display: none;
+.home-partners {
+	padding: var(--section-pad) 0;
+	overflow: hidden;
 }
-.partner-slide .partner-item img {
-	max-height: 90px;
-	width: auto;
+.home-partners .section-title {
+	margin-bottom: var(--s-6);
+}
+.partner-marquee {
+	display: grid;
+	gap: var(--s-5);
+	-webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+	mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.partner-marquee-row {
+	display: flex;
+	width: max-content;
+	animation: partner-marquee var(--marquee-dur, 60s) linear infinite;
+}
+.partner-marquee-row.is-reverse {
+	animation-direction: reverse;
+}
+.partner-marquee:hover .partner-marquee-row {
+	animation-play-state: paused;
+}
+@keyframes partner-marquee {
+	to { transform: translateX(-50%); }
+}
+.partner-marquee-track {
+	display: flex;
+	gap: var(--s-5);
+	margin: 0;
+	padding: 0 var(--s-5) 0 0; /* = gap, so the seam between copies matches */
+	list-style: none;
+}
+.partner-logo {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 110px;
+	padding: 18px 22px;
+	background: var(--c-surface);
+	border: 1px solid var(--c-border);
+	border-radius: var(--r-md);
+}
+.partner-logo img {
 	max-width: 100%;
-	margin: 0 auto;
+	max-height: 100%;
+	width: auto;
+	height: auto;
 	object-fit: contain;
+	filter: grayscale(1) opacity(.8);
+	transition: filter var(--t-med) var(--ease);
+}
+@media (hover: hover) {
+	.partner-logo:hover img {
+		filter: none;
+	}
+}
+.home-partners-foot {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: var(--s-4);
+	margin-top: var(--s-6);
+}
+@media only screen and (max-width: 575px) {
+	.partner-marquee,
+	.partner-marquee-track {
+		gap: var(--s-3);
+	}
+	.partner-marquee-track {
+		padding-right: var(--s-3);
+	}
+	.partner-logo {
+		width: 140px;
+		height: 80px;
+		padding: 12px 14px;
+	}
+}
+/* Reduced motion: no scrolling — the logos wrap as a static, centred grid
+   (the duplicate track is dropped). */
+@media (prefers-reduced-motion: reduce) {
+	.partner-marquee {
+		-webkit-mask-image: none;
+		mask-image: none;
+	}
+	.partner-marquee-row {
+		width: auto;
+		animation: none;
+	}
+	.partner-marquee-track {
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 var(--s-4);
+	}
+	.partner-marquee-track[aria-hidden="true"] {
+		display: none;
+	}
 }
 
 /* ------------------------------------------------------------------ *
@@ -1332,6 +1423,11 @@ float: right;
 width: 42%;
 margin: 6px 0 var(--s-5) var(--s-6);
 }
+/* A "Read More" button right after the text (home About CC) follows the text, beside
+   the photo, instead of dropping below it; the card contains the float instead. */
+.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4):has(+ p > .default-btn:only-child)::after { content: none; }
+.about-content li:has(> .row + p > .default-btn:only-child) { display: flow-root; }
+.about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) + p:has(> .default-btn:only-child) { margin: var(--s-4) 0 0; }
 }
 @media (max-width: 991.98px) {
 .about-content .row:has(> .col-lg-6 + .col-lg-6.pe-4) { flex-direction: column !important; }
@@ -1497,3 +1593,69 @@ margin: 6px 0 var(--s-5) var(--s-6);
 }
 @media (prefers-reduced-motion: reduce) { .intro-video-btn { animation: none; } }
 @media (max-width: 575px) { .intro-video-btn { width: 68px; height: 68px; } .intro-video-btn svg.i { width: 28px; height: 28px; } }
+
+/* === Home "Where we work" map (template-parts/work-area.php) ===
+ * Text and legend left, satellite photo right (stacked below 992px). The SVG overlay
+ * shares the photo's coordinates: each ward outline sends a ripple outwards, ward 9
+ * half a beat after ward 8, and the clinic dot pulses like the video play button. */
+.work-area { --ward-8: var(--c-crimson); --ward-9: #00c8c8; padding: var(--section-pad) 0; background: var(--c-surface-alt); }
+.work-area-grid { display: grid; gap: var(--s-6); align-items: center; }
+@media (min-width: 992px) { .work-area-grid { grid-template-columns: 6fr 5fr; gap: var(--s-8); } }
+.work-area-text h2 { font-size: clamp(2rem, 1.4rem + 2vw, 3rem); line-height: 1.15; margin: var(--s-3) 0 var(--s-4); }
+.site-content .work-area-lead { font-size: 1.1875rem; line-height: 1.7; margin: 0 0 var(--s-5); }
+.work-area-legend { list-style: none; padding: 0; margin: 0 0 var(--s-5); display: grid; gap: var(--s-3); }
+.work-area-legend li { display: flex; align-items: center; gap: var(--s-3); font-family: var(--ff-head); font-weight: 600; color: var(--c-navy); }
+.work-area-legend .swatch { flex: 0 0 auto; width: 22px; height: 16px; border-radius: 4px; border: 3px solid; }
+.swatch-ward-8 { border-color: var(--ward-8); background: rgba(229, 0, 70, .2); }
+.swatch-ward-9 { border-color: var(--ward-9); background: rgba(0, 200, 200, .2); }
+.work-area-legend .swatch-clinic { width: 16px; height: 16px; margin: 0 3px; border-radius: 50%; border-color: #fff; background: var(--c-crimson); box-shadow: 0 0 0 1px rgba(0, 0, 0, .25); }
+.work-area-links { margin: 0; }
+.work-area-links a { font-family: var(--ff-head); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--c-crimson); padding-bottom: 2px; }
+
+.work-area-map {
+	position: relative; margin: 0; width: 100%; max-width: 560px; justify-self: center;
+	border-radius: var(--r-lg); overflow: hidden; background: #2b3a2a; box-shadow: var(--shadow-lg);
+}
+.work-area-map img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.work-area-overlay { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.ward-shape { stroke-width: 3; stroke-linejoin: round; fill-opacity: .16; vector-effect: non-scaling-stroke; animation: ward-fill 2.4s ease-in-out infinite; }
+.ward-pulse { fill: none; stroke-linejoin: round; stroke-opacity: 0; animation: ward-ripple 2.4s ease-out infinite; }
+.ward-8 .ward-shape { fill: var(--ward-8); stroke: var(--ward-8); }
+.ward-8 .ward-pulse { stroke: var(--ward-8); }
+.ward-9 .ward-shape { fill: var(--ward-9); stroke: var(--ward-9); }
+.ward-9 .ward-pulse { stroke: var(--ward-9); }
+.ward-9 .ward-shape, .ward-9 .ward-pulse { animation-delay: 1.2s; }
+@keyframes ward-ripple {
+	0% { stroke-width: 3; stroke-opacity: .8; }
+	80%, 100% { stroke-width: 24; stroke-opacity: 0; }
+}
+@keyframes ward-fill {
+	0%, 100% { fill-opacity: .14; }
+	30% { fill-opacity: .32; }
+}
+.work-area-overlay text {
+	font-family: var(--ff-head); text-anchor: middle; fill: #fff;
+	paint-order: stroke; stroke: rgba(8, 16, 24, .85); stroke-width: 4px; stroke-linejoin: round;
+}
+.map-ward-label { font-size: 26px; font-weight: 800; }
+.map-ward-label.ward-8 { fill: #ff5c8a; }
+.map-ward-label.ward-9 { fill: var(--ward-9); }
+.map-place { font-size: 14px; font-weight: 500; }
+.map-clinic-label { font-size: 17px; font-weight: 700; }
+.clinic-dot { fill: var(--c-crimson); stroke: #fff; stroke-width: 3; }
+.clinic-pulse { fill: var(--c-crimson); transform-box: fill-box; transform-origin: center; animation: clinic-pulse 2.2s ease-out infinite; }
+@keyframes clinic-pulse {
+	0% { transform: scale(1); opacity: .6; }
+	70%, 100% { transform: scale(3.4); opacity: 0; }
+}
+.map-scale rect { fill: #fff; stroke: rgba(8, 16, 24, .85); stroke-width: 1; }
+.map-scale text { font-size: 13px; font-weight: 600; }
+.work-area-credit {
+	position: absolute; right: 0; bottom: 0; padding: 2px 8px; font-size: 10px; line-height: 1.4;
+	color: #fff; background: rgba(8, 16, 24, .55); border-top-left-radius: var(--r-sm);
+}
+/* On a phone-width map the small place names would be unreadable. */
+@media (max-width: 575px) { .map-place { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+	.ward-shape, .ward-pulse, .clinic-pulse { animation: none; }
+}
