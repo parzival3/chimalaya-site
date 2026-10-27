@@ -1805,6 +1805,8 @@ grid-row: 1;
 	position: absolute; right: 8px; bottom: 8px; padding: 2px 8px; border-radius: var(--r-sm);
 	background: rgba(8, 16, 24, .8); color: #fff; font-family: var(--ff-head); font-size: .8125rem; font-weight: 600;
 }
+/* The same card on its own in a post body ([chimalaya_video]). */
+.video-embed { max-width: 720px; margin: var(--s-5) 0; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-sm); }
 .video-card-body { padding: var(--s-4) var(--s-5) var(--s-5); }
 .video-card-body h3 { font-size: 1.125rem; line-height: 1.35; color: var(--c-navy); margin: 0 0 var(--s-2); }
 .site-content .video-card-meta { margin: 0; font-size: .9375rem; color: var(--c-text-muted); }
