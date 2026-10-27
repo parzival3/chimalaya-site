@@ -59,6 +59,21 @@ jQuery(function ($) {
 	onScroll();
 })();
 
+// Home intro card: the silent preview loop plays only while on screen, and never for
+// visitors who prefer reduced motion (they keep the still thumbnail).
+(function () {
+	var loop = document.querySelector('.intro-video-loop');
+	if (!loop || !('IntersectionObserver' in window)) return;
+	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+	loop.addEventListener('playing', function () { loop.classList.add('is-playing'); });
+	new IntersectionObserver(function (entries) {
+		entries.forEach(function (en) {
+			if (en.isIntersecting) { var p = loop.play(); if (p && p.catch) p.catch(function () {}); }
+			else loop.pause();
+		});
+	}, { threshold: 0.25 }).observe(loop);
+})();
+
 // Videos play in place (home introductory video, Teaching Videos cards). The card links
 // to YouTube; on click it is replaced by a youtube-nocookie embed, so YouTube is only
 // contacted once asked.

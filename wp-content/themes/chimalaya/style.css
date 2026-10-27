@@ -1583,6 +1583,13 @@ grid-row: 1;
 	background: linear-gradient(180deg, rgba(11, 42, 73, 0) 40%, rgba(11, 42, 73, .45) 100%);
 }
 .intro-video-play:hover img { transform: scale(1.03); }
+/* Silent preview loop over the thumbnail; fades in once it is actually playing. */
+.intro-video-loop {
+	position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+	opacity: 0; transition: opacity var(--t-med) var(--ease), transform var(--t-med) var(--ease);
+}
+.intro-video-loop.is-playing { opacity: 1; }
+.intro-video-play:hover .intro-video-loop { transform: scale(1.03); }
 .intro-video-btn {
 	position: absolute; top: 50%; left: 50%; z-index: 1; transform: translate(-50%, -50%);
 	width: 88px; height: 88px; border-radius: 50%; background: var(--c-crimson); color: #fff;
