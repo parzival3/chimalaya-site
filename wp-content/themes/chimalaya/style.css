@@ -1553,11 +1553,14 @@ grid-row: 1;
 .update-body .update-story .update-mosaic-cap { grid-column: 1 / -1; margin: var(--s-1) 0 0; font-size: 0.875rem; line-height: 1.4; color: var(--c-text-muted); }
 .update-body .update-story .update-inline img { transition: transform var(--t-med) var(--ease); }
 .update-body .update-story .update-inline img:hover { transform: scale(1.03); }
-.update-body .update-story--mosaic-large > .update-mosaic { float: none; width: 100%; max-width: none; margin: 0 0 var(--s-5); }
-@media (min-width: 992px) {
-	.update-body .update-story--mosaic-large { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; gap: var(--s-6); }
-	.update-body .update-story--mosaic-large > .update-mosaic { width: auto; margin: 0; }
-	.update-body .update-story--mosaic-large > .update-story-text { min-width: 0; }
+.update-body .update-story--whole-paragraphs .update-story-text > p { display: flow-root; }
+@media (min-width: 768px) {
+	.update-body .update-story--whole-paragraphs > .update-mosaic,
+	.update-body .update-story--whole-paragraphs > .update-couple { width: 55%; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.update-body .update-story--whole-paragraphs > .update-mosaic,
+	.update-body .update-story--whole-paragraphs > .update-couple { float: none; width: 100%; margin: 0 0 var(--s-5); }
 }
 /* Posts with inline photos get a wider text column so the text beside each photo is not cramped. */
 @media (min-width: 992px) {
