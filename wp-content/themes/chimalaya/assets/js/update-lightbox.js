@@ -1,10 +1,11 @@
 /* Photo viewer for a single update (single-activity.php): clicking a photo opens it
  * full-size over the page, with previous/next buttons, arrow keys, swipe and Esc.
- * Covers the lead photo, inline figures and the gallery, in page order. */
+ * Covers the lead photo, inline figures and the gallery, in page order. Also used by the
+ * photo wall on "One bag, many different lives" (.lives-tile). */
 ( function () {
 	var L = window.chimalayaLightbox || { close: 'Close', prev: 'Previous photo', next: 'Next photo' };
 	var triggers = Array.prototype.slice.call( document.querySelectorAll(
-		'.update-lead img, .update-inline img, .update-gallery-grid a' ) );
+		'.update-lead img, .update-inline img, .update-gallery-grid a, .lives-tile' ) );
 	if ( ! triggers.length ) return;
 
 	var photos = triggers.map( function ( el ) {
