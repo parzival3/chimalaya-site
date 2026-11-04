@@ -10,8 +10,7 @@
 	var photos = triggers.map( function ( el ) {
 		var img = el.tagName === 'IMG' ? el : el.querySelector( 'img' );
 		var full = el.tagName === 'A' ? el.getAttribute( 'href' ) : ( img.currentSrc || img.src ).replace( /-\d+x\d+(\.\w+)$/, '$1' );
-		var cap = el.closest( 'figure' ) && el.closest( 'figure' ).querySelector( 'figcaption' );
-		return { src: full, alt: img.alt || '', caption: cap ? cap.textContent : ( img.alt || '' ) };
+		return { src: full, alt: img.alt || '' };
 	} );
 
 	var box = document.createElement( 'div' );
@@ -37,7 +36,7 @@
 		at = ( i + photos.length ) % photos.length;
 		img.src = photos[ at ].src;
 		img.alt = photos[ at ].alt;
-		cap.textContent = ( photos[ at ].caption ? photos[ at ].caption + ' · ' : '' ) + ( at + 1 ) + ' / ' + photos.length;
+		cap.textContent = ( at + 1 ) + ' / ' + photos.length;
 		preload( at + 1 ); preload( at - 1 );
 	}
 	function open( i, from ) {
