@@ -1513,12 +1513,90 @@ grid-row: 1;
 .update-body { max-width: 760px; margin: 0 auto; }
 .site-content .update-body p, .update-body li { font-size: 1.125rem; line-height: 1.75; color: var(--c-text); }
 .site-content .update-body p { margin: 0 0 var(--s-5); }
+.update-body h2 { clear: both; color: var(--c-navy); font-size: clamp(1.625rem, 1.3rem + 1vw, 2.125rem); line-height: 1.2; margin: var(--s-7) 0 var(--s-4); }
+.update-body h3 { color: var(--c-navy); margin-top: var(--s-6); }
+.update-body .update-inline { margin: 0 0 var(--s-4); }
+.update-body .update-inline img { width: 100%; height: auto; border-radius: var(--r-md); display: block; }
+.update-body .update-inline figcaption { margin-top: var(--s-2); font-size: 0.875rem; line-height: 1.4; color: var(--c-text-muted); }
+.update-body .update-inline.update-wide { float: none !important; width: 100% !important; max-width: none !important; margin: var(--s-6) 0 var(--s-7) !important; }
+.update-body .update-callout { clear: both; margin: var(--s-8) 0; padding: var(--s-5) var(--s-6); border-left: 4px solid var(--c-crimson); background: var(--c-surface-alt); border-radius: 0 var(--r-md) var(--r-md) 0; }
+.update-body .update-callout > h2 { margin-top: 0 !important; }
+.update-body .update-callout p:last-child { margin-bottom: 0; }
+.update-body .update-strip { columns: 3 220px; column-gap: var(--s-3); margin: var(--s-5) 0 var(--s-7); }
+.update-body .update-strip .update-inline { float: none !important; width: auto !important; max-width: none !important; margin: 0 0 var(--s-3) !important; break-inside: avoid; }
+/* A story: photo beside its text (markup in the post body: section.update-story > figure.update-inline + div.update-story-text). */
+.update-body .update-story { margin: 0 0 var(--s-7); }
+.update-body .update-story .update-inline { float: none; width: auto; max-width: 420px; margin: 0 0 var(--s-4); }
+.update-body .update-story-text > :first-child { margin-top: 0 !important; }
+@media (min-width: 768px) {
+	/* Photos float to one side and the text wraps around them, then runs full width underneath. */
+	.update-body .update-story { display: flow-root; }
+	.update-body .update-story > .update-inline,
+	.update-body .update-story > .update-mosaic,
+	.update-body .update-story > .update-couple { width: 44%; max-width: none; margin: 0 var(--s-6) var(--s-4) 0; float: left; }
+	.update-body .update-story--right > .update-inline { float: right; margin: 0 0 var(--s-4) var(--s-6); }
+	.update-body .update-story--compact > .update-inline { width: 32%; }
+	.update-body .update-story .update-story-text > h2, .update-body .update-story .update-story-text > h3 { clear: none; }
+	.update-body .update-story--wide > .update-mosaic,
+	.update-body .update-story--wide > .update-couple { width: 50%; }
+}
+/* Photo groups inside a story: a couple's two portraits side by side, or a mosaic of one large photo and two smaller ones. */
+.update-body .update-story .update-couple, .update-body .update-story .update-mosaic { display: grid; gap: var(--s-2); }
+.update-body .update-story .update-couple { grid-template-columns: 1fr 1fr; }
+.update-body .update-story .update-mosaic { grid-template-columns: 3fr 2fr; }
+.update-body .update-story .update-couple .update-inline, .update-body .update-story .update-mosaic .update-inline { max-width: none; margin: 0; min-width: 0; position: relative; overflow: hidden; border-radius: var(--r-md); }
+.update-body .update-story .update-mosaic .update-inline:first-child { grid-row: 1 / span 2; }
+.update-body .update-story .update-mosaic .update-inline:not(:first-child) img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.update-body .update-story .update-mosaic figcaption, .update-body .update-story .update-couple figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.update-body .update-story .update-couple .update-inline { overflow: visible; border-radius: 0; }
+.update-body .update-story .update-couple .update-inline figcaption { position: static; width: auto; height: auto; clip: auto; white-space: normal; }
+.update-body .update-story .update-mosaic-cap { grid-column: 1 / -1; margin: var(--s-1) 0 0; font-size: 0.875rem; line-height: 1.4; color: var(--c-text-muted); }
+.update-body .update-story .update-inline img { transition: transform var(--t-med) var(--ease); }
+.update-body .update-story .update-inline img:hover { transform: scale(1.03); }
+/* Posts with inline photos get a wider text column so the text beside each photo is not cramped. */
+@media (min-width: 992px) {
+	.update-article:has(.update-inline) .update-article-head,
+	.update-article:has(.update-inline) .update-body { max-width: 1000px; }
+	.update-article:has(.update-inline) .update-body > p { font-size: 1.1875rem; line-height: 1.8; }
+	.update-article:has(.update-inline) .update-body .update-inline:not(.update-story .update-inline) { width: 40%; max-width: 400px; margin-bottom: var(--s-5); }
+	.update-article:has(.update-inline) .update-body h2 { margin-top: var(--s-8); }
+	.update-article:has(.update-inline) .update-body h3 { margin-top: var(--s-7); font-size: 1.5rem; }
+}
+@media (min-width: 576px) {
+	.update-body .update-inline { width: 44%; max-width: 320px; }
+	.update-body .update-inline--left { float: left; margin-right: var(--s-5); }
+	.update-body .update-inline--right { float: right; margin-left: var(--s-5); }
+	.update-body h3 { clear: both; }
+}
 .update-gallery { max-width: 1000px; margin: var(--s-7) auto 0; }
 .update-gallery h2 { font-size: 1.5rem; color: var(--c-navy); margin-bottom: var(--s-4); }
 .update-gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--s-3); }
 .update-gallery-grid a { display: block; border-radius: var(--r-sm); overflow: hidden; }
 .update-gallery-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform var(--t-med) var(--ease); }
 .update-gallery-grid a:hover img { transform: scale(1.03); }
+/* Photo viewer (assets/js/update-lightbox.js) */
+.lightbox-open { overflow: hidden; }
+.lightbox { position: fixed; inset: 0; z-index: 2000; background: rgba(10, 16, 28, .97); display: flex; align-items: center; justify-content: center; }
+.lightbox[hidden] { display: none; }
+.lightbox-stage { margin: 0; max-width: calc(100vw - 8rem); max-height: 100vh; padding: var(--s-4) 0; display: flex; flex-direction: column; align-items: center; }
+.lightbox-stage img { max-width: 100%; max-height: calc(100vh - 5rem); width: auto; height: auto; object-fit: contain; border-radius: var(--r-sm); }
+.lightbox-stage figcaption { margin-top: var(--s-3); color: #fff; font-size: .9375rem; text-align: center; }
+.lightbox button { appearance: none; border: 0; background: rgba(255, 255, 255, .14); color: #fff; cursor: pointer; line-height: 1; border-radius: var(--r-pill); }
+.lightbox button:hover, .lightbox button:focus-visible { background: rgba(255, 255, 255, .3); }
+.lightbox-close { position: absolute; top: var(--s-4); right: var(--s-4); width: 44px; height: 44px; font-size: 2rem; }
+.lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; font-size: 2.5rem; padding-bottom: 4px; }
+.lightbox-prev { left: var(--s-4); }
+.lightbox-next { right: var(--s-4); }
+@media (max-width: 575px) {
+	.lightbox-stage { max-width: 100vw; }
+	.lightbox-nav { top: auto; bottom: var(--s-4); transform: none; }
+}
+/* Posts with inline photos: show the gallery photos uncropped, in columns that keep each photo's own shape. */
+.update-article:has(.update-inline) .update-gallery { margin-top: var(--s-9); padding-top: var(--s-7); border-top: 1px solid var(--c-border); }
+.update-article:has(.update-inline) .update-gallery h2 { font-size: clamp(1.625rem, 1.3rem + 1vw, 2.125rem); margin-bottom: var(--s-5); }
+.update-article:has(.update-inline) .update-gallery-grid { display: block; columns: 3 240px; column-gap: var(--s-4); }
+.update-article:has(.update-inline) .update-gallery-grid a { margin-bottom: var(--s-4); break-inside: avoid; }
+.update-article:has(.update-inline) .update-gallery-grid img { aspect-ratio: auto; height: auto; }
 .update-pager {
 	display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4);
 	max-width: 1000px; margin: var(--s-8) auto 0; padding-top: var(--s-6); border-top: 1px solid var(--c-border);
@@ -1811,3 +1889,58 @@ grid-row: 1;
 .video-card-body h3 { font-size: 1.125rem; line-height: 1.35; color: var(--c-navy); margin: 0 0 var(--s-2); }
 .site-content .video-card-meta { margin: 0; font-size: .9375rem; color: var(--c-text-muted); }
 .site-content .video-list-more { text-align: center; margin: var(--s-6) 0 0; }
+
+/* Products & Collaborations: a browsable story archive with honest photo placeholders. */
+.products-intro { padding: clamp(52px, 8vw, 96px) 0 var(--s-6); background: var(--c-surface-alt); }
+.products-intro .container { max-width: 860px; }
+.products-intro h1 { margin: var(--s-3) 0 var(--s-4); color: var(--c-navy); font-size: clamp(2.1rem, 1.4rem + 3vw, 3.5rem); }
+.site-content .products-intro p { max-width: 70ch; margin: 0; font-size: 1.125rem; line-height: 1.7; color: var(--c-text-muted); }
+.products-list { padding: var(--section-pad) 0; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--s-6); }
+.product-card { overflow: hidden; display: flex; flex-direction: column; background: var(--c-surface); border-radius: var(--r-md); box-shadow: var(--shadow-sm); }
+.product-card-image { position: relative; display: block; overflow: hidden; aspect-ratio: 4 / 3; background: var(--c-surface-alt); }
+.product-card-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform var(--t-med) var(--ease); }
+@media (hover: hover) { .product-card:hover .product-card-image img { transform: scale(1.035); } }
+.product-image-note { position: absolute; inset: auto 0 0; padding: 8px 14px; background: rgba(18, 38, 48, .82); color: #fff; font-size: .8125rem; }
+.product-card-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: var(--s-5); }
+.product-prototype { display: inline-flex; margin: 0 0 var(--s-3); padding: 5px 11px; border-radius: var(--r-pill); background: #f7e8d0; color: #604c2d; font-size: .8125rem; font-weight: 700; }
+.product-card h2 { margin: 0 0 var(--s-3); color: var(--c-navy); font-size: 1.5rem; line-height: 1.25; }
+.product-card h2 a { color: inherit; text-decoration: none; }
+.site-content .product-card-body > p:not(.product-prototype) { margin: 0 0 var(--s-5); line-height: 1.65; color: var(--c-text-muted); }
+.product-read-link { margin-top: auto; color: var(--c-crimson); font-family: var(--ff-head); font-weight: 700; text-decoration: none; }
+.product-read-link span { display: inline-block; margin-left: 4px; transition: transform var(--t-fast) var(--ease); }
+.product-read-link:hover span { transform: translateX(4px); }
+.product-story-hero { padding: var(--section-pad) 0; background: var(--c-surface-alt); }
+.product-story-hero-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; gap: clamp(28px, 5vw, 72px); }
+.product-back { display: inline-block; margin-bottom: var(--s-4); color: var(--c-navy); font-family: var(--ff-head); font-weight: 700; text-decoration: none; }
+.product-story-heading h1 { margin: var(--s-3) 0 var(--s-4); color: var(--c-navy); font-size: clamp(2.2rem, 1.4rem + 3.2vw, 3.8rem); line-height: 1.1; }
+.product-story-summary { color: var(--c-text-muted); font-size: 1.125rem; line-height: 1.7; }
+.product-story-summary p { margin: 0; }
+.product-story-image { margin: 0; }
+.product-story-image img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-lg); box-shadow: var(--shadow-md); }
+.product-story-image figcaption { margin-top: var(--s-2); color: var(--c-text-muted); font-size: .875rem; }
+.product-story-content { padding-top: var(--section-pad); padding-bottom: var(--section-pad); }
+.product-story-copy { max-width: 760px; margin: 0 auto; }
+.product-story-copy h2 { margin: var(--s-7) 0 var(--s-3); color: var(--c-navy); font-size: clamp(1.4rem, 1.2rem + 1vw, 1.9rem); }
+.product-story-copy h2:first-child { margin-top: 0; }
+.site-content .product-story-copy p { margin: 0 0 var(--s-4); font-size: 1.0625rem; line-height: 1.8; }
+.product-story-copy .product-sample-note { padding: var(--s-4) var(--s-5); border-left: 4px solid var(--c-crimson); border-radius: 0 var(--r-sm) var(--r-sm) 0; background: var(--c-surface-alt); }
+.product-gallery { margin-top: var(--section-pad); }
+.product-gallery h2 { margin: 0 0 var(--s-5); color: var(--c-navy); font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2.1rem); }
+.product-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); }
+.product-gallery figure { overflow: hidden; margin: 0; background: var(--c-surface-alt); border-radius: var(--r-md); box-shadow: var(--shadow-sm); }
+.product-gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.product-gallery figcaption { padding: var(--s-3) var(--s-4); color: var(--c-text-muted); font-size: .9375rem; }
+.product-story-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-4); margin-top: var(--section-pad); padding-top: var(--s-5); border-top: 1px solid var(--c-border); }
+.product-story-nav .product-back { margin: 0; }
+.bag-products { padding: var(--section-pad) 0; background: var(--c-surface-alt); }
+.bag-products-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-5); }
+.bag-products-inner > div { flex: 1 1 480px; }
+.bag-products h2 { margin: var(--s-2) 0 var(--s-3); color: var(--c-navy); }
+.site-content .bag-products p { max-width: 70ch; margin: 0; color: var(--c-text-muted); line-height: 1.7; }
+@media (max-width: 767px) {
+	.product-story-hero-grid { grid-template-columns: 1fr; }
+	.product-story-heading { order: 0; }
+	.product-story-image { order: 1; }
+	.product-gallery-grid { grid-template-columns: 1fr; }
+}
