@@ -1670,7 +1670,8 @@ grid-row: 1;
 	background: linear-gradient(180deg, rgba(11, 42, 73, 0) 40%, rgba(11, 42, 73, .45) 100%);
 }
 .intro-video-play:hover img { transform: scale(1.03); }
-/* Silent preview loop over the thumbnail; fades in once it is actually playing. */
+/* Silent preview loop over the still (its own first frame, so nothing visibly changes);
+ * fades in once it is actually playing. */
 .intro-video-loop {
 	position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
 	opacity: 0; transition: opacity var(--t-med) var(--ease), transform var(--t-med) var(--ease);
@@ -1981,24 +1982,37 @@ grid-row: 1;
 @media (min-width: 1400px) { .lives-grid { grid-template-columns: repeat(5, 1fr); } }
 .bag-lives { background: var(--c-surface); }
 
-/* Home strip for the photo wall (template-parts/lives-cta.php) */
-.lives-cta { padding: var(--s-7) 0 0; background: linear-gradient(to bottom, var(--c-surface) 40%, var(--c-surface-alt)); }   /* ends in the grey of the volunteer strip below */
-.lives-cta-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-5); margin-bottom: var(--s-5); }
-.lives-cta-head > div { flex: 1 1 420px; }
-.lives-cta h2 { font-size: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); color: var(--c-navy); margin: var(--s-2) 0; }
-.site-content .lives-cta p { margin: 0; }
-/* The photos fade out at both sides and at the bottom, so the strip melts into the page
- * instead of ending in hard edges. Extra photos only show on wider screens. */
-.lives-cta-strip {
-	display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); padding: 0 var(--s-4);
-	-webkit-mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, #000 55%, transparent);
-	-webkit-mask-composite: source-in;
-	mask-image: linear-gradient(to right, transparent, #000 14%, #000 86%, transparent), linear-gradient(to bottom, #000 55%, transparent);
-	mask-composite: intersect;
+/* Home section for the photo wall (template-parts/lives-cta.php): title in front, two slow rows of
+ * photos behind (the partner-marquee rows), blurred and washed out only around the text. */
+.lives-cta { position: relative; overflow: hidden; display: flex; align-items: center; min-height: 620px; padding: var(--section-pad) 0; background: linear-gradient(to bottom, var(--c-surface) 40%, var(--c-surface-alt)); }   /* ends in the grey of the volunteer strip below */
+.lives-bg {
+	position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: var(--s-4);
+	opacity: .7; pointer-events: none;
+	-webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+	mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
 }
-.lives-cta-strip img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 35%; border-radius: var(--r-md); }
-.lives-cta-strip img { transition: opacity .6s var(--ease); }
-.lives-cta-strip img.is-swapping { opacity: 0; }
-.lives-cta-strip img:nth-child(n+4) { display: none; }
-@media (min-width: 768px) { .lives-cta-strip { grid-template-columns: repeat(6, 1fr); } .lives-cta-strip img:nth-child(-n+6) { display: block; } }
-@media (min-width: 1200px) { .lives-cta-strip { grid-template-columns: repeat(8, 1fr); } .lives-cta-strip img:nth-child(n+4) { display: block; } }
+.lives-bg .partner-marquee-track { gap: var(--s-4); padding-right: var(--s-4); }
+.lives-bg .partner-logo { width: 200px; height: 266px; padding: 0; overflow: hidden; border: 0; border-radius: var(--r-lg); }
+.lives-bg .partner-logo img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; object-position: 50% 35%; filter: none; }
+.lives-cta::after { /* blur and white wash only in a soft oval around the text; the photos stay clear elsewhere */
+	content: ""; position: absolute; inset: 0; pointer-events: none;
+	background: rgba(255, 255, 255, .68);
+	-webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+	-webkit-mask-image: radial-gradient(ellipse 36% 46% at 50% 50%, #000 35%, transparent 100%);
+	mask-image: radial-gradient(ellipse 36% 46% at 50% 50%, #000 35%, transparent 100%);
+}
+.lives-cta .container { position: relative; z-index: 1; width: 100%; }
+.lives-cta-body { max-width: 640px; margin: 0 auto; text-align: center; }
+.lives-cta h2 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.25rem); line-height: 1.12; color: var(--c-navy); margin: var(--s-3) 0 var(--s-4); text-wrap: balance; }
+.site-content .lives-cta p { margin: 0 0 var(--s-5); font-size: 1.1875rem; line-height: 1.7; }
+@media (max-width: 575px) {
+	.lives-cta { min-height: 540px; }
+	.lives-bg .partner-logo { width: 130px; height: 173px; }
+	.lives-cta::after { -webkit-mask-image: radial-gradient(ellipse 75% 46% at 50% 50%, #000 35%, transparent 100%); mask-image: radial-gradient(ellipse 75% 46% at 50% 50%, #000 35%, transparent 100%); }
+}
+/* Reduced motion: no drifting, the rows just sit still behind the text. */
+@media (prefers-reduced-motion: reduce) {
+	.lives-bg .partner-marquee-row { width: max-content; }
+	.lives-bg .partner-marquee-track { flex-wrap: nowrap; justify-content: flex-start; }
+	.lives-bg .partner-marquee-track[aria-hidden="true"] { display: flex; }
+}
