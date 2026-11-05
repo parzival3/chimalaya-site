@@ -1962,12 +1962,12 @@ grid-row: 1;
 .lives-page .container { max-width: 1320px; padding-left: var(--lives-gutter); padding-right: var(--lives-gutter); }
 .lives-hero { background: var(--c-surface-alt); padding: var(--s-9) 0 var(--s-7); }
 .lives-hero h1 { margin: var(--s-2) 0 var(--s-4); color: var(--c-navy); font-size: clamp(2rem, 5vw, 3.5rem); }
-.lives-intro p { max-width: 60ch; color: var(--c-text); font-size: 1.125rem; line-height: 1.7; }
-.lives-count { margin: var(--s-4) 0 0; color: var(--c-text-muted); font-weight: 600; }
+.lives-intro p { max-width: 90ch; text-wrap: pretty; color: var(--c-text); font-size: 1.125rem; line-height: 1.7; }
 .lives-month { padding-top: var(--s-8); }
 .lives-month header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-4); margin-bottom: var(--s-5); }
 .lives-month h2 { margin: 0; color: var(--c-navy); font-size: clamp(1.5rem, 3vw, 2.25rem); }
 .lives-month header span { color: var(--c-text-muted); font-size: .9375rem; }
+.lives-covid-intro, .lives-previous-intro { margin: calc(-1 * var(--s-3)) auto var(--s-5); color: var(--c-text-muted); }
 .lives-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-flow: dense; gap: var(--s-3); max-width: 1320px; margin: 0 auto; padding: 0 var(--lives-gutter); }
 .lives-tile { position: relative; display: block; overflow: hidden; aspect-ratio: 3 / 4; border-radius: var(--r-md); background: var(--c-surface-alt); cursor: zoom-in; box-shadow: var(--shadow-sm); }
 .lives-tile--wide { grid-column: span 2; aspect-ratio: 3 / 2; }
