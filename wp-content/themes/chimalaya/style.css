@@ -1542,6 +1542,26 @@ grid-row: 1;
 }
 /* Photo groups inside a story: a couple's two portraits side by side, or a mosaic of one large photo and two smaller ones. */
 .update-body .update-story .update-couple, .update-body .update-story .update-mosaic { display: grid; gap: var(--s-2); }
+/* A photo and an embedded reel side by side at the same height (the reel keeps its native 267x476). */
+.update-body .update-duo { display: flex; justify-content: center; align-items: stretch; gap: var(--s-4); margin: var(--s-6) 0 var(--s-7); }
+.update-body .update-duo .update-inline { margin: 0; }
+.update-body .update-duo .update-inline:not(.update-video) { flex: 0 1 357px; min-width: 0; height: 476px; }
+.update-body .update-duo .update-inline:not(.update-video) img { height: 100%; object-fit: cover; }
+.update-body .update-duo .update-crop img { object-position: 85% 50%; }   /* landscape photo cropped to the patient and the cuff */
+/* Two photos and the reel: wider than the text column, like the lead photo. */
+@media (min-width: 1040px) { .update-body .update-trio { margin-left: -100px; margin-right: -100px; } }
+.update-body .update-video { flex: 0 0 267px; height: 476px; border-radius: var(--r-md); overflow: hidden; background: var(--c-surface-alt); }
+.update-body .update-video iframe { display: block; width: 267px; height: 476px; }
+/* Shown only when the embed is blocked (tracking protection, ad blockers): the iframe covers it otherwise. */
+.update-body .update-video { position: relative; }
+.update-body .update-video-link { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: var(--s-4); text-align: center; font-weight: 600; }
+.update-body .update-video iframe { position: relative; z-index: 1; }
+@media (max-width: 679px) {
+	.update-body .update-duo { flex-direction: column; align-items: center; }
+	.update-body .update-duo .update-inline:not(.update-video) { flex: none; width: 100%; max-width: 357px; height: auto; }
+	.update-body .update-duo .update-inline:not(.update-video) img { height: auto; }
+	.update-body .update-duo .update-crop img { height: 476px; }
+}
 .update-body .update-story .update-couple { grid-template-columns: 1fr 1fr; }
 .update-body .update-story .update-mosaic { grid-template-columns: 3fr 2fr; }
 .update-body .update-story .update-couple .update-inline, .update-body .update-story .update-mosaic .update-inline { max-width: none; margin: 0; min-width: 0; position: relative; overflow: hidden; border-radius: var(--r-md); }

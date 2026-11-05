@@ -12,148 +12,151 @@
 		if (scrolled < 300) $('.go-top').removeClass('active');
 	});
 
-	// Services Slide JS
-	$('.services-slide').owlCarousel({
-		items: 1,
-		loop: true,
-		margin: 30,
-		nav: true,
-		dots: false,
-		autoplay: true,
-		smartSpeed: 1000,
-		autoplayHoverPause: true,
-		navText: [
-			"<i class='ri-arrow-left-s-line'></i>",
-			"<i class='ri-arrow-right-s-line'></i>",
-		],
-		responsive: {
-			0: {
-				items: 1,
+	// Carousels (owl.carousel is only loaded on the pages that have one)
+	if ($.fn.owlCarousel) {
+		// Services Slide JS
+		$('.services-slide').owlCarousel({
+			items: 1,
+			loop: true,
+			margin: 30,
+			nav: true,
+			dots: false,
+			autoplay: true,
+			smartSpeed: 1000,
+			autoplayHoverPause: true,
+			navText: [
+				"<i class='ri-arrow-left-s-line'></i>",
+				"<i class='ri-arrow-right-s-line'></i>",
+			],
+			responsive: {
+				0: {
+					items: 1,
+				},
+				414: {
+					items: 1,
+				},
+				576: {
+					items: 2,
+				},
+				768: {
+					items: 2,
+				},
+				992: {
+					items: 3,
+				},
+				1200: {
+					items: 3,
+				},
 			},
-			414: {
-				items: 1,
-			},
-			576: {
-				items: 2,
-			},
-			768: {
-				items: 2,
-			},
-			992: {
-				items: 3,
-			},
-			1200: {
-				items: 3,
-			},
-		},
-	});
+		});
 
-	// Services Slide Two JS
-	$('.services-slide-two').owlCarousel({
-		items: 1,
-		loop: true,
-		margin: 30,
-		nav: false,
-		dots: false,
-		autoplay: false,
-		smartSpeed: 1000,
-		autoplayHoverPause: true,
-		navText: [
-			"<i class='ri-arrow-left-s-line'></i>",
-			"<i class='ri-arrow-right-s-line'></i>",
-		],
-		responsive: {
-			0: {
-				items: 1,
+		// Services Slide Two JS
+		$('.services-slide-two').owlCarousel({
+			items: 1,
+			loop: true,
+			margin: 30,
+			nav: false,
+			dots: false,
+			autoplay: false,
+			smartSpeed: 1000,
+			autoplayHoverPause: true,
+			navText: [
+				"<i class='ri-arrow-left-s-line'></i>",
+				"<i class='ri-arrow-right-s-line'></i>",
+			],
+			responsive: {
+				0: {
+					items: 1,
+				},
+				414: {
+					items: 1,
+				},
+				576: {
+					items: 1,
+				},
+				768: {
+					items: 2,
+				},
+				992: {
+					items: 3,
+					center: true,
+				},
+				1200: {
+					items: 3,
+					center: true,
+				},
+				1400: {
+					items: 4,
+					center: true,
+				},
 			},
-			414: {
-				items: 1,
-			},
-			576: {
-				items: 1,
-			},
-			768: {
-				items: 2,
-			},
-			992: {
-				items: 3,
-				center: true,
-			},
-			1200: {
-				items: 3,
-				center: true,
-			},
-			1400: {
-				items: 4,
-				center: true,
-			},
-		},
-	});
+		});
 
-	// Blog Slide JS
-	$('.blog-slide').owlCarousel({
-		items: 1,
-		loop: true,
-		margin: 30,
-		nav: false,
-		dots: true,
-		autoplay: true,
-		smartSpeed: 1000,
-		autoplayHoverPause: true,
-		responsive: {
-			0: {
-				items: 1,
+		// Blog Slide JS
+		$('.blog-slide').owlCarousel({
+			items: 1,
+			loop: true,
+			margin: 30,
+			nav: false,
+			dots: true,
+			autoplay: true,
+			smartSpeed: 1000,
+			autoplayHoverPause: true,
+			responsive: {
+				0: {
+					items: 1,
+				},
+				414: {
+					items: 1,
+				},
+				576: {
+					items: 1,
+				},
+				768: {
+					items: 2,
+				},
+				992: {
+					items: 2,
+				},
+				1200: {
+					items: 3,
+				},
 			},
-			414: {
-				items: 1,
-			},
-			576: {
-				items: 1,
-			},
-			768: {
-				items: 2,
-			},
-			992: {
-				items: 2,
-			},
-			1200: {
-				items: 3,
-			},
-		},
-	});
+		});
 
-	// Review Slide JS
-	$('.review-slide').owlCarousel({
-		items: 1,
-		loop: true,
-		margin: 24,
-		nav: false,
-		dots: false,
-		autoplay: false,
-		smartSpeed: 1000,
-		autoplayHoverPause: true,
-		animateOut: 'fadeOut',
-		responsive: {
-			0: {
-				items: 1,
+		// Review Slide JS
+		$('.review-slide').owlCarousel({
+			items: 1,
+			loop: true,
+			margin: 24,
+			nav: false,
+			dots: false,
+			autoplay: false,
+			smartSpeed: 1000,
+			autoplayHoverPause: true,
+			animateOut: 'fadeOut',
+			responsive: {
+				0: {
+					items: 1,
+				},
+				414: {
+					items: 1,
+				},
+				576: {
+					items: 2,
+				},
+				768: {
+					items: 2,
+				},
+				992: {
+					items: 2,
+				},
+				1200: {
+					items: 2,
+				},
 			},
-			414: {
-				items: 1,
-			},
-			576: {
-				items: 2,
-			},
-			768: {
-				items: 2,
-			},
-			992: {
-				items: 2,
-			},
-			1200: {
-				items: 2,
-			},
-		},
-	});
+		});
+	}
 
 	// Gallery Popup JS (magnific-popup plugin is not bundled — skip when absent)
 	if ($.fn.magnificPopup) {
