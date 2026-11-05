@@ -2,21 +2,10 @@
 
 	'use strict';
 	
-	// Header Sticky, Go To Top JS
-	let prevScrollPos = window.pageYOffset;
-
+	// Go To Top JS. (The header stays put through .header-area { position: sticky } and
+	// theme-init.js; the old scroll-direction toggle of .navbar-area.is-sticky is gone: it
+	// replayed a slide-down animation and changed the bar's padding on every direction change.)
 	$(window).on('scroll', function() {
-		// Header Sticky JS
-		let currentScrollPos = window.pageYOffset;
-
-		if (prevScrollPos > currentScrollPos) {
-			$('.navbar-area').addClass("is-sticky");
-		} else {
-			$('.navbar-area').removeClass("is-sticky");
-		}
-
-		prevScrollPos = currentScrollPos;
-
 		// Go To Top JS
 		var scrolled = $(window).scrollTop();
 		if (scrolled > 300) $('.go-top').addClass('active');
