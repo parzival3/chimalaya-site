@@ -1561,6 +1561,7 @@ grid-row: 1;
 	.update-body .update-duo .update-inline:not(.update-video) { flex: none; width: 100%; max-width: 357px; height: auto; }
 	.update-body .update-duo .update-inline:not(.update-video) img { height: auto; }
 	.update-body .update-duo .update-crop img { height: 476px; }
+	.update-body .update-duo .update-video { flex: none; width: 267px; height: 476px; }   /* in a column, flex-basis would set the height */
 }
 .update-body .update-story .update-couple { grid-template-columns: 1fr 1fr; }
 .update-body .update-story .update-mosaic { grid-template-columns: 3fr 2fr; }
