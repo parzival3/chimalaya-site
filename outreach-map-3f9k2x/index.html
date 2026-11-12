@@ -61,7 +61,7 @@
       <input id="filter" type="search" placeholder="Type a health post or venue name…" autocomplete="off">
       <div id="count" aria-live="polite"></div>
       <ul id="venues"></ul>
-      <footer>Pulses identify the Chimalaya Charity clinic and mapped health posts; they do not represent distance travelled or programme growth over time. Event figures are recorded attendances, not unique people. Map © OpenStreetMap contributors.</footer>
+      <footer>Pulses identify the Chimalaya Charity clinic and mapped health posts; they do not represent distance travelled or programme growth over time. Event figures are recorded attendances, not unique people. Map tiles © Esri, © OpenStreetMap contributors.</footer>
     </aside>
     <div id="map" aria-label="OpenStreetMap view of Nepal"></div>
   </main>
@@ -91,9 +91,10 @@
     if (location.protocol === "file:") {
       document.getElementById("file-warning").hidden = false;
     }
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    // Esri's topographic basemap labels places in English; OpenStreetMap's own tiles use the local script.
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
       maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+      attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, FAO, NOAA, USGS, &copy; OpenStreetMap contributors, and the GIS User Community'
     }).addTo(map);
     const markers = new Map();
     for (const venue of mappedVenues) {
