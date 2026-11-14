@@ -2039,3 +2039,41 @@ grid-row: 1;
 	.lives-bg .partner-marquee-track { flex-wrap: nowrap; justify-content: flex-start; }
 	.lives-bg .partner-marquee-track[aria-hidden="true"] { display: flex; }
 }
+
+/* Monthly home-visit charts (inc/monthly-chart.php). Series colours are the validated categorical slots 1-4. */
+.impact-monthly, .home-impact-month {
+	--mv-first: #2a78d6; --mv-second: #eb6834; --mv-third: #1baf7a; --mv-six_month: #eda100;
+	--mv-ink: #16233a; --mv-muted: #52606f; --mv-grid: #e3e8ee; --mv-axis: #c3ccd6;
+}
+.mv-first { fill: var(--mv-first); }
+.mv-second { fill: var(--mv-second); }
+.mv-third { fill: var(--mv-third); }
+.mv-six_month { fill: var(--mv-six_month); }
+.mv-total-bar { fill: var(--mv-first); }
+.mv-grid { stroke: var(--mv-grid); stroke-width: 1; }
+.mv-axis { stroke: var(--mv-axis); }
+.mv-tick, .mv-label { fill: var(--mv-muted); font-size: 12px; font-family: inherit; }
+.mv-sub { font-size: 11px; }
+.mv-total { fill: var(--mv-ink); font-size: 13px; font-weight: 700; font-family: inherit; }
+.mv-hit { fill: transparent; }
+.mv-col { outline: none; }
+.mv-col:hover path:not(.mv-hit), .mv-col:hover rect:not(.mv-hit),
+.mv-col:focus path:not(.mv-hit), .mv-col:focus rect:not(.mv-hit) { filter: brightness(1.12); }
+.mv-col:focus-visible .mv-hit { stroke: var(--mv-ink); stroke-width: 1.5; }
+.mv-partial path:not(.mv-hit), .mv-partial rect:not(.mv-hit) { opacity: .55; }
+.mv-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; padding: 0; margin: 0 0 6px; font-size: 14px; color: var(--mv-ink); }
+.mv-legend li { display: flex; align-items: center; gap: 7px; margin: 0; }
+.mv-swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+.mv-swatch.mv-first { background: var(--mv-first); }
+.mv-swatch.mv-second { background: var(--mv-second); }
+.mv-swatch.mv-third { background: var(--mv-third); }
+.mv-swatch.mv-six_month { background: var(--mv-six_month); }
+.mv-mini { width: 100%; height: auto; display: block; }
+.home-impact-month {
+	display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+	gap: var(--s-4) var(--s-6); margin-top: var(--s-5); padding-top: var(--s-4); border-top: 1px solid var(--c-border);
+}
+.home-impact-month-text { margin: 0; font-size: 1.0625rem; line-height: 1.4; color: var(--c-text); }
+.home-impact-month-text strong { font-family: var(--ff-head); font-size: 1.5rem; color: var(--c-navy); }
+.home-impact-month-text span { display: block; font-size: .9375rem; color: var(--c-text-muted); }
+.home-impact-month .mv-mini { flex: 1 1 260px; max-width: 420px; }
