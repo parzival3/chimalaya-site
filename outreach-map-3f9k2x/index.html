@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Chimalaya outreach map preview</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    :root { color-scheme: light; font: 15px/1.45 system-ui, sans-serif; color: #23313b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { display: grid; grid-template-columns: minmax(290px, 360px) 1fr; height: 100vh; }
+    aside { padding: 18px; overflow: auto; border-right: 1px solid #d5dde2; }
+    h1 { margin: 0 0 8px; font-size: 1.3rem; }
+    p { margin: 8px 0 14px; }
+    .note { padding: 10px 12px; background: #fff4d5; border-radius: 6px; }
+    input[type="search"] { width: 100%; padding: 10px; border: 1px solid #aebbc4; border-radius: 5px; font: inherit; }
+    fieldset { margin: 0 0 16px; padding: 10px 12px 6px; border: 1px solid #d5dde2; border-radius: 6px; }
+    legend { padding: 0 6px; font-weight: 650; }
+    .layer { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; }
+    .layer input { width: 17px; height: 17px; margin: 0; }
+    .layer label { display: flex; align-items: center; gap: 8px; flex: 1; cursor: pointer; }
+    .layer.empty label { color: #7b8890; cursor: default; }
+    .swatch { width: 14px; height: 14px; border-radius: 50%; background: var(--c); border: 2px solid #fff; box-shadow: 0 0 0 1px #8a98a1; flex: none; }
+    .layer .n { margin-left: auto; color: #586770; font-size: .86rem; }
+    #count { color: #52616a; font-size: .9rem; margin: 8px 0; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { padding: 10px 0; border-top: 1px solid #e3e8eb; }
+    li strong { font-weight: 650; }
+    .meta { display: flex; align-items: center; gap: 6px; margin: 3px 0 4px; color: #586770; font-size: .86rem; }
+    .meta .swatch { width: 10px; height: 10px; border-width: 1px; }
+    button { font: inherit; }
+    #fit { display: block; margin: 0 0 14px; }
+    label[for="filter"] { display: block; margin-bottom: 6px; }
+    #map { min-height: 100vh; background: #e7ecef; }
+    footer { margin-top: 14px; color: #586770; font-size: .82rem; }
+    .map-marker { position: relative; width: 30px; height: 30px; color: var(--c); }
+    .map-marker.clinic { width: 44px; height: 44px; }
+    .map-marker::before, .map-marker::after, .map-marker span {
+      position: absolute; display: block; border-radius: 50%;
+    }
+    .map-marker::before, .map-marker::after {
+      content: ""; inset: 0; border: 3px solid currentColor; animation: pulse 2.4s ease-out infinite;
+    }
+    .map-marker::after { animation-delay: 1.2s; }
+    .map-marker span {
+      inset: 8px; background: currentColor; border: 2.5px solid white;
+      box-shadow: 0 2px 6px #333; z-index: 1;
+    }
+    .map-marker.clinic span { inset: 11px; border-width: 3px; }
+    .map-marker.tentative span { background: #fff; border: 3px solid currentColor; }
+    @keyframes pulse {
+      0% { transform: scale(.55); opacity: .9; }
+      100% { transform: scale(2.4); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .map-marker::before, .map-marker::after { animation: none; }
+      .map-marker::after { display: none; }
+    }
+    @media (max-width: 720px) {
+      main { grid-template-columns: 1fr; grid-template-rows: minmax(270px, 42vh) 1fr; height: 100dvh; }
+      aside { order: 2; border-right: 0; border-top: 1px solid #d5dde2; }
+      #map { order: 1; min-height: 42vh; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <aside>
+      <h1>Chimalaya outreach map preview</h1>
+      <p>The red marker is the Chimalaya Charity clinic. Choose below which kinds of places to show.</p>
+      <fieldset id="layers">
+        <legend>Show on the map</legend>
+      </fieldset>
+      <button type="button" id="fit">Zoom to the places shown</button>
+      <p id="load-error" class="note" hidden><strong>The places could not be loaded.</strong> Reload the page. If this was opened straight from a file, serve the folder with <code>python3 -m http.server</code> instead.</p>
+      <label for="filter"><strong>Filter place names</strong></label>
+      <input id="filter" type="search" placeholder="Type a place name…" autocomplete="off">
+      <div id="count" aria-live="polite"></div>
+      <ul id="venues"></ul>
+      <footer>Hollow markers have an approximate location that is still being confirmed. Pulses mark places on the map; they do not represent distance travelled or programme growth over time. Map tiles © Esri, © OpenStreetMap contributors.</footer>
+    </aside>
+    <div id="map" aria-label="Map of the Kathmandu Valley and surroundings"></div>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map("map").setView([27.69, 85.40], 12);
+    // Esri's topographic basemap labels places in English; OpenStreetMap's own tiles use the local script.
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {
+      maxZoom: 19,
+      attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, FAO, NOAA, USGS, &copy; OpenStreetMap contributors, and the GIS User Community'
+    }).addTo(map);
+
+    const el = id => document.getElementById(id);
+    const make = (tag, props = {}, ...kids) => {
+      const node = Object.assign(document.createElement(tag), props);
+      node.append(...kids);
+      return node;
+    };
+    const swatch = color => { const s = make("span", { className: "swatch" }); s.style.setProperty("--c", color); return s; };
+    const groups = new Map();   // category id -> L.layerGroup
+    const visible = new Set();  // category ids that are ticked
+    let categories = [], places = [], clinicMarker;
+
+    function icon(color, extra) {
+      const size = extra.includes("clinic") ? 44 : 30;
+      return L.divIcon({
+        className: "",
+        html: `<div class="map-marker ${extra}" style="--c:${color}"><span></span></div>`,
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2]
+      });
+    }
+    function popup(name, label, approximate) {
+      const box = make("div", {}, make("strong", { textContent: name }), make("br"), label);
+      if (approximate) box.append(make("br"), "Location approximate");
+      return box;
+    }
+
+    function render() {
+      const query = el("filter").value.trim().toLocaleLowerCase();
+      const shown = places.filter(p => visible.has(p.category) && p.name.toLocaleLowerCase().includes(query));
+      const list = el("venues");
+      list.replaceChildren();
+      el("count").textContent = `${shown.length} of ${places.length} places`;
+      for (const p of shown) {
+        const cat = categories.find(c => c.id === p.category);
+        const focus = make("button", { type: "button", textContent: "Show pin" });
+        focus.addEventListener("click", () => { map.setView(p.marker.getLatLng(), 15); p.marker.openPopup(); });
+        list.append(make("li", {},
+          make("strong", { textContent: p.name }),
+          make("span", { className: "meta" }, swatch(cat.color), cat.label + (p.confirmed ? "" : " · location approximate")),
+          focus));
+      }
+    }
+
+    function setLayer(id, on) {
+      if (on) { visible.add(id); groups.get(id).addTo(map); } else { visible.delete(id); map.removeLayer(groups.get(id)); }
+      render();
+    }
+
+    el("fit").addEventListener("click", () => {
+      const points = places.filter(p => visible.has(p.category)).map(p => p.marker.getLatLng()).concat([clinicMarker.getLatLng()]);
+      map.fitBounds(L.latLngBounds(points), { padding: [50, 50], maxZoom: 14 });
+    });
+    el("filter").addEventListener("input", render);
+
+    fetch("locations.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(data => {
+      categories = data.categories;
+      clinicMarker = L.marker([data.clinic.lat, data.clinic.lon], { icon: icon("#b33a2b", "clinic"), title: data.clinic.name, zIndexOffset: 1000 })
+        .bindPopup(popup(data.clinic.name, "Chimalaya Charity Nepal", false)).addTo(map);
+      for (const c of categories) groups.set(c.id, L.layerGroup().addTo(map));
+      places = data.locations.map(p => {
+        const cat = categories.find(c => c.id === p.category);
+        p.marker = L.marker([p.lat, p.lon], { icon: icon(cat.color, p.confirmed ? "" : "tentative"), title: p.name })
+          .bindPopup(popup(p.name, cat.label, !p.confirmed)).addTo(groups.get(p.category));
+        return p;
+      });
+      for (const c of categories) {
+        const n = places.filter(p => p.category === c.id).length;
+        const box = make("input", { type: "checkbox", id: "cat-" + c.id, checked: n > 0, disabled: n === 0 });
+        if (n > 0) visible.add(c.id);
+        box.addEventListener("change", () => setLayer(c.id, box.checked));
+        el("layers").append(make("div", { className: "layer" + (n ? "" : " empty") }, box,
+          make("label", { htmlFor: box.id }, swatch(c.color), c.label),
+          make("span", { className: "n", textContent: n ? String(n) : "none yet" })));
+      }
+      render();
+    }).catch(() => { el("load-error").hidden = false; });
+  </script>
+</body>
+</html>

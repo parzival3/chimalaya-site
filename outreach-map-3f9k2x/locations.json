@@ -1,0 +1,316 @@
+{
+ "categories": [
+  {
+   "id": "nurse",
+   "label": "Where trained nurses work",
+   "color": "#1b8a5a"
+  },
+  {
+   "id": "health_post",
+   "label": "Health posts and FCHV sessions",
+   "color": "#0878d1"
+  },
+  {
+   "id": "brick",
+   "label": "Brick factories",
+   "color": "#d55e00"
+  },
+  {
+   "id": "carpet",
+   "label": "Carpet factories",
+   "color": "#7b3fa0"
+  },
+  {
+   "id": "school",
+   "label": "Schools",
+   "color": "#c99700"
+  }
+ ],
+ "clinic": {
+  "name": "Chimalaya Charity clinic",
+  "lat": 27.690562,
+  "lon": 85.389687
+ },
+ "locations": [
+  {
+   "name": "Balkumari Health Post",
+   "category": "health_post",
+   "lat": 27.6716875,
+   "lon": 85.3386875,
+   "confirmed": true
+  },
+  {
+   "name": "Bhulankhel Health Post",
+   "category": "health_post",
+   "lat": 27.6802875,
+   "lon": 85.387015625,
+   "confirmed": true
+  },
+  {
+   "name": "Bode Health Post",
+   "category": "health_post",
+   "lat": 27.6920875,
+   "lon": 85.392578125,
+   "confirmed": true
+  },
+  {
+   "name": "Dadikot Prathamik Swastha Kendra",
+   "category": "health_post",
+   "lat": 27.6564875,
+   "lon": 85.392171875,
+   "confirmed": true
+  },
+  {
+   "name": "Duwakot Health Post",
+   "category": "health_post",
+   "lat": 27.6933625,
+   "lon": 85.412890625,
+   "confirmed": true
+  },
+  {
+   "name": "Jatigal Health Post",
+   "category": "health_post",
+   "lat": 27.6574825,
+   "lon": 85.43160546875,
+   "confirmed": true
+  },
+  {
+   "name": "Lokanthali Health Post",
+   "category": "health_post",
+   "lat": 27.6756375,
+   "lon": 85.358765625,
+   "confirmed": true
+  },
+  {
+   "name": "Nagadesh Health Post",
+   "category": "health_post",
+   "lat": 27.6850875,
+   "lon": 85.385640625,
+   "confirmed": true
+  },
+  {
+   "name": "Nagarkot Health Post",
+   "category": "health_post",
+   "lat": 27.7106875,
+   "lon": 85.4885625,
+   "confirmed": true
+  },
+  {
+   "name": "Padali Urban Health Centre",
+   "category": "health_post",
+   "lat": 27.6969875,
+   "lon": 85.486234375,
+   "confirmed": true
+  },
+  {
+   "name": "Thimi Health Post",
+   "category": "health_post",
+   "lat": 27.6855125,
+   "lon": 85.390484375,
+   "confirmed": true
+  },
+  {
+   "name": "Balkumari Health Post",
+   "category": "nurse",
+   "lat": 27.67661,
+   "lon": 85.38565,
+   "confirmed": false
+  },
+  {
+   "name": "Bhulankhel Health Post",
+   "category": "nurse",
+   "lat": 27.68029,
+   "lon": 85.38702,
+   "confirmed": true
+  },
+  {
+   "name": "Bode Health Post",
+   "category": "nurse",
+   "lat": 27.69209,
+   "lon": 85.39258,
+   "confirmed": true
+  },
+  {
+   "name": "Bode Urban Health Center",
+   "category": "nurse",
+   "lat": 27.68944,
+   "lon": 85.38731,
+   "confirmed": false
+  },
+  {
+   "name": "Chhaling Health Post",
+   "category": "nurse",
+   "lat": 27.70132,
+   "lon": 85.44632,
+   "confirmed": true
+  },
+  {
+   "name": "Chittapol Health Post",
+   "category": "nurse",
+   "lat": 27.6549,
+   "lon": 85.46247,
+   "confirmed": true
+  },
+  {
+   "name": "Dadhikot P.S Kendra",
+   "category": "nurse",
+   "lat": 27.65649,
+   "lon": 85.39217,
+   "confirmed": false
+  },
+  {
+   "name": "Devitar Health Post",
+   "category": "nurse",
+   "lat": 27.56888,
+   "lon": 84.81697,
+   "confirmed": true
+  },
+  {
+   "name": "Dhulikhel (Kavres.)",
+   "category": "nurse",
+   "lat": 27.93756,
+   "lon": 85.65196,
+   "confirmed": true
+  },
+  {
+   "name": "Dhulikhel Hospital",
+   "category": "nurse",
+   "lat": 27.61664,
+   "lon": 85.54564,
+   "confirmed": true
+  },
+  {
+   "name": "Duwakot Health Post",
+   "category": "nurse",
+   "lat": 27.69336,
+   "lon": 85.41289,
+   "confirmed": false
+  },
+  {
+   "name": "Gundu Health Post",
+   "category": "nurse",
+   "lat": 27.64779,
+   "lon": 85.4091,
+   "confirmed": false
+  },
+  {
+   "name": "Katunje Health Post",
+   "category": "nurse",
+   "lat": 27.66401,
+   "lon": 85.40423,
+   "confirmed": true
+  },
+  {
+   "name": "Kausaltar Health Post",
+   "category": "nurse",
+   "lat": 27.67494,
+   "lon": 85.36247,
+   "confirmed": false
+  },
+  {
+   "name": "Khwopa Hospital",
+   "category": "nurse",
+   "lat": 27.67374,
+   "lon": 85.4364,
+   "confirmed": true
+  },
+  {
+   "name": "Lokanthali Health Post",
+   "category": "nurse",
+   "lat": 27.67564,
+   "lon": 85.35877,
+   "confirmed": true
+  },
+  {
+   "name": "Nagadesh Health Post",
+   "category": "nurse",
+   "lat": 27.68504,
+   "lon": 85.38561,
+   "confirmed": false
+  },
+  {
+   "name": "Nangkhel Health Post",
+   "category": "nurse",
+   "lat": 27.64625,
+   "lon": 85.45671,
+   "confirmed": false
+  },
+  {
+   "name": "Nepal Korea Friendship Municipality Hospital (NKFMH)",
+   "category": "nurse",
+   "lat": 27.67861,
+   "lon": 85.38118,
+   "confirmed": true
+  },
+  {
+   "name": "Nikosera Health Post",
+   "category": "nurse",
+   "lat": 27.6808,
+   "lon": 85.39552,
+   "confirmed": false
+  },
+  {
+   "name": "Ravi Opi Health Post",
+   "category": "nurse",
+   "lat": 27.64566,
+   "lon": 85.5615,
+   "confirmed": true
+  },
+  {
+   "name": "Siddhi Hospital",
+   "category": "nurse",
+   "lat": 27.66833,
+   "lon": 85.43011,
+   "confirmed": true
+  },
+  {
+   "name": "Sipadol Health Post",
+   "category": "nurse",
+   "lat": 27.66421,
+   "lon": 85.43305,
+   "confirmed": false
+  },
+  {
+   "name": "Sudal Health Post",
+   "category": "nurse",
+   "lat": 27.68286,
+   "lon": 85.48157,
+   "confirmed": true
+  },
+  {
+   "name": "Suryabinayak Health Post",
+   "category": "nurse",
+   "lat": 27.66485,
+   "lon": 85.42505,
+   "confirmed": false
+  },
+  {
+   "name": "Tathali Health Post",
+   "category": "nurse",
+   "lat": 27.66184,
+   "lon": 85.48179,
+   "confirmed": true
+  },
+  {
+   "name": "Thimi Health Post",
+   "category": "nurse",
+   "lat": 27.68551,
+   "lon": 85.39048,
+   "confirmed": true
+  },
+  {
+   "name": "UHC Jatigal",
+   "category": "nurse",
+   "lat": 27.65748,
+   "lon": 85.43161,
+   "confirmed": true
+  },
+  {
+   "name": "North Point Mall",
+   "category": "school",
+   "lat": 27.689931,
+   "lon": 85.39023,
+   "confirmed": true
+  }
+ ]
+}
