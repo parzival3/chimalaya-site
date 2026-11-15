@@ -1,0 +1,1782 @@
+{
+  "generated": "2026-11-15",
+  "reach": {
+    "babies_total": 1851,
+    "staff_attribution": {
+      "babies_with_staff_code": 1825,
+      "babies_with_multiple_staff_codes": 1673
+    },
+    "register_as_of": "2026-11-05",
+    "first_visit_from": "2017-01-01",
+    "babies_by_year": [
+      {
+        "year": 2017,
+        "n": 146,
+        "partial": false
+      },
+      {
+        "year": 2018,
+        "n": 239,
+        "partial": false
+      },
+      {
+        "year": 2019,
+        "n": 228,
+        "partial": false
+      },
+      {
+        "year": 2020,
+        "n": 158,
+        "partial": false
+      },
+      {
+        "year": 2021,
+        "n": 169,
+        "partial": false
+      },
+      {
+        "year": 2022,
+        "n": 233,
+        "partial": false
+      },
+      {
+        "year": 2023,
+        "n": 172,
+        "partial": false
+      },
+      {
+        "year": 2024,
+        "n": 194,
+        "partial": false
+      },
+      {
+        "year": 2025,
+        "n": 160,
+        "partial": false
+      },
+      {
+        "year": 2026,
+        "n": 152,
+        "partial": true
+      }
+    ],
+    "babies_per_year_avg": 189.0,
+    "babies_per_month_recent": 15.8,
+    "girls": {
+      "pct": 46.5,
+      "n": 859,
+      "of": 1849
+    },
+    "localities_named": 42,
+    "top_localities": [
+      {
+        "locality": "Planning",
+        "n": 290
+      },
+      {
+        "locality": "Bode",
+        "n": 229
+      },
+      {
+        "locality": "Nayabasti",
+        "n": 134
+      },
+      {
+        "locality": "Tigani",
+        "n": 110
+      },
+      {
+        "locality": "Dhunchepakha",
+        "n": 95
+      },
+      {
+        "locality": "Millroad",
+        "n": 90
+      },
+      {
+        "locality": "Nikosera",
+        "n": 68
+      },
+      {
+        "locality": "Gakhu",
+        "n": 63
+      },
+      {
+        "locality": "Thimi",
+        "n": 51
+      },
+      {
+        "locality": "Sanutar",
+        "n": 44
+      }
+    ],
+    "bag4life": {
+      "pct": 93.6,
+      "n": 1733,
+      "of": 1851,
+      "from_year": 2017,
+      "total": 1733
+    }
+  },
+  "monthly_activity": {
+    "as_of": "2026-11-05",
+    "months": [
+      {
+        "month": "2025-12",
+        "first": 11,
+        "second": 13,
+        "third": 28,
+        "six_month": 18,
+        "total": 70,
+        "partial": false
+      },
+      {
+        "month": "2026-01",
+        "first": 14,
+        "second": 13,
+        "third": 11,
+        "six_month": 10,
+        "total": 48,
+        "partial": false
+      },
+      {
+        "month": "2026-02",
+        "first": 19,
+        "second": 12,
+        "third": 3,
+        "six_month": 13,
+        "total": 47,
+        "partial": false
+      },
+      {
+        "month": "2026-03",
+        "first": 18,
+        "second": 19,
+        "third": 10,
+        "six_month": 26,
+        "total": 73,
+        "partial": false
+      },
+      {
+        "month": "2026-04",
+        "first": 14,
+        "second": 16,
+        "third": 8,
+        "six_month": 18,
+        "total": 56,
+        "partial": false
+      },
+      {
+        "month": "2026-05",
+        "first": 12,
+        "second": 18,
+        "third": 26,
+        "six_month": 15,
+        "total": 71,
+        "partial": false
+      },
+      {
+        "month": "2026-06",
+        "first": 9,
+        "second": 6,
+        "third": 17,
+        "six_month": 8,
+        "total": 40,
+        "partial": false
+      },
+      {
+        "month": "2026-07",
+        "first": 12,
+        "second": 13,
+        "third": 20,
+        "six_month": 14,
+        "total": 59,
+        "partial": false
+      },
+      {
+        "month": "2026-08",
+        "first": 18,
+        "second": 11,
+        "third": 12,
+        "six_month": 16,
+        "total": 57,
+        "partial": false
+      },
+      {
+        "month": "2026-09",
+        "first": 18,
+        "second": 14,
+        "third": 7,
+        "six_month": 12,
+        "total": 51,
+        "partial": false
+      },
+      {
+        "month": "2026-10",
+        "first": 13,
+        "second": 11,
+        "third": 3,
+        "six_month": 5,
+        "total": 32,
+        "partial": false
+      },
+      {
+        "month": "2026-11",
+        "first": 5,
+        "second": 3,
+        "third": 5,
+        "six_month": 2,
+        "total": 15,
+        "partial": true
+      }
+    ],
+    "last_full_month": {
+      "month": "2026-10",
+      "visits": 32,
+      "new_babies": 13
+    },
+    "last_12_full_months": {
+      "visits": 668,
+      "new_babies": 178
+    }
+  },
+  "timeliness": {
+    "median_age_days_at_first_visit": 11.0,
+    "first_visit_within_14_days": {
+      "pct": 65.1,
+      "n": 1202,
+      "of": 1846
+    },
+    "first_visit_within_28_days": {
+      "pct": 90.9,
+      "n": 1678,
+      "of": 1846
+    },
+    "median_age_by_year": [
+      {
+        "year": 2017,
+        "days": 15.0
+      },
+      {
+        "year": 2018,
+        "days": 10.0
+      },
+      {
+        "year": 2019,
+        "days": 11.0
+      },
+      {
+        "year": 2020,
+        "days": 11.0
+      },
+      {
+        "year": 2021,
+        "days": 9.0
+      },
+      {
+        "year": 2022,
+        "days": 10.0
+      },
+      {
+        "year": 2023,
+        "days": 12.0
+      },
+      {
+        "year": 2024,
+        "days": 10.0
+      },
+      {
+        "year": 2025,
+        "days": 12.0
+      },
+      {
+        "year": 2026,
+        "days": 12.0
+      }
+    ],
+    "median_days_v1_to_v2": 19.0,
+    "median_days_v2_to_v3": 38.0,
+    "median_age_days_at_6m_visit": 204.0
+  },
+  "continuity": {
+    "overall": {
+      "v2": {
+        "pct": 96.4,
+        "n": 1754,
+        "of": 1819
+      },
+      "v3": {
+        "pct": 93.1,
+        "n": 1656,
+        "of": 1778
+      },
+      "v6m": {
+        "pct": 89.1,
+        "n": 1197,
+        "of": 1343
+      }
+    },
+    "all_three_newborn_visits": {
+      "pct": 92.4,
+      "n": 1643,
+      "of": 1778
+    },
+    "all_followups_since": {
+      "from_year": 2023,
+      "pct": 99.3,
+      "n": 551,
+      "of": 555
+    },
+    "by_year": [
+      {
+        "year": 2017,
+        "babies": 146,
+        "v2": {
+          "pct": 90.4,
+          "n": 132,
+          "of": 146
+        },
+        "v3": {
+          "pct": 73.3,
+          "n": 107,
+          "of": 146
+        },
+        "v6m": {
+          "pct": null,
+          "n": 0,
+          "of": 0
+        }
+      },
+      {
+        "year": 2018,
+        "babies": 239,
+        "v2": {
+          "pct": 92.5,
+          "n": 221,
+          "of": 239
+        },
+        "v3": {
+          "pct": 87.4,
+          "n": 209,
+          "of": 239
+        },
+        "v6m": {
+          "pct": null,
+          "n": 0,
+          "of": 0
+        }
+      },
+      {
+        "year": 2019,
+        "babies": 228,
+        "v2": {
+          "pct": 93.9,
+          "n": 214,
+          "of": 228
+        },
+        "v3": {
+          "pct": 86.4,
+          "n": 197,
+          "of": 228
+        },
+        "v6m": {
+          "pct": 57.0,
+          "n": 130,
+          "of": 228
+        }
+      },
+      {
+        "year": 2020,
+        "babies": 158,
+        "v2": {
+          "pct": 96.2,
+          "n": 152,
+          "of": 158
+        },
+        "v3": {
+          "pct": 93.0,
+          "n": 147,
+          "of": 158
+        },
+        "v6m": {
+          "pct": 87.3,
+          "n": 138,
+          "of": 158
+        }
+      },
+      {
+        "year": 2021,
+        "babies": 169,
+        "v2": {
+          "pct": 97.0,
+          "n": 164,
+          "of": 169
+        },
+        "v3": {
+          "pct": 97.0,
+          "n": 164,
+          "of": 169
+        },
+        "v6m": {
+          "pct": 91.7,
+          "n": 155,
+          "of": 169
+        }
+      },
+      {
+        "year": 2022,
+        "babies": 233,
+        "v2": {
+          "pct": 99.1,
+          "n": 231,
+          "of": 233
+        },
+        "v3": {
+          "pct": 98.3,
+          "n": 229,
+          "of": 233
+        },
+        "v6m": {
+          "pct": 95.3,
+          "n": 222,
+          "of": 233
+        }
+      },
+      {
+        "year": 2023,
+        "babies": 172,
+        "v2": {
+          "pct": 100.0,
+          "n": 172,
+          "of": 172
+        },
+        "v3": {
+          "pct": 99.4,
+          "n": 171,
+          "of": 172
+        },
+        "v6m": {
+          "pct": 99.4,
+          "n": 171,
+          "of": 172
+        }
+      },
+      {
+        "year": 2024,
+        "babies": 194,
+        "v2": {
+          "pct": 99.5,
+          "n": 193,
+          "of": 194
+        },
+        "v3": {
+          "pct": 100.0,
+          "n": 194,
+          "of": 194
+        },
+        "v6m": {
+          "pct": 100.0,
+          "n": 194,
+          "of": 194
+        }
+      },
+      {
+        "year": 2025,
+        "babies": 160,
+        "v2": {
+          "pct": 100.0,
+          "n": 160,
+          "of": 160
+        },
+        "v3": {
+          "pct": 100.0,
+          "n": 160,
+          "of": 160
+        },
+        "v6m": {
+          "pct": 98.8,
+          "n": 158,
+          "of": 160
+        }
+      },
+      {
+        "year": 2026,
+        "babies": 152,
+        "v2": {
+          "pct": 95.8,
+          "n": 115,
+          "of": 120
+        },
+        "v3": {
+          "pct": 98.7,
+          "n": 78,
+          "of": 79
+        },
+        "v6m": {
+          "pct": 100.0,
+          "n": 29,
+          "of": 29
+        }
+      }
+    ],
+    "missed_visit_reasons": [
+      {
+        "label": "not recorded",
+        "n": 304,
+        "pct": 91.3
+      },
+      {
+        "label": "family not found",
+        "n": 15,
+        "pct": 4.5
+      },
+      {
+        "label": "family moved away",
+        "n": 7,
+        "pct": 2.1
+      },
+      {
+        "label": "child died",
+        "n": 4,
+        "pct": 1.2
+      },
+      {
+        "label": "family declined",
+        "n": 3,
+        "pct": 0.9
+      }
+    ],
+    "six_month_programme_start": 2019
+  },
+  "third_visit": {
+    "babies": 984,
+    "period": [
+      "2021-03-23",
+      "2026-11-02"
+    ],
+    "median_age_days": 76.0,
+    "only_breastfeeding": {
+      "pct": 96.2,
+      "n": 944,
+      "of": 981
+    },
+    "only_breastfeeding_by_year": [
+      {
+        "year": 2021,
+        "pct": 98.1,
+        "n": 105,
+        "of": 107
+      },
+      {
+        "year": 2022,
+        "pct": 94.8,
+        "n": 183,
+        "of": 193
+      },
+      {
+        "year": 2023,
+        "pct": 96.4,
+        "n": 187,
+        "of": 194
+      },
+      {
+        "year": 2024,
+        "pct": 95.6,
+        "n": 172,
+        "of": 180
+      },
+      {
+        "year": 2025,
+        "pct": 96.3,
+        "n": 183,
+        "of": 190
+      },
+      {
+        "year": 2026,
+        "pct": 97.4,
+        "n": 114,
+        "of": 117
+      }
+    ],
+    "good_attachment": {
+      "pct": 99.3,
+      "n": 976,
+      "of": 983
+    },
+    "any_illness_last_month": {
+      "pct": 4.7,
+      "n": 34,
+      "of": 729
+    },
+    "medication": {
+      "pct": 0.0,
+      "n": 0,
+      "of": 602
+    },
+    "hospitalised": {
+      "pct": 1.1,
+      "n": 7,
+      "of": 612
+    },
+    "early_food_reasons": [
+      {
+        "label": "no enough breast milk",
+        "n": 15,
+        "pct": 57.7
+      },
+      {
+        "label": "working mother",
+        "n": 8,
+        "pct": 30.8
+      },
+      {
+        "label": "illness of child",
+        "n": 2,
+        "pct": 7.7
+      },
+      {
+        "label": "others",
+        "n": 1,
+        "pct": 3.8
+      }
+    ],
+    "home_visit": {
+      "pct": 93.3,
+      "n": 880,
+      "of": 943
+    },
+    "weight_kg_median": 5.6,
+    "length_cm_median": 60.0,
+    "mother_weight_kg_median": 68.0,
+    "mother_weight_recorded": {
+      "pct": 47.3,
+      "n": 465,
+      "of": 984
+    },
+    "matched_with_six_month": {
+      "babies": 864,
+      "ebf_at_third_visit": {
+        "pct": 96.2,
+        "n": 831,
+        "of": 864
+      },
+      "ebf_full_6_months": {
+        "pct": 58.8,
+        "n": 508,
+        "of": 864
+      },
+      "ebf_full_6_months_if_ebf_at_third": {
+        "pct": 59.7,
+        "n": 496,
+        "of": 831
+      }
+    }
+  },
+  "six_month": {
+    "babies": 970,
+    "period": [
+      "2021-06-15",
+      "2026-11-03"
+    ],
+    "ebf_full_6_months": {
+      "pct": 58.8,
+      "n": 553,
+      "of": 941
+    },
+    "ebf_full_6_months_by_year": [
+      {
+        "year": 2021,
+        "pct": 58.6,
+        "n": 51,
+        "of": 87
+      },
+      {
+        "year": 2022,
+        "pct": 67.1,
+        "n": 106,
+        "of": 158
+      },
+      {
+        "year": 2023,
+        "pct": 60.6,
+        "n": 132,
+        "of": 218
+      },
+      {
+        "year": 2024,
+        "pct": 52.3,
+        "n": 92,
+        "of": 176
+      },
+      {
+        "year": 2025,
+        "pct": 60.0,
+        "n": 102,
+        "of": 170
+      },
+      {
+        "year": 2026,
+        "pct": 53.4,
+        "n": 70,
+        "of": 131
+      }
+    ],
+    "ebf_months_distribution": [
+      {
+        "months": 0,
+        "n": 74
+      },
+      {
+        "months": 1,
+        "n": 14
+      },
+      {
+        "months": 2,
+        "n": 17
+      },
+      {
+        "months": 3,
+        "n": 32
+      },
+      {
+        "months": 4,
+        "n": 54
+      },
+      {
+        "months": 5,
+        "n": 197
+      },
+      {
+        "months": 6,
+        "n": 553
+      }
+    ],
+    "early_food_reasons": [
+      {
+        "label": "not enough breast milk",
+        "n": 76,
+        "pct": 46.3
+      },
+      {
+        "label": "other reason",
+        "n": 64,
+        "pct": 39.0
+      },
+      {
+        "label": "working mother",
+        "n": 19,
+        "pct": 11.6
+      },
+      {
+        "label": "twins baby",
+        "n": 2,
+        "pct": 1.2
+      },
+      {
+        "label": "illness of the child",
+        "n": 2,
+        "pct": 1.2
+      },
+      {
+        "label": "after 6 month",
+        "n": 1,
+        "pct": 0.6
+      }
+    ],
+    "foods": [
+      {
+        "food": "water",
+        "given": 84,
+        "median_month_started": 6.0,
+        "before_6_months": {
+          "pct": 26.2,
+          "n": 22,
+          "of": 84
+        }
+      },
+      {
+        "food": "janmaghuti",
+        "given": 48,
+        "median_month_started": 0.0,
+        "before_6_months": {
+          "pct": 91.7,
+          "n": 44,
+          "of": 48
+        }
+      },
+      {
+        "food": "powder milk",
+        "given": 146,
+        "median_month_started": 1.0,
+        "before_6_months": {
+          "pct": 88.4,
+          "n": 129,
+          "of": 146
+        }
+      },
+      {
+        "food": "animal milk",
+        "given": 104,
+        "median_month_started": 3.0,
+        "before_6_months": {
+          "pct": 64.4,
+          "n": 67,
+          "of": 104
+        }
+      },
+      {
+        "food": "lito",
+        "given": 450,
+        "median_month_started": 6.0,
+        "before_6_months": {
+          "pct": 26.2,
+          "n": 118,
+          "of": 450
+        }
+      },
+      {
+        "food": "ceralac",
+        "given": 362,
+        "median_month_started": 6.0,
+        "before_6_months": {
+          "pct": 34.3,
+          "n": 124,
+          "of": 362
+        }
+      },
+      {
+        "food": "rice dal jaulo",
+        "given": 416,
+        "median_month_started": 6.0,
+        "before_6_months": {
+          "pct": 18.0,
+          "n": 75,
+          "of": 416
+        }
+      },
+      {
+        "food": "fruits",
+        "given": 301,
+        "median_month_started": 6.0,
+        "before_6_months": {
+          "pct": 13.6,
+          "n": 41,
+          "of": 301
+        }
+      },
+      {
+        "food": "vegetables",
+        "given": 184,
+        "median_month_started": 6.0,
+        "before_6_months": {
+          "pct": 17.4,
+          "n": 32,
+          "of": 184
+        }
+      }
+    ],
+    "visited_as_newborn": {
+      "pct": 92.6,
+      "n": 898,
+      "of": 970
+    },
+    "attends_mother_group": {
+      "pct": 4.5,
+      "n": 44,
+      "of": 970
+    },
+    "mother_group_absence_reasons": [
+      {
+        "label": "working mother",
+        "n": 417,
+        "pct": 45.5
+      },
+      {
+        "label": "busy",
+        "n": 379,
+        "pct": 41.4
+      },
+      {
+        "label": "other",
+        "n": 95,
+        "pct": 10.4
+      },
+      {
+        "label": "do not know",
+        "n": 24,
+        "pct": 2.6
+      },
+      {
+        "label": "do not like",
+        "n": 1,
+        "pct": 0.1
+      }
+    ],
+    "visit_mode_by_year": [
+      {
+        "year": 2021,
+        "home visit": 56,
+        "by phone call": 42
+      },
+      {
+        "year": 2022,
+        "home visit": 157,
+        "mother group": 6,
+        "by phone call": 2
+      },
+      {
+        "year": 2023,
+        "home visit": 187,
+        "by phone call": 27,
+        "mother group": 4,
+        "not reached": 1
+      },
+      {
+        "year": 2024,
+        "home visit": 157,
+        "by phone call": 20,
+        "mother group": 1
+      },
+      {
+        "year": 2025,
+        "home visit": 145,
+        "by phone call": 25,
+        "mother group": 3
+      },
+      {
+        "year": 2026,
+        "home visit": 121,
+        "by phone call": 14,
+        "mother group": 1
+      }
+    ],
+    "advice_coverage": {
+      "nutrition": {
+        "pct": 99.9,
+        "n": 969,
+        "of": 970
+      },
+      "complementary_food": {
+        "pct": 99.9,
+        "n": 969,
+        "of": 970
+      },
+      "immunization_family_planning": {
+        "pct": 99.8,
+        "n": 968,
+        "of": 970
+      },
+      "mother_group": {
+        "pct": 94.6,
+        "n": 918,
+        "of": 970
+      }
+    },
+    "growth": {
+      "median_age_months": 7.0,
+      "weight_kg_median": 8.0,
+      "length_cm_median": 68.0,
+      "head_circumference_cm_median": 43.0,
+      "underweight": {
+        "pct": 2.3,
+        "n": 21,
+        "of": 921
+      },
+      "stunted": {
+        "pct": 8.9,
+        "n": 81,
+        "of": 908
+      },
+      "at_or_above_who_median_weight": {
+        "pct": 50.3,
+        "n": 463,
+        "of": 921
+      },
+      "reference": "WHO Child Growth Standards, weight- and length-for-age (config/who_reference.csv)"
+    },
+    "satisfied_remark": {
+      "pct": 32.6,
+      "n": 316,
+      "of": 970
+    }
+  },
+  "baseline_2017_2019": {
+    "babies": 584,
+    "period": [
+      "2017-01-01",
+      "2019-12-30"
+    ],
+    "born_in_health_facility": {
+      "pct": 95.5,
+      "n": 557,
+      "of": 583
+    },
+    "caesarean": {
+      "pct": 42.7,
+      "n": 249,
+      "of": 583
+    },
+    "regular_anc": {
+      "pct": 95.2,
+      "n": 555,
+      "of": 583
+    },
+    "breastfeeding_within_1h": {
+      "pct": 45.9,
+      "n": 266,
+      "of": 580
+    },
+    "breastfeeding_initiation": [
+      {
+        "label": "Within 1 hour",
+        "n": 266,
+        "pct": 45.9
+      },
+      {
+        "label": "After 24 hours",
+        "n": 163,
+        "pct": 28.1
+      },
+      {
+        "label": "1-5 hours",
+        "n": 118,
+        "pct": 20.3
+      },
+      {
+        "label": "5-24 hours",
+        "n": 33,
+        "pct": 5.7
+      }
+    ],
+    "formula_before_first_breastfeed": {
+      "pct": 29.2,
+      "n": 168,
+      "of": 575
+    },
+    "formula_before_first_breastfeed_normal": {
+      "pct": 12.8,
+      "n": 42,
+      "of": 327
+    },
+    "formula_before_first_breastfeed_caesarean": {
+      "pct": 50.2,
+      "n": 123,
+      "of": 245
+    },
+    "low_birth_weight": {
+      "pct": 8.2,
+      "n": 45,
+      "of": 546
+    },
+    "preterm": {
+      "pct": 4.4,
+      "n": 25,
+      "of": 568
+    },
+    "jaundice_at_visit": {
+      "pct": 58.0,
+      "n": 337,
+      "of": 581
+    },
+    "umbilicus_not_normal": {
+      "pct": 18.0,
+      "n": 105,
+      "of": 582
+    },
+    "skin_rash": {
+      "pct": 37.7,
+      "n": 220,
+      "of": 584
+    },
+    "latch_or_position_needs_help": {
+      "pct": 89.2,
+      "n": 510,
+      "of": 572
+    },
+    "latch_items_not_right": [
+      {
+        "item": "head of baby",
+        "pct": 60.5,
+        "n": 347,
+        "of": 574
+      },
+      {
+        "item": "facing",
+        "pct": 37.1,
+        "n": 213,
+        "of": 574
+      },
+      {
+        "item": "supporting",
+        "pct": 77.0,
+        "n": 442,
+        "of": 574
+      },
+      {
+        "item": "closeness",
+        "pct": 48.6,
+        "n": 279,
+        "of": 574
+      },
+      {
+        "item": "mouth of baby",
+        "pct": 51.7,
+        "n": 297,
+        "of": 574
+      },
+      {
+        "item": "position of nipple",
+        "pct": 64.3,
+        "n": 369,
+        "of": 574
+      },
+      {
+        "item": "position of chin",
+        "pct": 37.3,
+        "n": 214,
+        "of": 573
+      },
+      {
+        "item": "position of lower lip",
+        "pct": 39.4,
+        "n": 226,
+        "of": 573
+      }
+    ],
+    "mother_food_restriction": {
+      "pct": 40.5,
+      "n": 234,
+      "of": 578
+    },
+    "breast_problem": {
+      "pct": 7.9,
+      "n": 46,
+      "of": 580
+    },
+    "mother_age_median": 27.0
+  },
+  "baseline_recent": {
+    "babies": 1106,
+    "period": [
+      "2021-04-08",
+      "2026-11-05"
+    ],
+    "born_in_health_facility": {
+      "pct": 95.0,
+      "n": 1051,
+      "of": 1106
+    },
+    "caesarean": {
+      "pct": 52.9,
+      "n": 584,
+      "of": 1105
+    },
+    "regular_anc": {
+      "pct": 98.5,
+      "n": 1089,
+      "of": 1106
+    },
+    "breastfeeding_within_1h": {
+      "pct": 52.1,
+      "n": 576,
+      "of": 1106
+    },
+    "breastfeeding_initiation": [
+      {
+        "label": "Within 1 hour",
+        "n": 576,
+        "pct": 52.1
+      },
+      {
+        "label": "After 24 hours",
+        "n": 317,
+        "pct": 28.7
+      },
+      {
+        "label": "1-5 hours",
+        "n": 143,
+        "pct": 12.9
+      },
+      {
+        "label": "5-24 hours",
+        "n": 70,
+        "pct": 6.3
+      }
+    ],
+    "formula_before_first_breastfeed": {
+      "pct": 20.2,
+      "n": 223,
+      "of": 1106
+    },
+    "formula_before_first_breastfeed_normal": {
+      "pct": 8.9,
+      "n": 46,
+      "of": 519
+    },
+    "formula_before_first_breastfeed_caesarean": {
+      "pct": 30.3,
+      "n": 177,
+      "of": 584
+    },
+    "low_birth_weight": {
+      "pct": 9.4,
+      "n": 101,
+      "of": 1080
+    },
+    "preterm": {
+      "pct": null,
+      "n": 0,
+      "of": 0
+    },
+    "jaundice_at_visit": {
+      "pct": 46.4,
+      "n": 513,
+      "of": 1106
+    },
+    "umbilicus_not_normal": {
+      "pct": 0.5,
+      "n": 5,
+      "of": 1106
+    },
+    "skin_rash": {
+      "pct": 34.0,
+      "n": 376,
+      "of": 1106
+    },
+    "latch_or_position_needs_help": {
+      "pct": 82.4,
+      "n": 911,
+      "of": 1106
+    },
+    "latch_items_not_right": [
+      {
+        "item": "head of baby",
+        "pct": 48.3,
+        "n": 534,
+        "of": 1106
+      },
+      {
+        "item": "facing",
+        "pct": 24.6,
+        "n": 272,
+        "of": 1106
+      },
+      {
+        "item": "supporting",
+        "pct": 65.5,
+        "n": 724,
+        "of": 1106
+      },
+      {
+        "item": "closeness",
+        "pct": 40.3,
+        "n": 446,
+        "of": 1106
+      },
+      {
+        "item": "mouth of baby",
+        "pct": 36.9,
+        "n": 408,
+        "of": 1106
+      },
+      {
+        "item": "position of nipple",
+        "pct": 45.8,
+        "n": 506,
+        "of": 1106
+      },
+      {
+        "item": "position of chin",
+        "pct": 40.0,
+        "n": 442,
+        "of": 1106
+      },
+      {
+        "item": "position of lower lip",
+        "pct": 40.0,
+        "n": 442,
+        "of": 1106
+      }
+    ],
+    "mother_food_restriction": {
+      "pct": 6.5,
+      "n": 72,
+      "of": 1106
+    },
+    "breast_problem": {
+      "pct": 5.3,
+      "n": 59,
+      "of": 1106
+    },
+    "mother_age_median": 29.0
+  },
+  "mother_group": {
+    "period": [
+      "2017-07-02",
+      "2026-09-30"
+    ],
+    "sessions": 707,
+    "attendances": 7321,
+    "mothers": 449,
+    "avg_per_session": 10.4,
+    "by_year": [
+      {
+        "year": 2017,
+        "sessions": 49,
+        "attendances": 488,
+        "mothers": 79,
+        "avg_per_session": 10.0,
+        "partial": true
+      },
+      {
+        "year": 2018,
+        "sessions": 71,
+        "attendances": 792,
+        "mothers": 102,
+        "avg_per_session": 11.2,
+        "partial": false
+      },
+      {
+        "year": 2019,
+        "sessions": 97,
+        "attendances": 1527,
+        "mothers": 125,
+        "avg_per_session": 15.7,
+        "partial": false
+      },
+      {
+        "year": 2020,
+        "sessions": 29,
+        "attendances": 243,
+        "mothers": 50,
+        "avg_per_session": 8.4,
+        "partial": false
+      },
+      {
+        "year": 2021,
+        "sessions": 41,
+        "attendances": 220,
+        "mothers": 34,
+        "avg_per_session": 5.4,
+        "partial": false
+      },
+      {
+        "year": 2022,
+        "sessions": 88,
+        "attendances": 642,
+        "mothers": 71,
+        "avg_per_session": 7.3,
+        "partial": false
+      },
+      {
+        "year": 2023,
+        "sessions": 97,
+        "attendances": 970,
+        "mothers": 72,
+        "avg_per_session": 10.0,
+        "partial": false
+      },
+      {
+        "year": 2024,
+        "sessions": 98,
+        "attendances": 1206,
+        "mothers": 75,
+        "avg_per_session": 12.3,
+        "partial": false
+      },
+      {
+        "year": 2025,
+        "sessions": 63,
+        "attendances": 677,
+        "mothers": 53,
+        "avg_per_session": 10.7,
+        "partial": false
+      },
+      {
+        "year": 2026,
+        "sessions": 74,
+        "attendances": 556,
+        "mothers": 43,
+        "avg_per_session": 7.5,
+        "partial": true
+      }
+    ],
+    "median_sessions_per_mother": 6.0,
+    "retention": {
+      "ten_or_more_sessions": {
+        "pct": 39.4,
+        "n": 177,
+        "of": 449
+      },
+      "twenty_or_more_sessions": {
+        "pct": 25.2,
+        "n": 113,
+        "of": 449
+      },
+      "member_six_months_or_more": {
+        "pct": 40.1,
+        "n": 180,
+        "of": 449
+      },
+      "member_one_year_or_more": {
+        "pct": 23.4,
+        "n": 105,
+        "of": 449
+      },
+      "attended_in_last_six_months": {
+        "pct": 7.3,
+        "n": 33,
+        "of": 449
+      }
+    },
+    "sex": {
+      "girls": {
+        "pct": 42.9,
+        "n": 192,
+        "of": 448
+      }
+    },
+    "median_age_months_at_first_session": 11.0,
+    "age_known": {
+      "pct": 77.3,
+      "n": 347,
+      "of": 449
+    }
+  },
+  "benchmark": {
+    "underweight_6_11_months": {
+      "pct": 2.3,
+      "n": 21,
+      "of": 917,
+      "mean_weight_z": 0.0
+    },
+    "ndhs_2022": {
+      "ebf_age_2_3_months": 67,
+      "ebf_age_4_5_months": 41,
+      "ebf_age_0_5_months": 56,
+      "pnc_check_within_2_days_after_birth": 70,
+      "early_initiation_within_1h": 55,
+      "early_initiation_within_1h_urban": 51,
+      "early_initiation_within_1h_bagmati": 43,
+      "early_initiation_within_1h_vaginal": 63,
+      "early_initiation_within_1h_caesarean": 17,
+      "anc_breastfeeding_counselling": 52,
+      "ebf_age_0_5_months_2011": 70,
+      "underweight_age_6_11_months": 13.7,
+      "underweight_bagmati_under5": 10.5,
+      "neonatal_mortality_per_1000": 21,
+      "share_of_under5_deaths_in_first_month": 64
+    },
+    "third_visit_age_months": {
+      "median": 2.5,
+      "q1": 2.0,
+      "q3": 3.2
+    },
+    "ebf_at_third_visit": {
+      "pct": 96.2,
+      "n": 944,
+      "of": 981
+    },
+    "ebf_at_least_5_months": {
+      "pct": 79.7,
+      "n": 750,
+      "of": 941
+    },
+    "early_initiation": {
+      "pct": 45.9,
+      "n": 266,
+      "of": 580
+    },
+    "early_initiation_vaginal": {
+      "pct": 71.4,
+      "n": 235,
+      "of": 329
+    },
+    "early_initiation_caesarean": {
+      "pct": 12.6,
+      "n": 31,
+      "of": 247
+    },
+    "early_initiation_period": [
+      "2017",
+      "2019"
+    ]
+  },
+  "growth_trend": {
+    "by_year": [
+      {
+        "year": 2021,
+        "babies": 54,
+        "weight_z_mean": -0.13,
+        "weight_z_ci95": 0.35,
+        "underweight": {
+          "pct": 1.9,
+          "n": 1,
+          "of": 54
+        },
+        "length_z_mean": -1.06,
+        "length_z_ci95": 0.42,
+        "length_z_sd": 1.57,
+        "stunted": {
+          "pct": 29.6,
+          "n": 16,
+          "of": 54
+        }
+      },
+      {
+        "year": 2022,
+        "babies": 164,
+        "weight_z_mean": -0.1,
+        "weight_z_ci95": 0.18,
+        "underweight": {
+          "pct": 1.8,
+          "n": 3,
+          "of": 164
+        },
+        "length_z_mean": -0.06,
+        "length_z_ci95": 0.28,
+        "length_z_sd": 1.85,
+        "stunted": {
+          "pct": 11.0,
+          "n": 18,
+          "of": 164
+        }
+      },
+      {
+        "year": 2023,
+        "babies": 218,
+        "weight_z_mean": 0.01,
+        "weight_z_ci95": 0.17,
+        "underweight": {
+          "pct": 1.8,
+          "n": 4,
+          "of": 218
+        },
+        "length_z_mean": 0.6,
+        "length_z_ci95": 0.29,
+        "length_z_sd": 2.17,
+        "stunted": {
+          "pct": 8.7,
+          "n": 19,
+          "of": 218
+        }
+      },
+      {
+        "year": 2024,
+        "babies": 177,
+        "weight_z_mean": 0.14,
+        "weight_z_ci95": 0.18,
+        "underweight": {
+          "pct": 2.3,
+          "n": 4,
+          "of": 177
+        },
+        "length_z_mean": 0.99,
+        "length_z_ci95": 0.32,
+        "length_z_sd": 2.17,
+        "stunted": {
+          "pct": 4.0,
+          "n": 7,
+          "of": 173
+        }
+      },
+      {
+        "year": 2025,
+        "babies": 172,
+        "weight_z_mean": 0.11,
+        "weight_z_ci95": 0.19,
+        "underweight": {
+          "pct": 2.9,
+          "n": 5,
+          "of": 172
+        },
+        "length_z_mean": 0.99,
+        "length_z_ci95": 0.35,
+        "length_z_sd": 2.32,
+        "stunted": {
+          "pct": 5.4,
+          "n": 9,
+          "of": 166
+        }
+      },
+      {
+        "year": 2026,
+        "babies": 135,
+        "weight_z_mean": -0.13,
+        "weight_z_ci95": 0.23,
+        "underweight": {
+          "pct": 3.0,
+          "n": 4,
+          "of": 135
+        },
+        "length_z_mean": -0.08,
+        "length_z_ci95": 0.25,
+        "length_z_sd": 1.46,
+        "stunted": {
+          "pct": 9.1,
+          "n": 12,
+          "of": 132
+        }
+      }
+    ],
+    "mother_group_at_six_months": {
+      "attending": {
+        "babies": 44,
+        "weight_z_mean": 0.16,
+        "weight_z_ci95": 0.36,
+        "underweight": {
+          "pct": 2.3,
+          "n": 1,
+          "of": 44
+        },
+        "length_z_mean": 0.35,
+        "length_z_ci95": 0.5,
+        "length_z_sd": 1.69,
+        "stunted": {
+          "pct": 0.0,
+          "n": 0,
+          "of": 44
+        }
+      },
+      "not_attending": {
+        "babies": 877,
+        "weight_z_mean": 0.0,
+        "weight_z_ci95": 0.08,
+        "underweight": {
+          "pct": 2.3,
+          "n": 20,
+          "of": 877
+        },
+        "length_z_mean": 0.44,
+        "length_z_ci95": 0.14,
+        "length_z_sd": 2.12,
+        "stunted": {
+          "pct": 9.4,
+          "n": 81,
+          "of": 864
+        }
+      }
+    },
+    "note": "z-scores use whole-month WHO reference rows, as for the other growth figures"
+  },
+  "historical_activity_log": {
+    "period": [
+      "2018-08-01",
+      "2026-11-04"
+    ],
+    "home_visits": {
+      "dated_rows": 1749,
+      "first": 1571,
+      "second": 1582,
+      "third": 1423,
+      "six_month": 447,
+      "follow_up": 22,
+      "total_contacts": 5045
+    },
+    "outreach": {
+      "activities": 203,
+      "participant_attendances": 6266,
+      "categories": {
+        "brick_factory": {
+          "label": "Brick factory migrant camps",
+          "camps": 11,
+          "participants": 602
+        },
+        "carpet_factory": {
+          "label": "Carpet factory worker outreach",
+          "camps": 21,
+          "participants": 670
+        },
+        "school": {
+          "label": "School health & dental camps",
+          "camps": 16,
+          "participants": 1362
+        },
+        "hospital_and_nurse_training": {
+          "label": "Hospital staff & nurse trainings",
+          "camps": 12,
+          "participants": 318
+        },
+        "health_post_and_fchv": {
+          "label": "Health post & FCHV sessions",
+          "camps": 48,
+          "participants": 1009
+        },
+        "community_and_other": {
+          "label": "Community health, nutrition & maternal camps",
+          "camps": 95,
+          "participants": 2305
+        }
+      },
+      "nurse_and_hospital_trainings": {
+        "courses": 4,
+        "participants": 92,
+        "key_events": [
+          {
+            "date": "2022-11-07",
+            "last_date": "2022-11-07",
+            "location": "Dhulikhel Hospital",
+            "days": 1,
+            "participants": 20,
+            "description": "Training By Lene and Lona for 5 Days.."
+          },
+          {
+            "date": "2024-04-01",
+            "last_date": "2024-04-05",
+            "location": "Dhulikhel Hospital",
+            "days": 5,
+            "participants": 24,
+            "description": "Program of Educaton for Home visit nurses by Lona and lene.."
+          },
+          {
+            "date": "2025-04-07",
+            "last_date": "2025-04-07",
+            "location": "Dhulikhel Hospital",
+            "days": 1,
+            "participants": 33,
+            "description": "Program of Educaton for Home visit nurses by Lona ."
+          },
+          {
+            "date": "2026-10-08",
+            "last_date": "2026-10-08",
+            "location": "CCN/Korean Hospital",
+            "days": 1,
+            "participants": 15,
+            "description": "PNC Home Nurse Training /CCDK and CCN Health team."
+          }
+        ]
+      }
+    },
+    "mother_group": {
+      "dated_entries": 172,
+      "attendance_recorded_entries": 158,
+      "entries_without_attendance": 14,
+      "attendance_total": 2664
+    },
+    "historical_2018_2020": {
+      "period": [
+        "2018-08-01",
+        "2020-07-31"
+      ],
+      "home_visits": {
+        "dated_rows": 432,
+        "first": 435,
+        "second": 440,
+        "third": 403,
+        "six_month": 353,
+        "follow_up": 21,
+        "total_contacts": 1652
+      },
+      "outreach": {
+        "activities": 43,
+        "participant_attendances": 1501
+      },
+      "mother_group": {
+        "dated_entries": 170,
+        "attendance_recorded_entries": 157,
+        "entries_without_attendance": 13,
+        "attendance_total": 2645
+      }
+    }
+  }
+}
