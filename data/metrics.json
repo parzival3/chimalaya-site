@@ -6476,6 +6476,2106 @@
         "group_per_session": 7.5,
         "first_visit_median_days": 12
       }
-    ]
+    ],
+    "previous": {
+      "y2017": {
+        "v2_pct": [
+          {
+            "label": "Now",
+            "value": 90.4
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Now",
+            "value": 73.3
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Now",
+            "value": 43.8
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Now",
+            "value": 27.7
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Now",
+            "value": 16.9
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Now",
+            "value": 47.9
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Now",
+            "value": 15
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Now",
+            "value": 10.0
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Now",
+            "value": 8.2
+          }
+        ]
+      },
+      "y2018": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 92.5
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 87.4
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 43.8
+          },
+          {
+            "label": "Now",
+            "value": 47.4
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 27.7
+          },
+          {
+            "label": "Now",
+            "value": 23.6
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 33.5
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 63.6
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 10
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 11.2
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 5.9
+          }
+        ]
+      },
+      "y2019": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 92.5
+          },
+          {
+            "label": "Now",
+            "value": 93.9
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 87.4
+          },
+          {
+            "label": "Now",
+            "value": 86.4
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Now",
+            "value": 57.0
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 47.4
+          },
+          {
+            "label": "Now",
+            "value": 45.4
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 23.6
+          },
+          {
+            "label": "Now",
+            "value": 36.1
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 33.5
+          },
+          {
+            "label": "Now",
+            "value": 25.4
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 63.6
+          },
+          {
+            "label": "Now",
+            "value": 71.1
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 10
+          },
+          {
+            "label": "Now",
+            "value": 11
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 11.2
+          },
+          {
+            "label": "Now",
+            "value": 15.7
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 5.9
+          },
+          {
+            "label": "Now",
+            "value": 8.1
+          }
+        ]
+      },
+      "y2020": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 93.9
+          },
+          {
+            "label": "Now",
+            "value": 96.2
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 86.4
+          },
+          {
+            "label": "Now",
+            "value": 93.0
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 57.0
+          },
+          {
+            "label": "Now",
+            "value": 87.3
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 25.4
+          },
+          {
+            "label": "Now",
+            "value": 32.5
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 71.1
+          },
+          {
+            "label": "Now",
+            "value": 68.8
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 11
+          },
+          {
+            "label": "Now",
+            "value": 11
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 15.7
+          },
+          {
+            "label": "Now",
+            "value": 8.4
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.1
+          },
+          {
+            "label": "Now",
+            "value": 2.4
+          }
+        ]
+      },
+      "y2021": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 96.2
+          },
+          {
+            "label": "Now",
+            "value": 97.0
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 93.0
+          },
+          {
+            "label": "Now",
+            "value": 97.0
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 87.3
+          },
+          {
+            "label": "Now",
+            "value": 91.7
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Now",
+            "value": 58.6
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Now",
+            "value": 98.1
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Now",
+            "value": 57.3
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Now",
+            "value": 26.0
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 32.5
+          },
+          {
+            "label": "Now",
+            "value": 39.1
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 68.8
+          },
+          {
+            "label": "Now",
+            "value": 70.4
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 11
+          },
+          {
+            "label": "Now",
+            "value": 9
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 8.4
+          },
+          {
+            "label": "Now",
+            "value": 5.4
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 2.4
+          },
+          {
+            "label": "Now",
+            "value": 3.4
+          }
+        ]
+      },
+      "y2022": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 97.0
+          },
+          {
+            "label": "Now",
+            "value": 99.1
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 97.0
+          },
+          {
+            "label": "Now",
+            "value": 98.3
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 91.7
+          },
+          {
+            "label": "Now",
+            "value": 95.3
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 58.6
+          },
+          {
+            "label": "Now",
+            "value": 67.1
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 98.1
+          },
+          {
+            "label": "Now",
+            "value": 94.8
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 57.3
+          },
+          {
+            "label": "Now",
+            "value": 51.0
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 26.0
+          },
+          {
+            "label": "Now",
+            "value": 29.4
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 39.1
+          },
+          {
+            "label": "Now",
+            "value": 36.5
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 70.4
+          },
+          {
+            "label": "Now",
+            "value": 70.0
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 9
+          },
+          {
+            "label": "Now",
+            "value": 10
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 5.4
+          },
+          {
+            "label": "Now",
+            "value": 7.3
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 3.4
+          },
+          {
+            "label": "Now",
+            "value": 7.3
+          }
+        ]
+      },
+      "y2023": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 99.1
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 98.3
+          },
+          {
+            "label": "Now",
+            "value": 99.4
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 95.3
+          },
+          {
+            "label": "Now",
+            "value": 99.4
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 67.1
+          },
+          {
+            "label": "Now",
+            "value": 60.6
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 94.8
+          },
+          {
+            "label": "Now",
+            "value": 96.4
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 51.0
+          },
+          {
+            "label": "Now",
+            "value": 54.6
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 29.4
+          },
+          {
+            "label": "Now",
+            "value": 25.0
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 36.5
+          },
+          {
+            "label": "Now",
+            "value": 21.5
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 70.0
+          },
+          {
+            "label": "Now",
+            "value": 59.9
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 10
+          },
+          {
+            "label": "Now",
+            "value": 12
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 7.3
+          },
+          {
+            "label": "Now",
+            "value": 10.0
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 7.3
+          },
+          {
+            "label": "Now",
+            "value": 8.1
+          }
+        ]
+      },
+      "y2024": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 100.0
+          },
+          {
+            "label": "Now",
+            "value": 99.5
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 99.4
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 99.4
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 60.6
+          },
+          {
+            "label": "Now",
+            "value": 52.3
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 96.4
+          },
+          {
+            "label": "Now",
+            "value": 95.6
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 54.6
+          },
+          {
+            "label": "Now",
+            "value": 48.3
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 25.0
+          },
+          {
+            "label": "Now",
+            "value": 16.3
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 21.5
+          },
+          {
+            "label": "Now",
+            "value": 31.4
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 59.9
+          },
+          {
+            "label": "Now",
+            "value": 70.1
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 12
+          },
+          {
+            "label": "Now",
+            "value": 10
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 12.3
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.1
+          },
+          {
+            "label": "Now",
+            "value": 8.2
+          }
+        ]
+      },
+      "y2025": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 99.5
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 100.0
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 100.0
+          },
+          {
+            "label": "Now",
+            "value": 98.8
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 52.3
+          },
+          {
+            "label": "Now",
+            "value": 60.0
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 95.6
+          },
+          {
+            "label": "Now",
+            "value": 96.3
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 48.3
+          },
+          {
+            "label": "Now",
+            "value": 47.6
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 16.3
+          },
+          {
+            "label": "Now",
+            "value": 8.8
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 31.4
+          },
+          {
+            "label": "Now",
+            "value": 21.9
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 70.1
+          },
+          {
+            "label": "Now",
+            "value": 63.8
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 10
+          },
+          {
+            "label": "Now",
+            "value": 12
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 12.3
+          },
+          {
+            "label": "Now",
+            "value": 10.7
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 5.2
+          }
+        ]
+      },
+      "y2026": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 100.0
+          },
+          {
+            "label": "Now",
+            "value": 95.8
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 100.0
+          },
+          {
+            "label": "Now",
+            "value": 98.7
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 98.8
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 60.0
+          },
+          {
+            "label": "Now",
+            "value": 53.4
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 96.3
+          },
+          {
+            "label": "Now",
+            "value": 97.4
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 47.6
+          },
+          {
+            "label": "Now",
+            "value": 56.1
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 8.8
+          },
+          {
+            "label": "Now",
+            "value": 12.3
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 21.9
+          },
+          {
+            "label": "Now",
+            "value": 23.0
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 63.8
+          },
+          {
+            "label": "Now",
+            "value": 58.6
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 12
+          },
+          {
+            "label": "Now",
+            "value": 12
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.7
+          },
+          {
+            "label": "Now",
+            "value": 7.5
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 5.2
+          },
+          {
+            "label": "Now",
+            "value": 8.2
+          }
+        ]
+      }
+    },
+    "start": {
+      "y2017": {
+        "v2_pct": [
+          {
+            "label": "Now",
+            "value": 90.4
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Now",
+            "value": 73.3
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Now",
+            "value": 43.8
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Now",
+            "value": 27.7
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Now",
+            "value": 16.9
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Now",
+            "value": 47.9
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Now",
+            "value": 15
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Now",
+            "value": 10.0
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Now",
+            "value": 8.2
+          }
+        ]
+      },
+      "y2018": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 92.5
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 87.4
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 43.8
+          },
+          {
+            "label": "Now",
+            "value": 47.4
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 27.7
+          },
+          {
+            "label": "Now",
+            "value": 23.6
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 33.5
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 63.6
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 10
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 11.2
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 5.9
+          }
+        ]
+      },
+      "y2019": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 93.9
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 86.4
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Now",
+            "value": 57.0
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 43.8
+          },
+          {
+            "label": "Now",
+            "value": 45.4
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 27.7
+          },
+          {
+            "label": "Now",
+            "value": 36.1
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 25.4
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 71.1
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 11
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 15.7
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 8.1
+          }
+        ]
+      },
+      "y2020": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 96.2
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 93.0
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 57.0
+          },
+          {
+            "label": "Now",
+            "value": 87.3
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 32.5
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 68.8
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 11
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 8.4
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 2.4
+          }
+        ]
+      },
+      "y2021": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 97.0
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 97.0
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 57.0
+          },
+          {
+            "label": "Now",
+            "value": 91.7
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Now",
+            "value": 58.6
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Now",
+            "value": 98.1
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 43.8
+          },
+          {
+            "label": "Now",
+            "value": 57.3
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 27.7
+          },
+          {
+            "label": "Now",
+            "value": 26.0
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 39.1
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 70.4
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 9
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 5.4
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 3.4
+          }
+        ]
+      },
+      "y2022": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 99.1
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 98.3
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 57.0
+          },
+          {
+            "label": "Now",
+            "value": 95.3
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 58.6
+          },
+          {
+            "label": "Now",
+            "value": 67.1
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 98.1
+          },
+          {
+            "label": "Now",
+            "value": 94.8
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 43.8
+          },
+          {
+            "label": "Now",
+            "value": 51.0
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 27.7
+          },
+          {
+            "label": "Now",
+            "value": 29.4
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 36.5
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 70.0
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 10
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 7.3
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 7.3
+          }
+        ]
+      },
+      "y2023": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 99.4
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 57.0
+          },
+          {
+            "label": "Now",
+            "value": 99.4
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 58.6
+          },
+          {
+            "label": "Now",
+            "value": 60.6
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 98.1
+          },
+          {
+            "label": "Now",
+            "value": 96.4
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 43.8
+          },
+          {
+            "label": "Now",
+            "value": 54.6
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 27.7
+          },
+          {
+            "label": "Now",
+            "value": 25.0
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 21.5
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 59.9
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 12
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 10.0
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 8.1
+          }
+        ]
+      },
+      "y2024": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 99.5
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 57.0
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 58.6
+          },
+          {
+            "label": "Now",
+            "value": 52.3
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 98.1
+          },
+          {
+            "label": "Now",
+            "value": 95.6
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 43.8
+          },
+          {
+            "label": "Now",
+            "value": 48.3
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 27.7
+          },
+          {
+            "label": "Now",
+            "value": 16.3
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 31.4
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 70.1
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 10
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 12.3
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 8.2
+          }
+        ]
+      },
+      "y2025": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 57.0
+          },
+          {
+            "label": "Now",
+            "value": 98.8
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 58.6
+          },
+          {
+            "label": "Now",
+            "value": 60.0
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 98.1
+          },
+          {
+            "label": "Now",
+            "value": 96.3
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 43.8
+          },
+          {
+            "label": "Now",
+            "value": 47.6
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 27.7
+          },
+          {
+            "label": "Now",
+            "value": 8.8
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 21.9
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 63.8
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 12
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 10.7
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 5.2
+          }
+        ]
+      },
+      "y2026": {
+        "v2_pct": [
+          {
+            "label": "Before",
+            "value": 90.4
+          },
+          {
+            "label": "Now",
+            "value": 95.8
+          }
+        ],
+        "v3_pct": [
+          {
+            "label": "Before",
+            "value": 73.3
+          },
+          {
+            "label": "Now",
+            "value": 98.7
+          }
+        ],
+        "v6m_pct": [
+          {
+            "label": "Before",
+            "value": 57.0
+          },
+          {
+            "label": "Now",
+            "value": 100.0
+          }
+        ],
+        "ebf6_pct": [
+          {
+            "label": "Before",
+            "value": 58.6
+          },
+          {
+            "label": "Now",
+            "value": 53.4
+          }
+        ],
+        "ebf3_pct": [
+          {
+            "label": "Before",
+            "value": 98.1
+          },
+          {
+            "label": "Now",
+            "value": 97.4
+          }
+        ],
+        "early_pct": [
+          {
+            "label": "Before",
+            "value": 43.8
+          },
+          {
+            "label": "Now",
+            "value": 56.1
+          }
+        ],
+        "formula_pct": [
+          {
+            "label": "Before",
+            "value": 27.7
+          },
+          {
+            "label": "Now",
+            "value": 12.3
+          }
+        ],
+        "within7_pct": [
+          {
+            "label": "Before",
+            "value": 16.9
+          },
+          {
+            "label": "Now",
+            "value": 23.0
+          }
+        ],
+        "within14_pct": [
+          {
+            "label": "Before",
+            "value": 47.9
+          },
+          {
+            "label": "Now",
+            "value": 58.6
+          }
+        ],
+        "first_visit_median_days": [
+          {
+            "label": "Before",
+            "value": 15
+          },
+          {
+            "label": "Now",
+            "value": 12
+          }
+        ],
+        "group_per_session": [
+          {
+            "label": "Before",
+            "value": 10.0
+          },
+          {
+            "label": "Now",
+            "value": 7.5
+          }
+        ],
+        "group_sessions_month": [
+          {
+            "label": "Before",
+            "value": 8.2
+          },
+          {
+            "label": "Now",
+            "value": 8.2
+          }
+        ]
+      }
+    }
   }
 }
