@@ -1914,6 +1914,226 @@
         "status": "● Similar",
         "note": "Compared with 2024, the last year without Covid or building work."
       }
-    ]
+    ],
+    "charts": {
+      "visits": [
+        {
+          "date": "2025-12-01",
+          "value": 70,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-01-01",
+          "value": 48,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-02-01",
+          "value": 47,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-03-01",
+          "value": 73,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-04-01",
+          "value": 56,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-05-01",
+          "value": 71,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-06-01",
+          "value": 40,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-07-01",
+          "value": 59,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-08-01",
+          "value": 57,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-09-01",
+          "value": 51,
+          "reference": 57.2
+        },
+        {
+          "date": "2026-10-01",
+          "value": 32,
+          "reference": 57.2
+        }
+      ],
+      "third_visits": [
+        {
+          "date": "2025-12-01",
+          "value": 28,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-01-01",
+          "value": 11,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-02-01",
+          "value": 3,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-03-01",
+          "value": 10,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-04-01",
+          "value": 8,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-05-01",
+          "value": 26,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-06-01",
+          "value": 17,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-07-01",
+          "value": 20,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-08-01",
+          "value": 12,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-09-01",
+          "value": 7,
+          "reference": 14.2
+        },
+        {
+          "date": "2026-10-01",
+          "value": 3,
+          "reference": 14.2
+        }
+      ],
+      "second_visit": [
+        {
+          "date": "2017-01-01",
+          "value": 90.4,
+          "reference": 100.0
+        },
+        {
+          "date": "2018-01-01",
+          "value": 92.5,
+          "reference": 100.0
+        },
+        {
+          "date": "2019-01-01",
+          "value": 93.9,
+          "reference": 100.0
+        },
+        {
+          "date": "2020-01-01",
+          "value": 96.2,
+          "reference": 100.0
+        },
+        {
+          "date": "2021-01-01",
+          "value": 97.0,
+          "reference": 100.0
+        },
+        {
+          "date": "2022-01-01",
+          "value": 99.1,
+          "reference": 100.0
+        },
+        {
+          "date": "2023-01-01",
+          "value": 100.0,
+          "reference": 100.0
+        },
+        {
+          "date": "2024-01-01",
+          "value": 99.5,
+          "reference": 100.0
+        },
+        {
+          "date": "2025-01-01",
+          "value": 100.0,
+          "reference": 100.0
+        },
+        {
+          "date": "2026-01-01",
+          "value": 95.8,
+          "reference": 100.0
+        }
+      ],
+      "group_per_session": [
+        {
+          "date": "2017-01-01",
+          "value": 10.0,
+          "reference": 12.3
+        },
+        {
+          "date": "2018-01-01",
+          "value": 11.2,
+          "reference": 12.3
+        },
+        {
+          "date": "2019-01-01",
+          "value": 15.7,
+          "reference": 12.3
+        },
+        {
+          "date": "2020-01-01",
+          "value": 8.4,
+          "reference": 12.3
+        },
+        {
+          "date": "2021-01-01",
+          "value": 5.4,
+          "reference": 12.3
+        },
+        {
+          "date": "2022-01-01",
+          "value": 7.3,
+          "reference": 12.3
+        },
+        {
+          "date": "2023-01-01",
+          "value": 10.0,
+          "reference": 12.3
+        },
+        {
+          "date": "2024-01-01",
+          "value": 12.3,
+          "reference": 12.3
+        },
+        {
+          "date": "2025-01-01",
+          "value": 10.7,
+          "reference": 12.3
+        },
+        {
+          "date": "2026-01-01",
+          "value": 7.5,
+          "reference": 12.3
+        }
+      ]
+    }
   }
 }
