@@ -2134,6 +2134,120 @@
           "reference": 12.3
         }
       ]
+    },
+    "tiles": {
+      "visits": [
+        {
+          "label": "Before",
+          "value": 57.2
+        },
+        {
+          "label": "Now",
+          "value": 32
+        }
+      ],
+      "new_babies": [
+        {
+          "label": "Before",
+          "value": 14.5
+        },
+        {
+          "label": "Now",
+          "value": 13
+        }
+      ],
+      "third_visits": [
+        {
+          "label": "Before",
+          "value": 14.2
+        },
+        {
+          "label": "Now",
+          "value": 3
+        }
+      ],
+      "second_visit": [
+        {
+          "label": "Before",
+          "value": 100.0
+        },
+        {
+          "label": "Now",
+          "value": 95.8
+        }
+      ],
+      "third_followup": [
+        {
+          "label": "Before",
+          "value": 100.0
+        },
+        {
+          "label": "Now",
+          "value": 98.7
+        }
+      ],
+      "six_month_followup": [
+        {
+          "label": "Before",
+          "value": 98.8
+        },
+        {
+          "label": "Now",
+          "value": 100.0
+        }
+      ],
+      "ebf_six_months": [
+        {
+          "label": "Before",
+          "value": 60.0
+        },
+        {
+          "label": "Now",
+          "value": 53.4
+        }
+      ],
+      "first_visit_age": [
+        {
+          "label": "Before",
+          "value": 12.0
+        },
+        {
+          "label": "Now",
+          "value": 12.0
+        }
+      ],
+      "group_sessions_month": [
+        {
+          "label": "Before",
+          "value": 8.2
+        },
+        {
+          "label": "Now",
+          "value": 8.2
+        }
+      ],
+      "group_mothers_per_session": [
+        {
+          "label": "Before",
+          "value": 12.3
+        },
+        {
+          "label": "Now",
+          "value": 7.5
+        }
+      ],
+      "group_recent": [
+        {
+          "label": "Mothers who came in the last six months",
+          "value": 7.3
+        }
+      ],
+      "reasons_unrecorded": [
+        {
+          "label": "Missed visits with no reason written down",
+          "value": 91.3
+        }
+      ]
     }
   }
 }
