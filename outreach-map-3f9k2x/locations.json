@@ -334,10 +334,66 @@
    "confirmed": true
   },
   {
+   "name": "Bode Secondary School",
+   "category": "school",
+   "lat": 27.6914808,
+   "lon": 85.3846886,
+   "confirmed": true
+  },
+  {
+   "name": "Ganesh Boarding School",
+   "category": "school",
+   "lat": 27.69929,
+   "lon": 85.2851765,
+   "confirmed": true
+  },
+  {
+   "name": "Gyan Bikash Public School",
+   "category": "school",
+   "lat": 27.6922065,
+   "lon": 85.385349,
+   "confirmed": true
+  },
+  {
+   "name": "Janak Siddhikali Secondary School",
+   "category": "school",
+   "lat": 27.6725843,
+   "lon": 85.3737524,
+   "confirmed": true
+  },
+  {
+   "name": "Lotus Innovative School",
+   "category": "school",
+   "lat": 27.6914655,
+   "lon": 85.385238,
+   "confirmed": true
+  },
+  {
+   "name": "Nil Barahi School - Tigani",
+   "category": "school",
+   "lat": 27.6967324,
+   "lon": 85.3334143,
+   "confirmed": true
+  },
+  {
    "name": "North Point Mall",
    "category": "school",
    "lat": 27.689931,
    "lon": 85.39023,
+   "confirmed": true
+  },
+  {
+   "name": "Prime Academy School",
+   "category": "school",
+   "lat": 27.6940731,
+   "lon": 85.3257768,
+   "confirmed": true
+  },
+  {
+   "name": "Thimi Active School",
+   "category": "school",
+   "lat": 27.6820077,
+   "lon": 85.3828306,
    "confirmed": true
   }
  ]
