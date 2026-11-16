@@ -1,12 +1,12 @@
 {
   "generated": "2026-11-16",
   "reach": {
-    "babies_total": 1851,
+    "babies_total": 1852,
     "staff_attribution": {
-      "babies_with_staff_code": 1825,
+      "babies_with_staff_code": 1826,
       "babies_with_multiple_staff_codes": 1673
     },
-    "register_as_of": "2026-11-05",
+    "register_as_of": "2026-11-16",
     "first_visit_from": "2017-01-01",
     "babies_by_year": [
       {
@@ -56,7 +56,7 @@
       },
       {
         "year": 2026,
-        "n": 152,
+        "n": 153,
         "partial": true
       }
     ],
@@ -64,8 +64,8 @@
     "babies_per_month_recent": 15.8,
     "girls": {
       "pct": 46.5,
-      "n": 859,
-      "of": 1849
+      "n": 860,
+      "of": 1850
     },
     "localities_named": 42,
     "top_localities": [
@@ -112,14 +112,14 @@
     ],
     "bag4life": {
       "pct": 93.6,
-      "n": 1733,
-      "of": 1851,
+      "n": 1734,
+      "of": 1852,
       "from_year": 2017,
-      "total": 1733
+      "total": 1734
     }
   },
   "monthly_activity": {
-    "as_of": "2026-11-05",
+    "as_of": "2026-11-16",
     "months": [
       {
         "month": "2025-12",
@@ -222,11 +222,11 @@
       },
       {
         "month": "2026-11",
-        "first": 5,
+        "first": 6,
         "second": 3,
         "third": 5,
         "six_month": 2,
-        "total": 15,
+        "total": 16,
         "partial": true
       }
     ],
@@ -245,12 +245,12 @@
     "first_visit_within_14_days": {
       "pct": 65.1,
       "n": 1202,
-      "of": 1846
+      "of": 1847
     },
     "first_visit_within_28_days": {
       "pct": 90.9,
-      "n": 1678,
-      "of": 1846
+      "n": 1679,
+      "of": 1847
     },
     "median_age_by_year": [
       {
@@ -302,30 +302,30 @@
     "overall": {
       "v2": {
         "pct": 96.4,
-        "n": 1754,
-        "of": 1819
+        "n": 1758,
+        "of": 1823
       },
       "v3": {
         "pct": 93.1,
-        "n": 1656,
-        "of": 1778
+        "n": 1657,
+        "of": 1779
       },
       "v6m": {
         "pct": 89.1,
-        "n": 1197,
-        "of": 1343
+        "n": 1204,
+        "of": 1351
       }
     },
     "all_three_newborn_visits": {
       "pct": 92.4,
-      "n": 1643,
-      "of": 1778
+      "n": 1644,
+      "of": 1779
     },
     "all_followups_since": {
       "from_year": 2023,
-      "pct": 99.3,
-      "n": 551,
-      "of": 555
+      "pct": 99.1,
+      "n": 558,
+      "of": 563
     },
     "by_year": [
       {
@@ -501,28 +501,28 @@
       },
       {
         "year": 2026,
-        "babies": 152,
+        "babies": 153,
         "v2": {
-          "pct": 95.8,
-          "n": 115,
-          "of": 120
+          "pct": 96.0,
+          "n": 119,
+          "of": 124
         },
         "v3": {
-          "pct": 98.7,
-          "n": 78,
-          "of": 79
+          "pct": 98.8,
+          "n": 79,
+          "of": 80
         },
         "v6m": {
-          "pct": 100.0,
-          "n": 29,
-          "of": 29
+          "pct": 97.3,
+          "n": 36,
+          "of": 37
         }
       }
     ],
     "missed_visit_reasons": [
       {
         "label": "not recorded",
-        "n": 304,
+        "n": 305,
         "pct": 91.3
       },
       {
@@ -1270,41 +1270,41 @@
     "mother_age_median": 27.0
   },
   "baseline_recent": {
-    "babies": 1106,
+    "babies": 1107,
     "period": [
       "2021-04-08",
-      "2026-11-05"
+      "2026-11-16"
     ],
     "born_in_health_facility": {
       "pct": 95.0,
-      "n": 1051,
-      "of": 1106
+      "n": 1052,
+      "of": 1107
     },
     "caesarean": {
-      "pct": 52.9,
+      "pct": 52.8,
       "n": 584,
-      "of": 1105
+      "of": 1106
     },
     "regular_anc": {
       "pct": 98.5,
-      "n": 1089,
-      "of": 1106
+      "n": 1090,
+      "of": 1107
     },
     "breastfeeding_within_1h": {
       "pct": 52.1,
-      "n": 576,
-      "of": 1106
+      "n": 577,
+      "of": 1107
     },
     "breastfeeding_initiation": [
       {
         "label": "Within 1 hour",
-        "n": 576,
+        "n": 577,
         "pct": 52.1
       },
       {
         "label": "After 24 hours",
         "n": 317,
-        "pct": 28.7
+        "pct": 28.6
       },
       {
         "label": "1-5 hours",
@@ -1318,14 +1318,14 @@
       }
     ],
     "formula_before_first_breastfeed": {
-      "pct": 20.2,
+      "pct": 20.1,
       "n": 223,
-      "of": 1106
+      "of": 1107
     },
     "formula_before_first_breastfeed_normal": {
-      "pct": 8.9,
+      "pct": 8.8,
       "n": 46,
-      "of": 519
+      "of": 520
     },
     "formula_before_first_breastfeed_caesarean": {
       "pct": 30.3,
@@ -1333,9 +1333,9 @@
       "of": 584
     },
     "low_birth_weight": {
-      "pct": 9.4,
+      "pct": 9.3,
       "n": 101,
-      "of": 1080
+      "of": 1081
     },
     "preterm": {
       "pct": null,
@@ -1343,84 +1343,84 @@
       "of": 0
     },
     "jaundice_at_visit": {
-      "pct": 46.4,
+      "pct": 46.3,
       "n": 513,
-      "of": 1106
+      "of": 1107
     },
     "umbilicus_not_normal": {
       "pct": 0.5,
       "n": 5,
-      "of": 1106
+      "of": 1107
     },
     "skin_rash": {
       "pct": 34.0,
       "n": 376,
-      "of": 1106
+      "of": 1107
     },
     "latch_or_position_needs_help": {
       "pct": 82.4,
-      "n": 911,
-      "of": 1106
+      "n": 912,
+      "of": 1107
     },
     "latch_items_not_right": [
       {
         "item": "head of baby",
         "pct": 48.3,
-        "n": 534,
-        "of": 1106
+        "n": 535,
+        "of": 1107
       },
       {
         "item": "facing",
-        "pct": 24.6,
-        "n": 272,
-        "of": 1106
+        "pct": 24.7,
+        "n": 273,
+        "of": 1107
       },
       {
         "item": "supporting",
-        "pct": 65.5,
+        "pct": 65.4,
         "n": 724,
-        "of": 1106
+        "of": 1107
       },
       {
         "item": "closeness",
-        "pct": 40.3,
-        "n": 446,
-        "of": 1106
+        "pct": 40.4,
+        "n": 447,
+        "of": 1107
       },
       {
         "item": "mouth of baby",
         "pct": 36.9,
-        "n": 408,
-        "of": 1106
+        "n": 409,
+        "of": 1107
       },
       {
         "item": "position of nipple",
-        "pct": 45.8,
+        "pct": 45.7,
         "n": 506,
-        "of": 1106
+        "of": 1107
       },
       {
         "item": "position of chin",
         "pct": 40.0,
-        "n": 442,
-        "of": 1106
+        "n": 443,
+        "of": 1107
       },
       {
         "item": "position of lower lip",
         "pct": 40.0,
-        "n": 442,
-        "of": 1106
+        "n": 443,
+        "of": 1107
       }
     ],
     "mother_food_restriction": {
       "pct": 6.5,
       "n": 72,
-      "of": 1106
+      "of": 1107
     },
     "breast_problem": {
       "pct": 5.3,
       "n": 59,
-      "of": 1106
+      "of": 1107
     },
     "mother_age_median": 29.0
   },
@@ -2029,7 +2029,7 @@
       "overall": {
         "pct": 4.6,
         "n": 77,
-        "of": 1689
+        "of": 1690
       },
       "by_year": [
         {
@@ -2090,7 +2090,7 @@
         },
         {
           "year": "2026",
-          "n": 155,
+          "n": 156,
           "count": 5,
           "pct": 3.2,
           "partial": true
@@ -2101,7 +2101,7 @@
       "overall": {
         "pct": 4.4,
         "n": 72,
-        "of": 1623
+        "of": 1624
       },
       "by_year": [
         {
@@ -2162,9 +2162,9 @@
         },
         {
           "year": "2026",
-          "n": 155,
+          "n": 156,
           "count": 6,
-          "pct": 3.9,
+          "pct": 3.8,
           "partial": true
         }
       ],
@@ -2257,14 +2257,14 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 91,
-            "pct": 58.7,
+            "pct": 58.3,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1688,
+          "n": 1689,
           "count": 833,
           "pct": 49.3
         }
@@ -2330,14 +2330,14 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 15,
-            "pct": 9.7,
+            "pct": 9.6,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1626,
+          "n": 1627,
           "count": 146,
           "pct": 9.0
         }
@@ -2403,14 +2403,14 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 4,
             "pct": 2.6,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1688,
+          "n": 1689,
           "count": 83,
           "pct": 4.9
         }
@@ -2476,14 +2476,14 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 5,
             "pct": 3.2,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1689,
+          "n": 1690,
           "count": 83,
           "pct": 4.9
         }
@@ -2549,14 +2549,14 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 0,
             "pct": 0.0,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1674,
+          "n": 1675,
           "count": 83,
           "pct": 5.0
         }
@@ -2622,14 +2622,14 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 47,
-            "pct": 30.3,
+            "pct": 30.1,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1687,
+          "n": 1688,
           "count": 850,
           "pct": 50.4
         }
@@ -2695,14 +2695,14 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 1,
             "pct": 0.6,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1688,
+          "n": 1689,
           "count": 110,
           "pct": 6.5
         }
@@ -2768,16 +2768,16 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 54,
-            "pct": 34.8,
+            "pct": 34.6,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1690,
+          "n": 1691,
           "count": 596,
-          "pct": 35.3
+          "pct": 35.2
         }
       },
       "mother_pale": {
@@ -2841,14 +2841,14 @@
           },
           {
             "year": "2026",
-            "n": 154,
+            "n": 155,
             "count": 0,
             "pct": 0.0,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1686,
+          "n": 1687,
           "count": 71,
           "pct": 4.2
         }
@@ -2914,16 +2914,16 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 9,
             "pct": 5.8,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1685,
+          "n": 1686,
           "count": 252,
-          "pct": 15.0
+          "pct": 14.9
         }
       },
       "water_given": {
@@ -2987,14 +2987,14 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 1,
             "pct": 0.6,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1687,
+          "n": 1688,
           "count": 79,
           "pct": 4.7
         }
@@ -3060,14 +3060,14 @@
           },
           {
             "year": "2026",
-            "n": 154,
+            "n": 155,
             "count": 6,
             "pct": 3.9,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1680,
+          "n": 1681,
           "count": 109,
           "pct": 6.5
         }
@@ -3133,14 +3133,14 @@
           },
           {
             "year": "2026",
-            "n": 155,
+            "n": 156,
             "count": 5,
             "pct": 3.2,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1684,
+          "n": 1685,
           "count": 108,
           "pct": 6.4
         }
@@ -3206,15 +3206,15 @@
           },
           {
             "year": "2026",
-            "n": 155,
-            "count": 139,
+            "n": 156,
+            "count": 140,
             "pct": 89.7,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1678,
-          "count": 1421,
+          "n": 1679,
+          "count": 1422,
           "pct": 84.7
         }
       },
@@ -3279,15 +3279,15 @@
           },
           {
             "year": "2026",
-            "n": 153,
-            "count": 63,
-            "pct": 41.2,
+            "n": 154,
+            "count": 64,
+            "pct": 41.6,
             "partial": true
           }
         ],
         "overall": {
-          "n": 1591,
-          "count": 779,
+          "n": 1592,
+          "count": 780,
           "pct": 49.0
         }
       }
@@ -3394,14 +3394,14 @@
           },
           {
             "year": "2026",
-            "caesarean": 58.7,
-            "low_birth_weight": 9.7,
+            "caesarean": 58.3,
+            "low_birth_weight": 9.6,
             "birth_complication": 2.6,
             "baby_did_not_cry": 3.2,
             "problem_after_birth": 0.0,
-            "jaundice": 30.3,
+            "jaundice": 30.1,
             "umbilicus_not_normal": 0.6,
-            "skin_rash": 34.8,
+            "skin_rash": 34.6,
             "mother_pale": 0.0
           }
         ]
@@ -3520,7 +3520,7 @@
           },
           {
             "year": "2026",
-            "first_child": 41.2
+            "first_child": 41.6
           }
         ]
       }
@@ -3529,8 +3529,8 @@
       "mother": [
         {
           "occupation": "Housewife",
-          "n": 759,
-          "pct": 68.6
+          "n": 760,
+          "pct": 68.7
         },
         {
           "occupation": "Service",
@@ -3571,7 +3571,7 @@
         },
         {
           "occupation": "Service",
-          "n": 255,
+          "n": 256,
           "pct": 23.1
         },
         {
@@ -3594,11 +3594,11 @@
   },
   "origin": {
     "note": "Renting is a stand-in for coming from outside Bode: the form asks whether the mother lives in rent and, if so, which district she is from. Kobo form only, since 2021.",
-    "answers": 1106,
+    "answers": 1107,
     "renting": {
       "pct": 50.3,
-      "n": 556,
-      "of": 1106
+      "n": 557,
+      "of": 1107
     },
     "from": "2021",
     "by_year": [
@@ -3639,18 +3639,18 @@
       },
       {
         "year": "2026",
-        "n": 155,
-        "renting": 94,
-        "pct": 60.6,
+        "n": 156,
+        "renting": 95,
+        "pct": 60.9,
         "partial": true
       }
     ],
-    "districts_known": 511,
+    "districts_known": 512,
     "top_districts": [
       {
         "district": "Sindhupalchok",
         "n": 118,
-        "pct": 23.1
+        "pct": 23.0
       },
       {
         "district": "Ramechhap",
@@ -3660,7 +3660,7 @@
       {
         "district": "Kavrepalanchok",
         "n": 56,
-        "pct": 11.0
+        "pct": 10.9
       },
       {
         "district": "Dolakha",
@@ -3669,8 +3669,8 @@
       },
       {
         "district": "Sindhuli",
-        "n": 34,
-        "pct": 6.7
+        "n": 35,
+        "pct": 6.8
       },
       {
         "district": "Okhaldhunga",
@@ -3705,33 +3705,33 @@
         "visit": "Second visit",
         "renting": 98.7,
         "not_renting": 98.0,
-        "renting_n": 527,
-        "renting_of": 534,
-        "not_renting_n": 529,
-        "not_renting_of": 540
+        "renting_n": 530,
+        "renting_of": 537,
+        "not_renting_n": 530,
+        "not_renting_of": 541
       },
       {
         "visit": "Third visit",
         "renting": 98.4,
         "not_renting": 95.2,
-        "renting_n": 500,
-        "renting_of": 508,
+        "renting_n": 501,
+        "renting_of": 509,
         "not_renting_n": 500,
         "not_renting_of": 525
       },
       {
         "visit": "Six-month visit",
-        "renting": 98.3,
+        "renting": 98.1,
         "not_renting": 96.0,
-        "renting_n": 456,
-        "renting_of": 464,
-        "not_renting_n": 404,
-        "not_renting_of": 421
+        "renting_n": 461,
+        "renting_of": 470,
+        "not_renting_n": 405,
+        "not_renting_of": 422
       }
     ]
   },
   "watch": {
-    "as_of": "2026-11-05",
+    "as_of": "2026-11-16",
     "rows": [
       {
         "area": "Home visits",
@@ -3758,11 +3758,11 @@
       {
         "area": "Follow-up",
         "indicator": "Babies who had the second visit",
-        "now": "96% (115 of 120)",
+        "now": "96% (119 of 124)",
         "now_period": "2026 so far",
         "before": "100% (160 of 160)",
         "before_period": "2025",
-        "change": "-4.2 points",
+        "change": "-4.0 points",
         "status": "▼ Worse",
         "note": "Only babies old enough for the visit are counted."
       },
@@ -3802,7 +3802,7 @@
       {
         "area": "Records",
         "indicator": "Missed visits with no reason written down",
-        "now": "91% (304 of 333)",
+        "now": "91% (305 of 334)",
         "now_period": "all years",
         "before": "",
         "before_period": "",
@@ -3824,22 +3824,22 @@
       {
         "area": "Follow-up",
         "indicator": "Babies who had the third visit",
-        "now": "99% (78 of 79)",
+        "now": "99% (79 of 80)",
         "now_period": "2026 so far",
         "before": "100% (160 of 160)",
         "before_period": "2025",
-        "change": "-1.3 points",
+        "change": "-1.2 points",
         "status": "● Similar",
         "note": "Only babies old enough for the visit are counted."
       },
       {
         "area": "Follow-up",
         "indicator": "Babies who had the six-month visit",
-        "now": "100% (29 of 29)",
+        "now": "97% (36 of 37)",
         "now_period": "2026 so far",
         "before": "99% (158 of 160)",
         "before_period": "2025",
-        "change": "+1.2 points",
+        "change": "-1.5 points",
         "status": "● Similar",
         "note": "Only babies old enough for the visit are counted."
       },
@@ -4040,7 +4040,7 @@
         },
         {
           "date": "2026-01-01",
-          "value": 95.8,
+          "value": 96.0,
           "reference": 100.0
         }
       ],
@@ -4135,7 +4135,7 @@
         },
         {
           "label": "Now",
-          "value": 95.8
+          "value": 96.0
         }
       ],
       "third_followup": [
@@ -4145,7 +4145,7 @@
         },
         {
           "label": "Now",
-          "value": 98.7
+          "value": 98.8
         }
       ],
       "six_month_followup": [
@@ -4155,7 +4155,7 @@
         },
         {
           "label": "Now",
-          "value": 100.0
+          "value": 97.3
         }
       ],
       "ebf_six_months": [
@@ -7769,8 +7769,8 @@
         "v3_n": 19,
         "v3_of": 19,
         "v3_pct12": 100.0,
-        "v6m_n": 15,
-        "v6m_of": 15,
+        "v6m_n": 18,
+        "v6m_of": 18,
         "v6m_pct12": 98.8,
         "ebf6_n": 8,
         "ebf6_of": 13,
@@ -7806,7 +7806,9 @@
         "v3_n": 17,
         "v3_of": 18,
         "v3_pct12": 99.4,
-        "v6m_pct12": 98.7,
+        "v6m_n": 4,
+        "v6m_of": 5,
+        "v6m_pct12": 98.2,
         "ebf6_n": 9,
         "ebf6_of": 25,
         "ebf6_pct12": 62.6,
@@ -7841,7 +7843,7 @@
         "v3_n": 14,
         "v3_of": 14,
         "v3_pct12": 99.4,
-        "v6m_pct12": 98.6,
+        "v6m_pct12": 98.0,
         "ebf6_n": 8,
         "ebf6_of": 18,
         "ebf6_pct12": 60.9,
@@ -7876,7 +7878,7 @@
         "v3_n": 12,
         "v3_of": 12,
         "v3_pct12": 99.4,
-        "v6m_pct12": 98.5,
+        "v6m_pct12": 97.8,
         "ebf6_n": 11,
         "ebf6_of": 13,
         "ebf6_pct12": 63.1,
@@ -7909,7 +7911,7 @@
         "v2_of": 9,
         "v2_pct12": 100.0,
         "v3_pct12": 99.4,
-        "v6m_pct12": 98.4,
+        "v6m_pct12": 97.7,
         "ebf6_n": 5,
         "ebf6_of": 7,
         "ebf6_pct12": 62.3,
@@ -7942,7 +7944,7 @@
         "v2_of": 12,
         "v2_pct12": 100.0,
         "v3_pct12": 99.4,
-        "v6m_pct12": 98.1,
+        "v6m_pct12": 97.3,
         "ebf6_n": 6,
         "ebf6_of": 14,
         "ebf6_pct12": 60.0,
@@ -7975,7 +7977,7 @@
         "v2_of": 18,
         "v2_pct12": 98.2,
         "v3_pct12": 99.2,
-        "v6m_pct12": 98.8,
+        "v6m_pct12": 97.8,
         "ebf6_n": 7,
         "ebf6_of": 14,
         "ebf6_pct12": 59.7,
@@ -8004,9 +8006,11 @@
         "group_sessions": 8,
         "group_attendances": 61,
         "visits_total": 51,
-        "v2_pct12": 96.9,
+        "v2_n": 6,
+        "v2_of": 8,
+        "v2_pct12": 97.0,
         "v3_pct12": 99.2,
-        "v6m_pct12": 98.6,
+        "v6m_pct12": 97.5,
         "ebf6_n": 7,
         "ebf6_of": 13,
         "ebf6_pct12": 57.9,
@@ -8035,9 +8039,9 @@
         "group_sessions": 0,
         "group_attendances": 0,
         "visits_total": 32,
-        "v2_pct12": 96.7,
+        "v2_pct12": 96.8,
         "v3_pct12": 99.1,
-        "v6m_pct12": 98.3,
+        "v6m_pct12": 97.1,
         "ebf6_pct12": 57.9,
         "ebf3_pct12": 98.0,
         "early_n": 7,
@@ -8055,32 +8059,32 @@
       },
       {
         "month": "2026-11-01",
-        "visits_first": 5,
+        "visits_first": 6,
         "visits_second": 3,
         "visits_third": 5,
         "visits_six_month": 2,
         "group_sessions": 0,
         "group_attendances": 0,
-        "visits_total": 15,
-        "v2_pct12": 96.2,
+        "visits_total": 16,
+        "v2_pct12": 96.3,
         "v3_pct12": 98.9,
-        "v6m_pct12": 97.5,
+        "v6m_pct12": 95.8,
         "ebf6_pct12": 56.0,
         "ebf3_n": 5,
         "ebf3_of": 5,
         "ebf3_pct12": 97.9,
-        "early_n": 3,
-        "early_of": 5,
-        "early_pct12": 55.2,
+        "early_n": 4,
+        "early_of": 6,
+        "early_pct12": 55.4,
         "formula_n": 0,
-        "formula_of": 5,
-        "formula_pct12": 12.1,
+        "formula_of": 6,
+        "formula_pct12": 12.0,
         "within7_n": 1,
-        "within7_of": 5,
-        "within7_pct12": 22.7,
+        "within7_of": 6,
+        "within7_pct12": 22.6,
         "within14_n": 2,
-        "within14_of": 5,
-        "within14_pct12": 59.5
+        "within14_of": 6,
+        "within14_pct12": 59.1
       }
     ],
     "yearly": [
@@ -8420,40 +8424,40 @@
       {
         "year": 2026,
         "partial": true,
-        "visits_first": 152,
+        "visits_first": 153,
         "visits_second": 136,
         "visits_third": 122,
         "visits_six_month": 139,
         "group_sessions": 74,
         "group_attendances": 556,
-        "visits_total": 549,
-        "v2_n": 115,
-        "v2_of": 120,
-        "v2_pct": 95.8,
-        "v3_n": 78,
-        "v3_of": 79,
-        "v3_pct": 98.7,
-        "v6m_n": 29,
-        "v6m_of": 29,
-        "v6m_pct": 100.0,
+        "visits_total": 550,
+        "v2_n": 119,
+        "v2_of": 124,
+        "v2_pct": 96.0,
+        "v3_n": 79,
+        "v3_of": 80,
+        "v3_pct": 98.8,
+        "v6m_n": 36,
+        "v6m_of": 37,
+        "v6m_pct": 97.3,
         "ebf6_n": 70,
         "ebf6_of": 131,
         "ebf6_pct": 53.4,
         "ebf3_n": 114,
         "ebf3_of": 117,
         "ebf3_pct": 97.4,
-        "early_n": 87,
-        "early_of": 155,
-        "early_pct": 56.1,
+        "early_n": 88,
+        "early_of": 156,
+        "early_pct": 56.4,
         "formula_n": 19,
-        "formula_of": 155,
-        "formula_pct": 12.3,
+        "formula_of": 156,
+        "formula_pct": 12.2,
         "within7_n": 35,
-        "within7_of": 152,
-        "within7_pct": 23.0,
+        "within7_of": 153,
+        "within7_pct": 22.9,
         "within14_n": 89,
-        "within14_of": 152,
-        "within14_pct": 58.6,
+        "within14_of": 153,
+        "within14_pct": 58.2,
         "group_sessions_month": 8.2,
         "group_per_session": 7.5,
         "first_visit_median_days": 12
@@ -9390,7 +9394,7 @@
           },
           {
             "label": "Now",
-            "value": 95.8
+            "value": 96.0
           }
         ],
         "v3_pct": [
@@ -9400,7 +9404,7 @@
           },
           {
             "label": "Now",
-            "value": 98.7
+            "value": 98.8
           }
         ],
         "v6m_pct": [
@@ -9410,7 +9414,7 @@
           },
           {
             "label": "Now",
-            "value": 100.0
+            "value": 97.3
           }
         ],
         "ebf6_pct": [
@@ -9440,7 +9444,7 @@
           },
           {
             "label": "Now",
-            "value": 56.1
+            "value": 56.4
           }
         ],
         "formula_pct": [
@@ -9450,7 +9454,7 @@
           },
           {
             "label": "Now",
-            "value": 12.3
+            "value": 12.2
           }
         ],
         "within7_pct": [
@@ -9460,7 +9464,7 @@
           },
           {
             "label": "Now",
-            "value": 23.0
+            "value": 22.9
           }
         ],
         "within14_pct": [
@@ -9470,7 +9474,7 @@
           },
           {
             "label": "Now",
-            "value": 58.6
+            "value": 58.2
           }
         ],
         "first_visit_median_days": [
@@ -9512,7 +9516,7 @@
           },
           {
             "label": "Now",
-            "value": 95.8
+            "value": 96.0
           }
         ],
         "v3_pct": [
@@ -9522,7 +9526,7 @@
           },
           {
             "label": "Now",
-            "value": 98.7
+            "value": 98.8
           }
         ],
         "v6m_pct": [
@@ -9532,7 +9536,7 @@
           },
           {
             "label": "Now",
-            "value": 100.0
+            "value": 97.3
           }
         ],
         "ebf6_pct": [
@@ -9562,7 +9566,7 @@
           },
           {
             "label": "Now",
-            "value": 56.1
+            "value": 56.4
           }
         ],
         "formula_pct": [
@@ -9572,7 +9576,7 @@
           },
           {
             "label": "Now",
-            "value": 12.3
+            "value": 12.2
           }
         ],
         "within7_pct": [
@@ -9582,7 +9586,7 @@
           },
           {
             "label": "Now",
-            "value": 23.0
+            "value": 22.9
           }
         ],
         "within14_pct": [
@@ -9592,7 +9596,7 @@
           },
           {
             "label": "Now",
-            "value": 58.6
+            "value": 58.2
           }
         ],
         "first_visit_median_days": [
@@ -10566,7 +10570,7 @@
           },
           {
             "label": "Now",
-            "value": 95.8
+            "value": 96.0
           }
         ],
         "v3_pct": [
@@ -10576,7 +10580,7 @@
           },
           {
             "label": "Now",
-            "value": 98.7
+            "value": 98.8
           }
         ],
         "v6m_pct": [
@@ -10586,7 +10590,7 @@
           },
           {
             "label": "Now",
-            "value": 100.0
+            "value": 97.3
           }
         ],
         "ebf6_pct": [
@@ -10616,7 +10620,7 @@
           },
           {
             "label": "Now",
-            "value": 56.1
+            "value": 56.4
           }
         ],
         "formula_pct": [
@@ -10626,7 +10630,7 @@
           },
           {
             "label": "Now",
-            "value": 12.3
+            "value": 12.2
           }
         ],
         "within7_pct": [
@@ -10636,7 +10640,7 @@
           },
           {
             "label": "Now",
-            "value": 23.0
+            "value": 22.9
           }
         ],
         "within14_pct": [
@@ -10646,7 +10650,7 @@
           },
           {
             "label": "Now",
-            "value": 58.6
+            "value": 58.2
           }
         ],
         "first_visit_median_days": [
@@ -10688,7 +10692,7 @@
           },
           {
             "label": "Now",
-            "value": 95.8
+            "value": 96.0
           }
         ],
         "v3_pct": [
@@ -10698,7 +10702,7 @@
           },
           {
             "label": "Now",
-            "value": 98.7
+            "value": 98.8
           }
         ],
         "v6m_pct": [
@@ -10708,7 +10712,7 @@
           },
           {
             "label": "Now",
-            "value": 100.0
+            "value": 97.3
           }
         ],
         "ebf6_pct": [
@@ -10738,7 +10742,7 @@
           },
           {
             "label": "Now",
-            "value": 56.1
+            "value": 56.4
           }
         ],
         "formula_pct": [
@@ -10748,7 +10752,7 @@
           },
           {
             "label": "Now",
-            "value": 12.3
+            "value": 12.2
           }
         ],
         "within7_pct": [
@@ -10758,7 +10762,7 @@
           },
           {
             "label": "Now",
-            "value": 23.0
+            "value": 22.9
           }
         ],
         "within14_pct": [
@@ -10768,7 +10772,7 @@
           },
           {
             "label": "Now",
-            "value": 58.6
+            "value": 58.2
           }
         ],
         "first_visit_median_days": [
