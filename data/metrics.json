@@ -1429,6 +1429,73 @@
         "of": 449
       }
     },
+    "active_windows": [
+      {
+        "year": 2026,
+        "end": "2026-09-30",
+        "came": 33,
+        "new": 14
+      },
+      {
+        "year": 2025,
+        "end": "2025-09-30",
+        "came": 35,
+        "new": 14
+      },
+      {
+        "year": 2024,
+        "end": "2024-09-30",
+        "came": 62,
+        "new": 29
+      },
+      {
+        "year": 2023,
+        "end": "2023-09-30",
+        "came": 52,
+        "new": 17
+      },
+      {
+        "year": 2022,
+        "end": "2022-09-30",
+        "came": 41,
+        "new": 24
+      },
+      {
+        "year": 2021,
+        "end": "2021-09-30",
+        "came": 5,
+        "new": 0
+      },
+      {
+        "year": 2020,
+        "end": "2020-09-30",
+        "came": 0,
+        "new": 0
+      },
+      {
+        "year": 2019,
+        "end": "2019-09-30",
+        "came": 98,
+        "new": 47
+      },
+      {
+        "year": 2018,
+        "end": "2018-09-30",
+        "came": 70,
+        "new": 15
+      }
+    ],
+    "young_child_came_in_last_six_months": {
+      "pct": 82.6,
+      "n": 19,
+      "of": 23,
+      "child_under_months": 24,
+      "dob_known": {
+        "pct": 77.3,
+        "n": 347,
+        "of": 449
+      }
+    },
     "sex": {
       "girls": {
         "pct": 42.9,
@@ -1891,14 +1958,25 @@
       },
       {
         "area": "Mothers' group",
-        "indicator": "Mothers (of all since 2017) who came in the last six months",
-        "now": "7% (33 of 449)",
-        "now_period": "last six months",
-        "before": "",
-        "before_period": "",
-        "change": "",
-        "status": "! Check",
-        "note": "A low share means few mothers keep coming back."
+        "indicator": "Mothers who came in the last six months",
+        "now": "33",
+        "now_period": "6 months to Sep 2026",
+        "before": "62",
+        "before_period": "6 months to Sep 2024",
+        "change": "-47%",
+        "status": "▼ Worse",
+        "note": "Mothers with at least one session in the six months. Compared with 2024, the last year without Covid or building work."
+      },
+      {
+        "area": "Mothers' group",
+        "indicator": "New mothers who joined in the last six months",
+        "now": "14",
+        "now_period": "6 months to Sep 2026",
+        "before": "29",
+        "before_period": "6 months to Sep 2024",
+        "change": "-52%",
+        "status": "▼ Worse",
+        "note": "Mothers at their first session in the six months. Compared with 2024, the last year without Covid or building work."
       },
       {
         "area": "Records",
@@ -2299,10 +2377,30 @@
           "value": 7.5
         }
       ],
-      "group_recent": [
+      "group_came": [
         {
-          "label": "Mothers who came in the last six months",
-          "value": 7.3
+          "label": "Before",
+          "value": 62
+        },
+        {
+          "label": "Now",
+          "value": 33
+        }
+      ],
+      "group_new": [
+        {
+          "label": "Before",
+          "value": 29
+        },
+        {
+          "label": "Now",
+          "value": 14
+        }
+      ],
+      "group_young": [
+        {
+          "label": "Mothers with a child under 2 years who came in the last six months",
+          "value": 82.6
         }
       ],
       "reasons_unrecorded": [
