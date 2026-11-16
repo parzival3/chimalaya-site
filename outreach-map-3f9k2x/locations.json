@@ -110,6 +110,13 @@
    "confirmed": true
   },
   {
+   "name": "Bageshwori Health Post",
+   "category": "nurse",
+   "lat": 27.69745,
+   "lon": 85.40893,
+   "confirmed": true
+  },
+  {
    "name": "Balkumari Health Post",
    "category": "nurse",
    "lat": 27.67661,
@@ -136,6 +143,13 @@
    "lat": 27.68944,
    "lon": 85.38731,
    "confirmed": false
+  },
+  {
+   "name": "Changunarayan Hospital",
+   "category": "nurse",
+   "lat": 27.70788,
+   "lon": 85.43783,
+   "confirmed": true
   },
   {
    "name": "Chhaling Health Post",
@@ -192,6 +206,13 @@
    "lat": 27.64779,
    "lon": 85.4091,
    "confirmed": false
+  },
+  {
+   "name": "Jhaukhel Health Post",
+   "category": "nurse",
+   "lat": 27.7034,
+   "lon": 85.42486,
+   "confirmed": true
   },
   {
    "name": "Katunje Health Post",
