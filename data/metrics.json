@@ -1909,6 +1909,176 @@
       }
     ]
   },
+  "birth_and_pregnancy": {
+    "note": "As the mother told it at the first home visit. Paper form 2017-2019, Kobo form from 2021; there are no first visit forms for 2020. These are the mothers Chimalaya visited, not every birth in the area.",
+    "home_birth": {
+      "overall": {
+        "pct": 4.6,
+        "n": 77,
+        "of": 1689
+      },
+      "by_year": [
+        {
+          "year": "2017",
+          "n": 132,
+          "count": 8,
+          "pct": 6.1,
+          "partial": false
+        },
+        {
+          "year": "2018",
+          "n": 232,
+          "count": 5,
+          "pct": 2.2,
+          "partial": false
+        },
+        {
+          "year": "2019",
+          "n": 219,
+          "count": 12,
+          "pct": 5.5,
+          "partial": false
+        },
+        {
+          "year": "2021",
+          "n": 131,
+          "count": 15,
+          "pct": 11.5,
+          "partial": false
+        },
+        {
+          "year": "2022",
+          "n": 245,
+          "count": 13,
+          "pct": 5.3,
+          "partial": false
+        },
+        {
+          "year": "2023",
+          "n": 196,
+          "count": 5,
+          "pct": 2.6,
+          "partial": false
+        },
+        {
+          "year": "2024",
+          "n": 209,
+          "count": 9,
+          "pct": 4.3,
+          "partial": false
+        },
+        {
+          "year": "2025",
+          "n": 170,
+          "count": 5,
+          "pct": 2.9,
+          "partial": false
+        },
+        {
+          "year": "2026",
+          "n": 155,
+          "count": 5,
+          "pct": 3.2,
+          "partial": true
+        }
+      ]
+    },
+    "illness_in_pregnancy": {
+      "overall": {
+        "pct": 4.4,
+        "n": 72,
+        "of": 1623
+      },
+      "by_year": [
+        {
+          "year": "2017",
+          "n": 110,
+          "count": 4,
+          "pct": 3.6,
+          "partial": false
+        },
+        {
+          "year": "2018",
+          "n": 208,
+          "count": 10,
+          "pct": 4.8,
+          "partial": false
+        },
+        {
+          "year": "2019",
+          "n": 199,
+          "count": 5,
+          "pct": 2.5,
+          "partial": false
+        },
+        {
+          "year": "2021",
+          "n": 131,
+          "count": 10,
+          "pct": 7.6,
+          "partial": false
+        },
+        {
+          "year": "2022",
+          "n": 245,
+          "count": 13,
+          "pct": 5.3,
+          "partial": false
+        },
+        {
+          "year": "2023",
+          "n": 196,
+          "count": 10,
+          "pct": 5.1,
+          "partial": false
+        },
+        {
+          "year": "2024",
+          "n": 209,
+          "count": 2,
+          "pct": 1.0,
+          "partial": false
+        },
+        {
+          "year": "2025",
+          "n": 170,
+          "count": 12,
+          "pct": 7.1,
+          "partial": false
+        },
+        {
+          "year": "2026",
+          "n": 155,
+          "count": 6,
+          "pct": 3.9,
+          "partial": true
+        }
+      ],
+      "types_since_2021": [
+        {
+          "illness": "Thyroid (hypothyroidism)",
+          "n": 23,
+          "pct": 2.1
+        },
+        {
+          "illness": "Hypertension",
+          "n": 17,
+          "pct": 1.5
+        },
+        {
+          "illness": "Diabetes",
+          "n": 15,
+          "pct": 1.4
+        },
+        {
+          "illness": "Others (fewer than 5 each)",
+          "n": 7,
+          "pct": 0.6
+        }
+      ],
+      "types_note": "Mothers can name more than one illness. Anaemia and pre-eclampsia were never recorded, which is probably under-reporting."
+    }
+  },
   "origin": {
     "note": "Renting is a stand-in for coming from outside Bode: the form asks whether the mother lives in rent and, if so, which district she is from. Kobo form only, since 2021.",
     "answers": 1106,
