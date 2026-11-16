@@ -117,6 +117,13 @@
    "confirmed": true
   },
   {
+   "name": "Bakhundol Swasthya Chauki",
+   "category": "nurse",
+   "lat": 27.62209,
+   "lon": 85.53758,
+   "confirmed": true
+  },
+  {
    "name": "Balkumari Health Post",
    "category": "nurse",
    "lat": 27.67661,
@@ -175,8 +182,8 @@
   {
    "name": "Devitar Health Post",
    "category": "nurse",
-   "lat": 27.56888,
-   "lon": 84.81697,
+   "lat": 27.66304,
+   "lon": 85.55888,
    "confirmed": true
   },
   {
