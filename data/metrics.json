@@ -1909,6 +1909,144 @@
       }
     ]
   },
+  "origin": {
+    "note": "Renting is a stand-in for coming from outside Bode: the form asks whether the mother lives in rent and, if so, which district she is from. Kobo form only, since 2021.",
+    "answers": 1106,
+    "renting": {
+      "pct": 50.3,
+      "n": 556,
+      "of": 1106
+    },
+    "from": "2021",
+    "by_year": [
+      {
+        "year": "2021",
+        "n": 131,
+        "renting": 61,
+        "pct": 46.6,
+        "partial": false
+      },
+      {
+        "year": "2022",
+        "n": 245,
+        "renting": 122,
+        "pct": 49.8,
+        "partial": false
+      },
+      {
+        "year": "2023",
+        "n": 196,
+        "renting": 91,
+        "pct": 46.4,
+        "partial": false
+      },
+      {
+        "year": "2024",
+        "n": 209,
+        "renting": 106,
+        "pct": 50.7,
+        "partial": false
+      },
+      {
+        "year": "2025",
+        "n": 170,
+        "renting": 82,
+        "pct": 48.2,
+        "partial": false
+      },
+      {
+        "year": "2026",
+        "n": 155,
+        "renting": 94,
+        "pct": 60.6,
+        "partial": true
+      }
+    ],
+    "districts_known": 511,
+    "top_districts": [
+      {
+        "district": "Sindhupalchok",
+        "n": 118,
+        "pct": 23.1
+      },
+      {
+        "district": "Ramechhap",
+        "n": 65,
+        "pct": 12.7
+      },
+      {
+        "district": "Kavrepalanchok",
+        "n": 56,
+        "pct": 11.0
+      },
+      {
+        "district": "Dolakha",
+        "n": 39,
+        "pct": 7.6
+      },
+      {
+        "district": "Sindhuli",
+        "n": 34,
+        "pct": 6.7
+      },
+      {
+        "district": "Okhaldhunga",
+        "n": 20,
+        "pct": 3.9
+      },
+      {
+        "district": "Makwanpur",
+        "n": 20,
+        "pct": 3.9
+      },
+      {
+        "district": "Sarlahi",
+        "n": 14,
+        "pct": 2.7
+      },
+      {
+        "district": "Khotang",
+        "n": 12,
+        "pct": 2.3
+      },
+      {
+        "district": "Bhaktapur",
+        "n": 12,
+        "pct": 2.3
+      }
+    ],
+    "other_districts": 121,
+    "district_not_stated": 45,
+    "followup": [
+      {
+        "visit": "Second visit",
+        "renting": 98.7,
+        "not_renting": 98.0,
+        "renting_n": 527,
+        "renting_of": 534,
+        "not_renting_n": 529,
+        "not_renting_of": 540
+      },
+      {
+        "visit": "Third visit",
+        "renting": 98.4,
+        "not_renting": 95.2,
+        "renting_n": 500,
+        "renting_of": 508,
+        "not_renting_n": 500,
+        "not_renting_of": 525
+      },
+      {
+        "visit": "Six-month visit",
+        "renting": 98.3,
+        "not_renting": 96.0,
+        "renting_n": 456,
+        "renting_of": 464,
+        "not_renting_n": 404,
+        "not_renting_of": 421
+      }
+    ]
+  },
   "watch": {
     "as_of": "2026-11-05",
     "rows": [
