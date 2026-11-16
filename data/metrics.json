@@ -618,6 +618,76 @@
       "n": 7,
       "of": 612
     },
+    "health_by_year": [
+      {
+        "year": "2021",
+        "n": 42,
+        "illness_pct": 0.0,
+        "hospitalised_pct": 0.0
+      },
+      {
+        "year": "2022",
+        "n": 172,
+        "illness_pct": 11.6,
+        "hospitalised_pct": 0.0
+      },
+      {
+        "year": "2023",
+        "n": 144,
+        "illness_pct": 6.2,
+        "hospitalised_pct": 3.3
+      },
+      {
+        "year": "2024",
+        "n": 146,
+        "illness_pct": 2.7,
+        "hospitalised_pct": 0.8
+      },
+      {
+        "year": "2025",
+        "n": 141,
+        "illness_pct": 0.7,
+        "hospitalised_pct": 0.9
+      },
+      {
+        "year": "2026",
+        "n": 84,
+        "illness_pct": 0.0,
+        "hospitalised_pct": 1.4
+      }
+    ],
+    "illness_types": [
+      {
+        "illness": "Fever",
+        "pct": 0.1,
+        "n": 1,
+        "of": 728
+      },
+      {
+        "illness": "Diarrhoea",
+        "pct": 1.1,
+        "n": 7,
+        "of": 633
+      },
+      {
+        "illness": "Cough",
+        "pct": 0.8,
+        "n": 5,
+        "of": 608
+      },
+      {
+        "illness": "Vomiting",
+        "pct": 3.3,
+        "n": 20,
+        "of": 608
+      },
+      {
+        "illness": "Other",
+        "pct": 0.3,
+        "n": 2,
+        "of": 605
+      }
+    ],
     "early_food_reasons": [
       {
         "label": "no enough breast milk",
@@ -948,6 +1018,50 @@
         "home visit": 121,
         "by phone call": 14,
         "mother group": 1
+      }
+    ],
+    "visit_mode_rows": [
+      {
+        "year": "2021",
+        "home_visit": 56,
+        "phone_call": 42,
+        "mother_group": 0,
+        "not_reached": 0
+      },
+      {
+        "year": "2022",
+        "home_visit": 157,
+        "phone_call": 2,
+        "mother_group": 6,
+        "not_reached": 0
+      },
+      {
+        "year": "2023",
+        "home_visit": 187,
+        "phone_call": 27,
+        "mother_group": 4,
+        "not_reached": 1
+      },
+      {
+        "year": "2024",
+        "home_visit": 157,
+        "phone_call": 20,
+        "mother_group": 1,
+        "not_reached": 0
+      },
+      {
+        "year": "2025",
+        "home_visit": 145,
+        "phone_call": 25,
+        "mother_group": 3,
+        "not_reached": 0
+      },
+      {
+        "year": "2026",
+        "home_visit": 121,
+        "phone_call": 14,
+        "mother_group": 1,
+        "not_reached": 0
       }
     ],
     "advice_coverage": {
@@ -2077,6 +2191,1405 @@
         }
       ],
       "types_note": "Mothers can name more than one illness. Anaemia and pre-eclampsia were never recorded, which is probably under-reporting."
+    }
+  },
+  "first_visit_trends": {
+    "note": "From the first home visit, as the nurse recorded it. Paper form 2017-2019 and Kobo form from 2021; there are no first visit forms for 2020. A year with fewer than 30 answers is left out.",
+    "indicators": {
+      "caesarean": {
+        "label": "Caesarean birth",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 132,
+            "count": 54,
+            "pct": 40.9,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 232,
+            "count": 96,
+            "pct": 41.4,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 219,
+            "count": 99,
+            "pct": 45.2,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 55,
+            "pct": 42.0,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 113,
+            "pct": 46.1,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 106,
+            "pct": 54.1,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 208,
+            "count": 114,
+            "pct": 54.8,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 105,
+            "pct": 61.8,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 91,
+            "pct": 58.7,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1688,
+          "count": 833,
+          "pct": 49.3
+        }
+      },
+      "low_birth_weight": {
+        "label": "Born under 2.5 kg",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 110,
+            "count": 8,
+            "pct": 7.3,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 227,
+            "count": 26,
+            "pct": 11.5,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 209,
+            "count": 11,
+            "pct": 5.3,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 126,
+            "count": 10,
+            "pct": 7.9,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 234,
+            "count": 25,
+            "pct": 10.7,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 194,
+            "count": 21,
+            "pct": 10.8,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 203,
+            "count": 16,
+            "pct": 7.9,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 168,
+            "count": 14,
+            "pct": 8.3,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 15,
+            "pct": 9.7,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1626,
+          "count": 146,
+          "pct": 9.0
+        }
+      },
+      "birth_complication": {
+        "label": "Complication for the mother",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 132,
+            "count": 24,
+            "pct": 18.2,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 231,
+            "count": 19,
+            "pct": 8.2,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 219,
+            "count": 17,
+            "pct": 7.8,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 6,
+            "pct": 4.6,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 5,
+            "pct": 2.0,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 5,
+            "pct": 2.6,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 3,
+            "pct": 1.4,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 0,
+            "pct": 0.0,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 4,
+            "pct": 2.6,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1688,
+          "count": 83,
+          "pct": 4.9
+        }
+      },
+      "baby_did_not_cry": {
+        "label": "Baby did not cry at birth",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 132,
+            "count": 4,
+            "pct": 3.0,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 232,
+            "count": 19,
+            "pct": 8.2,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 219,
+            "count": 6,
+            "pct": 2.7,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 1,
+            "pct": 0.8,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 11,
+            "pct": 4.5,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 6,
+            "pct": 3.1,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 21,
+            "pct": 10.0,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 10,
+            "pct": 5.9,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 5,
+            "pct": 3.2,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1689,
+          "count": 83,
+          "pct": 4.9
+        }
+      },
+      "problem_after_birth": {
+        "label": "Problem or hospital stay after birth",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 130,
+            "count": 34,
+            "pct": 26.2,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 227,
+            "count": 16,
+            "pct": 7.0,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 211,
+            "count": 13,
+            "pct": 6.2,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 5,
+            "pct": 3.8,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 8,
+            "pct": 3.3,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 4,
+            "pct": 2.0,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 3,
+            "pct": 1.4,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 0,
+            "pct": 0.0,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 0,
+            "pct": 0.0,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1674,
+          "count": 83,
+          "pct": 5.0
+        }
+      },
+      "jaundice": {
+        "label": "Yellow skin or eyes",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 130,
+            "count": 63,
+            "pct": 48.5,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 232,
+            "count": 148,
+            "pct": 63.8,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 219,
+            "count": 126,
+            "pct": 57.5,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 70,
+            "pct": 53.4,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 142,
+            "pct": 58.0,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 107,
+            "pct": 54.6,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 78,
+            "pct": 37.3,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 69,
+            "pct": 40.6,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 47,
+            "pct": 30.3,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1687,
+          "count": 850,
+          "pct": 50.4
+        }
+      },
+      "umbilicus_not_normal": {
+        "label": "Umbilicus not dry and normal",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 133,
+            "count": 14,
+            "pct": 10.5,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 231,
+            "count": 52,
+            "pct": 22.5,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 218,
+            "count": 39,
+            "pct": 17.9,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 4,
+            "pct": 3.1,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 0,
+            "pct": 0.0,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 0,
+            "pct": 0.0,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 0,
+            "pct": 0.0,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 0,
+            "pct": 0.0,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 1,
+            "pct": 0.6,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1688,
+          "count": 110,
+          "pct": 6.5
+        }
+      },
+      "skin_rash": {
+        "label": "Skin rash",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 133,
+            "count": 41,
+            "pct": 30.8,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 232,
+            "count": 87,
+            "pct": 37.5,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 219,
+            "count": 92,
+            "pct": 42.0,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 30,
+            "pct": 22.9,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 85,
+            "pct": 34.7,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 81,
+            "pct": 41.3,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 67,
+            "pct": 32.1,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 59,
+            "pct": 34.7,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 54,
+            "pct": 34.8,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1690,
+          "count": 596,
+          "pct": 35.3
+        }
+      },
+      "mother_pale": {
+        "label": "Mother looks pale",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 131,
+            "count": 3,
+            "pct": 2.3,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 232,
+            "count": 12,
+            "pct": 5.2,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 218,
+            "count": 2,
+            "pct": 0.9,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 9,
+            "pct": 6.9,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 19,
+            "pct": 7.8,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 15,
+            "pct": 7.7,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 9,
+            "pct": 4.3,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 2,
+            "pct": 1.2,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 154,
+            "count": 0,
+            "pct": 0.0,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1686,
+          "count": 71,
+          "pct": 4.2
+        }
+      },
+      "other_food_or_drink": {
+        "label": "Given other food or drink now",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 130,
+            "count": 24,
+            "pct": 18.5,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 230,
+            "count": 36,
+            "pct": 15.7,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 219,
+            "count": 46,
+            "pct": 21.0,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 23,
+            "pct": 17.6,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 46,
+            "pct": 18.8,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 26,
+            "pct": 13.3,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 28,
+            "pct": 13.4,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 14,
+            "pct": 8.2,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 9,
+            "pct": 5.8,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1685,
+          "count": 252,
+          "pct": 15.0
+        }
+      },
+      "water_given": {
+        "label": "Given water",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 130,
+            "count": 8,
+            "pct": 6.2,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 232,
+            "count": 10,
+            "pct": 4.3,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 219,
+            "count": 17,
+            "pct": 7.8,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 11,
+            "pct": 8.4,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 17,
+            "pct": 6.9,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 8,
+            "pct": 4.1,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 4,
+            "pct": 1.9,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 3,
+            "pct": 1.8,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 1,
+            "pct": 0.6,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1687,
+          "count": 79,
+          "pct": 4.7
+        }
+      },
+      "few_feeds": {
+        "label": "Fewer than 8 breastfeeds in 24 hours",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 129,
+            "count": 9,
+            "pct": 7.0,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 231,
+            "count": 17,
+            "pct": 7.4,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 215,
+            "count": 15,
+            "pct": 7.0,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 7,
+            "pct": 5.3,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 22,
+            "pct": 9.0,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 10,
+            "pct": 5.1,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 14,
+            "pct": 6.7,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 9,
+            "pct": 5.3,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 154,
+            "count": 6,
+            "pct": 3.9,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1680,
+          "count": 109,
+          "pct": 6.5
+        }
+      },
+      "few_urines": {
+        "label": "Fewer than 6 wet nappies in 24 hours",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 130,
+            "count": 6,
+            "pct": 4.6,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 232,
+            "count": 21,
+            "pct": 9.1,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 218,
+            "count": 17,
+            "pct": 7.8,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 5,
+            "pct": 3.8,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 24,
+            "pct": 9.8,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 6,
+            "pct": 3.1,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 208,
+            "count": 19,
+            "pct": 9.1,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 169,
+            "count": 5,
+            "pct": 3.0,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 5,
+            "pct": 3.2,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1684,
+          "count": 108,
+          "pct": 6.4
+        }
+      },
+      "latch_needs_help": {
+        "label": "Position or attachment needs help",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 126,
+            "count": 118,
+            "pct": 93.7,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 232,
+            "count": 215,
+            "pct": 92.7,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 214,
+            "count": 177,
+            "pct": 82.7,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 131,
+            "count": 91,
+            "pct": 69.5,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 245,
+            "count": 201,
+            "pct": 82.0,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 196,
+            "count": 176,
+            "pct": 89.8,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 209,
+            "count": 179,
+            "pct": 85.6,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 125,
+            "pct": 73.5,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 155,
+            "count": 139,
+            "pct": 89.7,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1678,
+          "count": 1421,
+          "pct": 84.7
+        }
+      },
+      "first_child": {
+        "label": "First child",
+        "by_year": [
+          {
+            "year": "2017",
+            "n": 117,
+            "count": 49,
+            "pct": 41.9,
+            "partial": false
+          },
+          {
+            "year": "2018",
+            "n": 181,
+            "count": 107,
+            "pct": 59.1,
+            "partial": false
+          },
+          {
+            "year": "2019",
+            "n": 202,
+            "count": 115,
+            "pct": 56.9,
+            "partial": false
+          },
+          {
+            "year": "2021",
+            "n": 130,
+            "count": 63,
+            "pct": 48.5,
+            "partial": false
+          },
+          {
+            "year": "2022",
+            "n": 238,
+            "count": 132,
+            "pct": 55.5,
+            "partial": false
+          },
+          {
+            "year": "2023",
+            "n": 194,
+            "count": 91,
+            "pct": 46.9,
+            "partial": false
+          },
+          {
+            "year": "2024",
+            "n": 206,
+            "count": 93,
+            "pct": 45.1,
+            "partial": false
+          },
+          {
+            "year": "2025",
+            "n": 170,
+            "count": 66,
+            "pct": 38.8,
+            "partial": false
+          },
+          {
+            "year": "2026",
+            "n": 153,
+            "count": 63,
+            "pct": 41.2,
+            "partial": true
+          }
+        ],
+        "overall": {
+          "n": 1591,
+          "count": 779,
+          "pct": 49.0
+        }
+      }
+    },
+    "groups": {
+      "newborn_health": {
+        "title": "Newborn and mother's health at the first visit",
+        "by_year": [
+          {
+            "year": "2017",
+            "caesarean": 40.9,
+            "low_birth_weight": 7.3,
+            "birth_complication": 18.2,
+            "baby_did_not_cry": 3.0,
+            "problem_after_birth": 26.2,
+            "jaundice": 48.5,
+            "umbilicus_not_normal": 10.5,
+            "skin_rash": 30.8,
+            "mother_pale": 2.3
+          },
+          {
+            "year": "2018",
+            "caesarean": 41.4,
+            "low_birth_weight": 11.5,
+            "birth_complication": 8.2,
+            "baby_did_not_cry": 8.2,
+            "problem_after_birth": 7.0,
+            "jaundice": 63.8,
+            "umbilicus_not_normal": 22.5,
+            "skin_rash": 37.5,
+            "mother_pale": 5.2
+          },
+          {
+            "year": "2019",
+            "caesarean": 45.2,
+            "low_birth_weight": 5.3,
+            "birth_complication": 7.8,
+            "baby_did_not_cry": 2.7,
+            "problem_after_birth": 6.2,
+            "jaundice": 57.5,
+            "umbilicus_not_normal": 17.9,
+            "skin_rash": 42.0,
+            "mother_pale": 0.9
+          },
+          {
+            "year": "2021",
+            "caesarean": 42.0,
+            "low_birth_weight": 7.9,
+            "birth_complication": 4.6,
+            "baby_did_not_cry": 0.8,
+            "problem_after_birth": 3.8,
+            "jaundice": 53.4,
+            "umbilicus_not_normal": 3.1,
+            "skin_rash": 22.9,
+            "mother_pale": 6.9
+          },
+          {
+            "year": "2022",
+            "caesarean": 46.1,
+            "low_birth_weight": 10.7,
+            "birth_complication": 2.0,
+            "baby_did_not_cry": 4.5,
+            "problem_after_birth": 3.3,
+            "jaundice": 58.0,
+            "umbilicus_not_normal": 0.0,
+            "skin_rash": 34.7,
+            "mother_pale": 7.8
+          },
+          {
+            "year": "2023",
+            "caesarean": 54.1,
+            "low_birth_weight": 10.8,
+            "birth_complication": 2.6,
+            "baby_did_not_cry": 3.1,
+            "problem_after_birth": 2.0,
+            "jaundice": 54.6,
+            "umbilicus_not_normal": 0.0,
+            "skin_rash": 41.3,
+            "mother_pale": 7.7
+          },
+          {
+            "year": "2024",
+            "caesarean": 54.8,
+            "low_birth_weight": 7.9,
+            "birth_complication": 1.4,
+            "baby_did_not_cry": 10.0,
+            "problem_after_birth": 1.4,
+            "jaundice": 37.3,
+            "umbilicus_not_normal": 0.0,
+            "skin_rash": 32.1,
+            "mother_pale": 4.3
+          },
+          {
+            "year": "2025",
+            "caesarean": 61.8,
+            "low_birth_weight": 8.3,
+            "birth_complication": 0.0,
+            "baby_did_not_cry": 5.9,
+            "problem_after_birth": 0.0,
+            "jaundice": 40.6,
+            "umbilicus_not_normal": 0.0,
+            "skin_rash": 34.7,
+            "mother_pale": 1.2
+          },
+          {
+            "year": "2026",
+            "caesarean": 58.7,
+            "low_birth_weight": 9.7,
+            "birth_complication": 2.6,
+            "baby_did_not_cry": 3.2,
+            "problem_after_birth": 0.0,
+            "jaundice": 30.3,
+            "umbilicus_not_normal": 0.6,
+            "skin_rash": 34.8,
+            "mother_pale": 0.0
+          }
+        ]
+      },
+      "feeding": {
+        "title": "Feeding at the first visit",
+        "by_year": [
+          {
+            "year": "2017",
+            "other_food_or_drink": 18.5,
+            "water_given": 6.2,
+            "few_feeds": 7.0,
+            "few_urines": 4.6,
+            "latch_needs_help": 93.7
+          },
+          {
+            "year": "2018",
+            "other_food_or_drink": 15.7,
+            "water_given": 4.3,
+            "few_feeds": 7.4,
+            "few_urines": 9.1,
+            "latch_needs_help": 92.7
+          },
+          {
+            "year": "2019",
+            "other_food_or_drink": 21.0,
+            "water_given": 7.8,
+            "few_feeds": 7.0,
+            "few_urines": 7.8,
+            "latch_needs_help": 82.7
+          },
+          {
+            "year": "2021",
+            "other_food_or_drink": 17.6,
+            "water_given": 8.4,
+            "few_feeds": 5.3,
+            "few_urines": 3.8,
+            "latch_needs_help": 69.5
+          },
+          {
+            "year": "2022",
+            "other_food_or_drink": 18.8,
+            "water_given": 6.9,
+            "few_feeds": 9.0,
+            "few_urines": 9.8,
+            "latch_needs_help": 82.0
+          },
+          {
+            "year": "2023",
+            "other_food_or_drink": 13.3,
+            "water_given": 4.1,
+            "few_feeds": 5.1,
+            "few_urines": 3.1,
+            "latch_needs_help": 89.8
+          },
+          {
+            "year": "2024",
+            "other_food_or_drink": 13.4,
+            "water_given": 1.9,
+            "few_feeds": 6.7,
+            "few_urines": 9.1,
+            "latch_needs_help": 85.6
+          },
+          {
+            "year": "2025",
+            "other_food_or_drink": 8.2,
+            "water_given": 1.8,
+            "few_feeds": 5.3,
+            "few_urines": 3.0,
+            "latch_needs_help": 73.5
+          },
+          {
+            "year": "2026",
+            "other_food_or_drink": 5.8,
+            "water_given": 0.6,
+            "few_feeds": 3.9,
+            "few_urines": 3.2,
+            "latch_needs_help": 89.7
+          }
+        ]
+      },
+      "reach": {
+        "title": "Who the programme reaches",
+        "by_year": [
+          {
+            "year": "2017",
+            "first_child": 41.9
+          },
+          {
+            "year": "2018",
+            "first_child": 59.1
+          },
+          {
+            "year": "2019",
+            "first_child": 56.9
+          },
+          {
+            "year": "2021",
+            "first_child": 48.5
+          },
+          {
+            "year": "2022",
+            "first_child": 55.5
+          },
+          {
+            "year": "2023",
+            "first_child": 46.9
+          },
+          {
+            "year": "2024",
+            "first_child": 45.1
+          },
+          {
+            "year": "2025",
+            "first_child": 38.8
+          },
+          {
+            "year": "2026",
+            "first_child": 41.2
+          }
+        ]
+      }
+    },
+    "occupations": {
+      "mother": [
+        {
+          "occupation": "Housewife",
+          "n": 759,
+          "pct": 68.6
+        },
+        {
+          "occupation": "Service",
+          "n": 144,
+          "pct": 13.0
+        },
+        {
+          "occupation": "Daily wage",
+          "n": 89,
+          "pct": 8.0
+        },
+        {
+          "occupation": "Business",
+          "n": 58,
+          "pct": 5.2
+        },
+        {
+          "occupation": "Other",
+          "n": 50,
+          "pct": 4.5
+        },
+        {
+          "occupation": "Farmer",
+          "n": 6,
+          "pct": 0.5
+        }
+      ],
+      "father": [
+        {
+          "occupation": "Business",
+          "n": 289,
+          "pct": 26.1
+        },
+        {
+          "occupation": "Daily wage",
+          "n": 288,
+          "pct": 26.0
+        },
+        {
+          "occupation": "Service",
+          "n": 255,
+          "pct": 23.1
+        },
+        {
+          "occupation": "Other",
+          "n": 217,
+          "pct": 19.6
+        },
+        {
+          "occupation": "No work",
+          "n": 29,
+          "pct": 2.6
+        },
+        {
+          "occupation": "Farmer",
+          "n": 28,
+          "pct": 2.5
+        }
+      ]
     }
   },
   "origin": {
