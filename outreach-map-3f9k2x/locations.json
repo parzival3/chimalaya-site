@@ -24,6 +24,11 @@
    "id": "school",
    "label": "Schools",
    "color": "#c99700"
+  },
+  {
+   "id": "community",
+   "label": "Community venues",
+   "color": "#c2185b"
   }
  ],
  "clinic": {
@@ -32,6 +37,13 @@
   "lon": 85.389687
  },
  "locations": [
+  {
+   "name": "North Point Mall",
+   "category": "community",
+   "lat": 27.689931,
+   "lon": 85.39023,
+   "confirmed": true
+  },
   {
    "name": "Balkumari Health Post",
    "category": "health_post",
@@ -373,13 +385,6 @@
    "category": "school",
    "lat": 27.6967324,
    "lon": 85.3334143,
-   "confirmed": true
-  },
-  {
-   "name": "North Point Mall",
-   "category": "school",
-   "lat": 27.689931,
-   "lon": 85.39023,
    "confirmed": true
   },
   {

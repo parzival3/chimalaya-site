@@ -159,8 +159,9 @@
       });
       for (const c of categories) {
         const n = places.filter(p => p.category === c.id).length;
-        const box = make("input", { type: "checkbox", id: "cat-" + c.id, checked: n > 0, disabled: n === 0 });
-        if (n > 0) visible.add(c.id);
+        const on = c.id === "nurse" && n > 0;  // opens showing only where trained nurses work
+        const box = make("input", { type: "checkbox", id: "cat-" + c.id, checked: on, disabled: n === 0 });
+        if (on) visible.add(c.id); else map.removeLayer(groups.get(c.id));
         box.addEventListener("change", () => setLayer(c.id, box.checked));
         el("layers").append(make("div", { className: "layer" + (n ? "" : " empty") }, box,
           make("label", { htmlFor: box.id }, swatch(c.color), c.label),
