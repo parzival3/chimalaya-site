@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15",
+  "generated": "2026-11-16",
   "reach": {
     "babies_total": 1851,
     "staff_attribution": {
@@ -1778,6 +1778,69 @@
         "attendance_total": 2645
       }
     }
+  },
+  "pregnancy_groups": {
+    "note": "From the outreach log: counts of sessions and attendances only, found by the word 'pregnant' in the event description. There is no separate register, so some sessions may be missing.",
+    "sessions": 49,
+    "attendances": 792,
+    "average": 16.2,
+    "last_session": "2026-10-29",
+    "yearly": [
+      {
+        "year": 2018,
+        "sessions": 1,
+        "attendances": 21,
+        "average": 21.0
+      },
+      {
+        "year": 2019,
+        "sessions": 1,
+        "attendances": 7,
+        "average": 7.0
+      },
+      {
+        "year": 2020,
+        "sessions": 6,
+        "attendances": 80,
+        "average": 13.3
+      },
+      {
+        "year": 2021,
+        "sessions": 13,
+        "attendances": 130,
+        "average": 10.0
+      },
+      {
+        "year": 2022,
+        "sessions": 6,
+        "attendances": 80,
+        "average": 13.3
+      },
+      {
+        "year": 2023,
+        "sessions": 8,
+        "attendances": 221,
+        "average": 27.6
+      },
+      {
+        "year": 2024,
+        "sessions": 5,
+        "attendances": 108,
+        "average": 21.6
+      },
+      {
+        "year": 2025,
+        "sessions": 3,
+        "attendances": 76,
+        "average": 25.3
+      },
+      {
+        "year": 2026,
+        "sessions": 6,
+        "attendances": 69,
+        "average": 11.5
+      }
+    ]
   },
   "watch": {
     "as_of": "2026-11-05",
